@@ -1,11 +1,20 @@
-import React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Default as Thing } from '../stories/Thing.stories';
+import React from 'react'
+import * as ReactDOM from 'react-dom'
+import { Thing } from '../src/index'
+import {
+  render,
+  cleanup,
+  waitForDomChange,
+  Matcher,
+  act,
+} from '@testing-library/react'
 
 describe('Thing', () => {
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Thing />, div);
-    ReactDOM.unmountComponentAtNode(div);
-  });
-});
+  it('The text matches the prop passed to it', () => {
+    afterEach(cleanup)
+
+    //create test children
+
+    //execute the getByText'
+  })
+})
