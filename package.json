@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "watch:css tsdx watch",
-    "build": "tsdx build",
+    "build": "watch:css  tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "watch:css": "postcss src/css/tailwind.css -o src/index.css -w",
