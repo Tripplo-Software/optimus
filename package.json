@@ -11,11 +11,11 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "watch:css tsdx watch",
+    "start": " tsdx watch",
     "build": "watch:css  tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "watch:css": "postcss src/css/tailwind.css -o src/index.css -w",
+    "watch:css": "postcss src/tailwind.css -o src/index.css -w",
     "prepare": "tsdx build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -54,6 +54,7 @@
     "autoprefixer": "^9.8.5",
     "babel-loader": "^8.1.0",
     "husky": "^4.2.5",
+    "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
