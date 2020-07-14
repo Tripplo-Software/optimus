@@ -11,10 +11,11 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
+    "start": "watch:css tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
+    "watch:css": "postcss src/css/tailwind.css -o src/index.css -w",
     "prepare": "tsdx build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -36,6 +37,7 @@
   "name": "optimus",
   "author": "AmoDinho",
   "module": "dist/optimus.esm.js",
+  "style": "dist/optimus.css",
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@storybook/addon-actions": "^5.3.19",
@@ -57,6 +59,7 @@
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
+    "rollup-plugin-css-only": "^2.1.0",
     "ts-loader": "^7.0.5",
     "tsdx": "^0.13.2",
     "tslib": "^2.0.0",
