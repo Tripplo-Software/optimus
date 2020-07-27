@@ -1,8 +1,11 @@
 import React, { FC } from 'react'
 import '../index.css'
 
-const Input: FC = ({}) => {
-  return <input />
+export interface Props {
+  className: string
+}
+const Input = (props: Props) => {
+  return <input {...props} />
 }
 
 export default Input
