@@ -6,7 +6,7 @@ export interface Props {
 }
 
 const defaultProps = {
-  className: 'bg-white border border-gray-400',
+  className: 'bg-white border border-gray-400 rounded p-2 w-auto',
 }
 const Input = (props: Props) => {
   return <input {...props} />
