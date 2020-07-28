@@ -7,9 +7,11 @@ const cssnano = require('cssnano')
 module.exports = {
   rollup(config, options) {
     config.plugins.push(
+      css({ output: 'dist/umqombothi.css' }),
       postcss({
         plugins: [
           autoprefixer(),
+          tailwindcss('./tailwind.config.js'),
           cssnano({
             preset: 'default',
           }),
