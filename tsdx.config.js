@@ -7,7 +7,7 @@ const cssnano = require('cssnano')
 module.exports = {
   rollup(config, options) {
     config.plugins.push(
-      css({ output: 'dist/umqombothi.css' }),
+      css({ output: 'dist/optimus-ui.css' }),
       postcss({
         plugins: [
           autoprefixer(),
