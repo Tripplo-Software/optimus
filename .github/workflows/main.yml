@@ -8,6 +8,12 @@ jobs:
       - name: Begin CI...
         uses: actions/checkout@v2
 
+      - name: Action For Semantic Release
+        uses: cycjimmy/semantic-release-action@v2.5.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Use Node 12
         uses: actions/setup-node@v1
         with:
