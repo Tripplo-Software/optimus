@@ -7,9 +7,9 @@ interface Props {
 }
 
 const HeadingTwo: FC<Props> = ({ children, className }: Props) => (
-  <h1 className={` ${className} text-6xl text-blue font-poppins`}>
+  <h2 className={` ${className} text-6xl text-blue font-poppins`}>
     {children}
-  </h1>
+  </h2>
 )
 
 export default HeadingTwo
