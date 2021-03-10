@@ -1,5 +1,5 @@
 {
-  "include": ["src", "types", "stories/HeadingTwo.stories.tsx"],
+  "include": ["src", "types"],
   "compilerOptions": {
     "module": "esnext",
     "lib": ["dom", "esnext"],
