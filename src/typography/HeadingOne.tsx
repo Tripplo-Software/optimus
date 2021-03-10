@@ -1,17 +1,15 @@
-import React from 'react'
+import React, { FC } from 'react'
 import '../index.css'
 
-export interface Props {
+interface Props {
   className: string
+  children: any
 }
 
-const defaultProps = {
-  className: 'text-5xl text-black font-poppins',
-}
-
-const HeadingOne = (props: Props, children: any) => (
-  <h1 {...props}>{children}</h1>
+const HeadingOne: FC<Props> = ({ children, className }: Props) => (
+  <h1 className={` ${className} text-5xl text-black font-poppins`}>
+    {children}
+  </h1>
 )
 
-HeadingOne.defaultProps = defaultProps
 export default HeadingOne
