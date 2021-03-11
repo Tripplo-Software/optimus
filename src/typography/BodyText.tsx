@@ -6,10 +6,10 @@ export interface Props {
     children: any
 }
 
-const Body: FC<Props> = ({ children, className }: Props) => (
-    <p className={` ${className} text-black-700 text-opacity-75`}>
+const BodyText: FC<Props> = ({ children, className }: Props) => (
+    <p className={` ${className} text-black-700 h-text-base`}>
         {children}
     </p>
 )
 
-export default Body
+export default BodyText

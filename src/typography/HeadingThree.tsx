@@ -6,7 +6,7 @@ interface Props {
     children: any
 }
 const HeadingThree: FC<Props> = ({ children, className }: Props) => (
-    <h3 className={` ${className} text-3xl text-blue font-poppins`}>
+    <h3 className={` ${className} text-4xl text-black font-poppins`}>
         {children}
     </h3>
 )

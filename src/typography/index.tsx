@@ -4,5 +4,7 @@ import HeadingThree from './HeadingThree'
 import HeadingFour from './HeadingFour'
 import HeadingFive from './HeadingFive'
 import HeadingSix from './HeadingSix'
+import BodyText from './BodyText'
+import Link from './Link'
 
-export { HeadingOne, HeadingTwo, HeadingThree, HeadingFour, HeadingFive, HeadingSix }
+export { HeadingOne, HeadingTwo, HeadingThree, HeadingFour, HeadingFive, HeadingSix, BodyText, Link }

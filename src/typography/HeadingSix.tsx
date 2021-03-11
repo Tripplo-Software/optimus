@@ -7,7 +7,7 @@ interface Props {
 }
 
 const HeadingSix: FC<Props> = ({ children, className }: Props) => (
-  <h6 className={` ${className} text-xl text-teal font-Arial`}>
+  <h6 className={` ${className} text-1xl text-black font-poppins`}>
     {children}
   </h6>
 )
