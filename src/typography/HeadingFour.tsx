@@ -5,9 +5,8 @@ interface Props {
     className: string
     children: any
 }
-
 const HeadingFour: FC<Props> = ({ children, className }: Props) => (
-    <h4 className={` ${className} text-2xl text-blue font-poppins`}>
+    <h4 className={` ${className} text-2xl text-red font-poppins`}>
         {children}
     </h4>
 )

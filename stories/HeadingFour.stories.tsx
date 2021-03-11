@@ -1,10 +1,10 @@
 import React from 'react'
-import { HeadingFour } from '../src/typographyFour'
+import { HeadingFour } from '../src'
 
 export default {
-    title: 'Almost There',
+    title: 'How we doing?',
 }
 
 export const Default = () => (
-    <HeadingFour className="text-yellow-900">Starting to get a hang of it</HeadingFour>
+    <HeadingFour className="text-yellow-700">We gon be alright</HeadingFour>
 )

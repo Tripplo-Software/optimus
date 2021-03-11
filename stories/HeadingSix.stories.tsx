@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeadingSix } from '../src/typographySix'
+import { HeadingSix } from '../src'
 
 export default {
     title: 'Last Heading',

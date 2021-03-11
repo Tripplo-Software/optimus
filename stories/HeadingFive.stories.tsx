@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeadingFive } from '../src/typographyFive'
+import { HeadingFive } from '../src'
 
 export default {
     title: 'Progress',
