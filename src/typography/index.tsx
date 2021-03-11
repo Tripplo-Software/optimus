@@ -7,4 +7,13 @@ import HeadingSix from './HeadingSix'
 import BodyText from './BodyText'
 import Link from './Link'
 
-export { HeadingOne, HeadingTwo, HeadingThree, HeadingFour, HeadingFive, HeadingSix, BodyText, Link }
+export {
+  HeadingOne,
+  HeadingTwo,
+  HeadingThree,
+  HeadingFour,
+  HeadingFive,
+  HeadingSix,
+  BodyText,
+  Link,
+}

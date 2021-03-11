@@ -1,9 +1,17 @@
 import React from 'react'
-import { HeadingOne, HeadingTwo, HeadingThree, HeadingFour, HeadingFive, HeadingSix, BodyText, Link } from '../src'
+import {
+  HeadingOne,
+  HeadingTwo,
+  HeadingThree,
+  HeadingFour,
+  HeadingFive,
+  HeadingSix,
+  BodyText,
+  Link,
+} from '../src/typography'
 
 export default {
   title: 'Typography',
-  component: HeadingOne
 }
 
 // By passing optional props to this story, you can control the props of the component when
@@ -32,4 +40,3 @@ export const Body = () => (
 export const LinkText = () => (
   <Link className="text-black-500 no-underline">Click here</Link>
 )
-
