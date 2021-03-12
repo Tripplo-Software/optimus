@@ -10,5 +10,7 @@ describe('Typography', () => {
     const { getByText } = render(
       <HeadingOne className="text-green-3000">Hello there</HeadingOne>
     )
+    const text = 'Hello there'
+    expect(getByText(text)).toHaveTextContent('Hello there')
   })
 })
