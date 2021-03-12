@@ -5,7 +5,8 @@ import {
     HeadingThree,
     HeadingFour,
     HeadingFive,
-    HeadingSix
+    HeadingSix,
+    BodyText
 } from '../src/index'
 import { render, cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
@@ -75,6 +76,17 @@ describe('Typography', () => {
         const text = 'Heading 6 testing'
         expect(getByText(text)).toHaveTextContent(
             'Heading 6 testing'
+        )
+    })
+    //Body Text Test
+    it('[BodyText] - it matches the Text prop passed to it', () => {
+        afterEach(cleanup)
+
+        const { getByText } = render(<BodyText className="text-black-3000" >Body Text testing</BodyText>)
+
+        const text = 'Body Text testing'
+        expect(getByText(text)).toHaveTextContent(
+            'Body Text testing'
         )
     })
 })

@@ -37,7 +37,7 @@ export const Heading_6 = () => (
 export const Body = () => (
   <BodyText className="text-black-500">This is a paragraph</BodyText>
 )
-var url: string = "https://www.tripplo.co/";
+let dest: URL = new URL("https://www.tripplo.co/");
 export const LinkText = () => (
-  <Link to={url} className="text-black-500 hover:underline">This is a link</Link>
+  <Link url={dest} className="text-black-500 underline">This is a link</Link>
 )
