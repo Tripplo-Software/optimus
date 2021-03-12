@@ -6,7 +6,8 @@ import {
     HeadingFour,
     HeadingFive,
     HeadingSix,
-    BodyText
+    BodyText,
+    Link
 } from '../src/index'
 import { render, cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
@@ -88,5 +89,17 @@ describe('Typography', () => {
         expect(getByText(text)).toHaveTextContent(
             'Body Text testing'
         )
+    })
+    //Link Test
+    it('[Link] - It renders the url prop passed to it', () => {
+        const link = 'https://www.tripplo.co/'
+        const { getByRole } = render(
+            <Link
+                url={link}
+                className="text-black-3000 underline"
+            >This is a link</Link>
+        )
+        //The <a> tag is considered a Role, hence use getByRole.
+        expect(getByRole('link')).toHaveAttribute('href', 'https://www.tripplo.co/');
     })
 })

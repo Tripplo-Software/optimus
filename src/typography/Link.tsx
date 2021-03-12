@@ -4,7 +4,7 @@ import '../index.css'
 interface Props {
   className: string
   children: any
-  url: URL
+  url: string
 }
 const Link: FC<Props> = ({ children, className, url }: Props) => (
   <a
