@@ -19,24 +19,25 @@ export default {
 export const Default = () => (
   <HeadingOne className="text-black-500">Heading 1</HeadingOne>
 )
-export const H2 = () => (
-  <HeadingTwo className="text-black-500">HEADING 2</HeadingTwo>
+export const Heading_2 = () => (
+  <HeadingTwo className="text-black-500">Heading 2</HeadingTwo>
 )
-export const H3 = () => (
-  <HeadingThree className="text-black-500">HEADING 3</HeadingThree>
+export const Heading_3 = () => (
+  <HeadingThree className="text-black-500">Heading 3</HeadingThree>
 )
-export const H4 = () => (
-  <HeadingFour className="text-black-500">HEADING 4</HeadingFour>
+export const Heading_4 = () => (
+  <HeadingFour className="text-black-500">Heading 4</HeadingFour>
 )
-export const H5 = () => (
-  <HeadingFive className="text-black-500">HEADING 5</HeadingFive>
+export const Heading_5 = () => (
+  <HeadingFive className="text-black-500">Heading 5</HeadingFive>
 )
-export const H6 = () => (
-  <HeadingSix className="text-black-500">HEADING 6</HeadingSix>
+export const Heading_6 = () => (
+  <HeadingSix className="text-black-500">Heading 6</HeadingSix>
 )
 export const Body = () => (
   <BodyText className="text-black-500">This is a paragraph</BodyText>
 )
+var url: string = "https://www.tripplo.co/";
 export const LinkText = () => (
-  <Link className="text-black-500 no-underline">Click here</Link>
+  <Link to={url} className="text-black-500 hover:underline">This is a link</Link>
 )
