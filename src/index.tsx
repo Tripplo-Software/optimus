@@ -9,3 +9,5 @@ export {
   BodyText,
   Link,
 } from './typography'
+
+export { BlueDarkButton } from './buttons'
