@@ -4,10 +4,11 @@ import '../index.css'
 interface Props {
   className: string
   children: any
+  url: string
 }
-const Link: FC<Props> = ({ children, className }: Props) => (
+const Link: FC<Props> = ({ children, className, url }: Props) => (
   <a
-    href="https://www.tripplo.co/"
+    href={`${url}`}
     className={` ${className} text-black font-poppins`}
   >
     {children}
