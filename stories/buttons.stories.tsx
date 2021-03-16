@@ -1,14 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {BlueDarkButton} from '../src/buttons'
+import { Meta, Story } from '@storybook/react'
 
-export default {
+import { BlueDarkButton } from '../src/buttons'
+
+const meta: Meta = {
   title: 'Buttons',
 }
+export default meta
 
-export const Default = () => (
+export const Blue: Story = () => (
   <BlueDarkButton
-    onClick={PropTypes.func}
+    onClick={() => alert('hi')}
     disabled={false}
     className="text-white-500"
   >

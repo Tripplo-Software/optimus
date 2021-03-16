@@ -1,3 +1,3 @@
-import BlueDarkButton from './BlueDarkButton'
+import { BlueDarkButton } from './BlueDarkButton'
 
 export { BlueDarkButton }
