@@ -4,14 +4,13 @@ import { RedButton } from './RedButton'
 import { GreenButton } from './GreenButton'
 import { BlueLightestOutlinedButton } from './BlueLightestOutlinedButton'
 import { BlueActionButton } from './BlueActionButton'
-import {classNames } from './Button'"
-
+import { Button } from './Button'
 export {
-    BlueDarkButton,
-    BlueDarkTransparentOutlinedButton,
-    BlueLightestOutlinedButton,
-    BlueActionButton,
-    RedButton,
-    GreenButton,
-    classNames
+  BlueDarkButton,
+  BlueDarkTransparentOutlinedButton,
+  BlueLightestOutlinedButton,
+  BlueActionButton,
+  RedButton,
+  GreenButton,
+  Button,
 }

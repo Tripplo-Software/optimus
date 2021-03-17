@@ -7,7 +7,8 @@ import {
   BlueLightestOutlinedButton,
   BlueActionButton,
   RedButton,
-  GreenButton
+  GreenButton,
+  Button,
 } from '../src/buttons'
 
 const meta: Meta = {
@@ -24,6 +25,12 @@ export const Blue_Dark_Button: Story = () => (
   >
     Button
   </BlueDarkButton>
+)
+
+export const Default_button: Story = () => (
+  <Button variant="GreenButton" onClick={() => alert('Red Button clicked')}>
+    Test
+  </Button>
 )
 // RedButton story
 export const Red_Button: Story = () => (

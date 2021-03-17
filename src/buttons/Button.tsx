@@ -9,7 +9,7 @@ export interface Props {
   variant: string
 }
 
-export const BlueDarkButton: FC<Props> = ({
+export const Button: FC<Props> = ({
   className,
   onClick,
   children,
@@ -29,19 +29,19 @@ export const BlueDarkButton: FC<Props> = ({
     },
     GreenButton: {
       borderColor: '',
-      backgroundColor: 'blue',
+      backgroundColor: 'bg-green-500',
       dimensions: 'py-2 px-10',
-      textUtils: 'text-blue-500 font-poppins',
+      textUtils: 'text-white font-poppins',
     },
   }
 
-  const classNames = Object.values(types[variant]).join(' ')
+  const classNames: string = Object.values(types[variant]).join(' ')
 
   return (
     <button
       className={` ${className} ${classNames}`}
       onClick={onClick}
-      disabled={disabled}
+      disabled={disabled || false}
     >
       {children}
     </button>
