@@ -3,6 +3,7 @@ import { Meta, Story } from '@storybook/react'
 
 import {
   BlueDarkButton,
+  BlueDarkOutlinedButton,
   RedButton
 } from '../src/buttons'
 
@@ -30,4 +31,14 @@ export const Red_Button: Story = () => (
   >
     Button
   </RedButton>
+)
+// RedButton story
+export const Blue_Outlined_Button: Story = () => (
+  <BlueDarkOutlinedButton
+    onClick={() => alert('Blue Otlined Button clicked')}
+    disabled={false}
+    className="text-white font-semibold"
+  >
+    Button
+  </BlueDarkOutlinedButton>
 )
