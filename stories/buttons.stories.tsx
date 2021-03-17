@@ -1,15 +1,13 @@
-import React, {MouseEvent} from 'react'
+import React, { MouseEvent } from 'react'
 import { Meta, Story } from '@storybook/react'
 
-import {
-  Button
-} from '../src/buttons'
+import { Button } from '../src/buttons'
 
 const meta: Meta = {
   title: 'Buttons',
 }
 export default meta
-const onClick=(event: MouseEvent) =>{
+const onClick = (event: MouseEvent) => {
   event.preventDefault();
   alert(event.currentTarget.tagName + " clicked");
 }

@@ -1,14 +1,7 @@
 import React from 'react'
 import { render, cleanup, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import {
-    BlueDarkButton,
-    BlueDarkTransparentOutlinedButton,
-    BlueLightestOutlinedButton,
-    BlueActionButton,
-    RedButton,
-    GreenButton
-} from '../src/index'
+import { Button } from '../src/index'
 
 describe('Button', () => {
     // BlueDarkButton Test
@@ -16,11 +9,12 @@ describe('Button', () => {
         afterEach(cleanup)
         const onClick = jest.fn();
         const { getByText } = render(
-            <BlueDarkButton
+            <Button
+                variant="BlueDarkButton"
                 onClick={onClick}
                 disabled={false}
                 className="text-white-500">Button testing
-            </BlueDarkButton>)
+            </Button>)
 
         const text = 'Button testing'
         fireEvent.click(getByText(text));
@@ -32,26 +26,28 @@ describe('Button', () => {
         afterEach(cleanup)
         const onClick = jest.fn();
         const { getByText } = render(
-            <RedButton
+            <Button
+                variant="RedButton"
                 onClick={onClick}
                 disabled={false}
                 className="text-white-500">Button testing
-            </RedButton>)
+            </Button>)
 
         const text = 'Button testing'
         fireEvent.click(getByText(text));
         expect(onClick).toHaveBeenCalled();
     })
-    // BlueDarkOutlinedButton Test
-    it('[BlueDarkOutlinedButton] - it calls "onClick" prop on button click', () => {
+    // BlueDarkTransparentOutlinedButton Test
+    it('[BlueDarkTransparentOutlinedButton] - it calls "onClick" prop on button click', () => {
         afterEach(cleanup)
         const onClick = jest.fn();
         const { getByText } = render(
-            <BlueDarkTransparentOutlinedButton
+            <Button
+                variant="BlueDarkTransparentOutlinedButton"
                 onClick={onClick}
                 disabled={false}
                 className="text-white-500">Button testing
-            </BlueDarkTransparentOutlinedButton>)
+            </Button>)
 
         const text = 'Button testing'
         fireEvent.click(getByText(text));
@@ -62,11 +58,12 @@ describe('Button', () => {
         afterEach(cleanup)
         const onClick = jest.fn();
         const { getByText } = render(
-            <GreenButton
+            <Button
+                variant="GreenButton"
                 onClick={onClick}
                 disabled={false}
                 className="text-white-500">Button testing
-            </GreenButton>)
+            </Button>)
 
         const text = 'Button testing'
         fireEvent.click(getByText(text));
@@ -77,11 +74,12 @@ describe('Button', () => {
         afterEach(cleanup)
         const onClick = jest.fn();
         const { getByText } = render(
-            <BlueLightestOutlinedButton
+            <Button
+                variant="BlueLightestOutlinedButton"
                 onClick={onClick}
                 disabled={false}
                 className="text-white-500">Button testing
-            </BlueLightestOutlinedButton>)
+            </Button>)
 
         const text = 'Button testing'
         fireEvent.click(getByText(text));
@@ -92,11 +90,12 @@ describe('Button', () => {
         afterEach(cleanup)
         const onClick = jest.fn();
         const { getByText } = render(
-            <BlueActionButton
+            <Button
+                variant="BlueActionButton"
                 onClick={onClick}
                 disabled={false}
                 className="text-white-500">Button testing
-            </BlueActionButton>)
+            </Button>)
 
         const text = 'Button testing'
         fireEvent.click(getByText(text));
