@@ -1,9 +1,12 @@
 import { BlueDarkButton } from './BlueDarkButton'
-import { RedButton } from './RedButton'
 import { BlueDarkOutlinedButton } from './BlueDarkOutlinedButton'
+import { RedButton } from './RedButton'
+import { GreenButton } from './GreenButton'
+
 
 export {
     BlueDarkButton,
+    BlueDarkOutlinedButton,
     RedButton,
-    BlueDarkOutlinedButton
+    GreenButton
 }
