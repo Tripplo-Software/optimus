@@ -4,7 +4,8 @@ import '@testing-library/jest-dom/extend-expect'
 import {
     BlueDarkButton,
     RedButton,
-    BlueDarkOutlinedButton
+    BlueDarkOutlinedButton,
+    GreenButton
 } from '../src/index'
 
 describe('Button', () => {
@@ -49,6 +50,21 @@ describe('Button', () => {
                 disabled={false}
                 className="text-white-500">Button testing
             </BlueDarkOutlinedButton>)
+
+        const text = 'Button testing'
+        fireEvent.click(getByText(text));
+        expect(onClick).toHaveBeenCalled();
+    })
+    // GreenButton Test
+    it('[GreenButton] - it calls "onClick" prop on button click', () => {
+        afterEach(cleanup)
+        const onClick = jest.fn();
+        const { getByText } = render(
+            <GreenButton
+                onClick={onClick}
+                disabled={false}
+                className="text-white-500">Button testing
+            </GreenButton>)
 
         const text = 'Button testing'
         fireEvent.click(getByText(text));
