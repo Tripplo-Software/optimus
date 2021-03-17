@@ -8,7 +8,7 @@ export interface Props {
   disabled: boolean
 }
 
-export const BlueDarkOutlinedButton: FC<Props> = ({
+export const BlueDarkTransparentOutlinedButton: FC<Props> = ({
   className,
   onClick,
   children,

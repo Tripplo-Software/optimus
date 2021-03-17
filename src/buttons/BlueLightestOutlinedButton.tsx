@@ -8,17 +8,17 @@ export interface Props {
   disabled: boolean
 }
 
-export const BlueDarkButton: FC<Props> = ({
+export const BlueLightestOutlinedButton: FC<Props> = ({
   className,
   onClick,
   children,
   disabled,
 }: Props) => (
   <button
-    className={` ${className} bg-blue-500 py-2 px-10 rounded`}
+    className={` ${className} border-2 border-solid border-blue-500 text-blue-100 py-2 px-10 rounded`}
     onClick={onClick}
     disabled={disabled}
   >
     {children}
   </button>
-)
+);
