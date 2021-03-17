@@ -5,6 +5,7 @@ import {
   BlueDarkButton,
   BlueDarkTransparentOutlinedButton,
   BlueLightestOutlinedButton,
+  BlueActionButton,
   RedButton,
   GreenButton
 } from '../src/buttons'
@@ -64,4 +65,14 @@ export const Blue_Lightest_Outlined_Button: Story = () => (
   >
     Button
   </BlueLightestOutlinedButton>
+)
+//BlueActionButton story
+export const Blue_Action_Button: Story = () => (
+  <BlueActionButton
+    onClick={() => alert('Blue Action Button clicked')}
+    disabled={false}
+    className="text-white font-bold"
+  >
+    +
+  </BlueActionButton>
 )
