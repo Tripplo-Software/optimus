@@ -1,6 +1,14 @@
 import React, { FC } from 'react'
 import '../index.css'
 
+/**
+ * finsihed the types object in this file witth all the styles from the remain buttons
+ * delete the other buttons and their stories from
+ * create new stories with the variants
+ * refactor the tests
+ * add correct types for the onClick event
+ *
+ * */
 export interface Props {
   className: string
   onClick: any
