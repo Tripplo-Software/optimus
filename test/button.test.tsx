@@ -3,8 +3,9 @@ import { render, cleanup, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 import {
     BlueDarkButton,
+    BlueDarkTransparentOutlinedButton,
+    BlueLightestOutlinedButton,
     RedButton,
-    BlueDarkOutlinedButton,
     GreenButton
 } from '../src/index'
 
@@ -45,11 +46,11 @@ describe('Button', () => {
         afterEach(cleanup)
         const onClick = jest.fn();
         const { getByText } = render(
-            <BlueDarkOutlinedButton
+            <BlueDarkTransparentOutlinedButton
                 onClick={onClick}
                 disabled={false}
                 className="text-white-500">Button testing
-            </BlueDarkOutlinedButton>)
+            </BlueDarkTransparentOutlinedButton>)
 
         const text = 'Button testing'
         fireEvent.click(getByText(text));
@@ -65,6 +66,21 @@ describe('Button', () => {
                 disabled={false}
                 className="text-white-500">Button testing
             </GreenButton>)
+
+        const text = 'Button testing'
+        fireEvent.click(getByText(text));
+        expect(onClick).toHaveBeenCalled();
+    })
+    // BlueLightestOutlinedButton Test
+    it('[BlueLightestOutlinedButton] - it calls "onClick" prop on button click', () => {
+        afterEach(cleanup)
+        const onClick = jest.fn();
+        const { getByText } = render(
+            <BlueLightestOutlinedButton
+                onClick={onClick}
+                disabled={false}
+                className="text-white-500">Button testing
+            </BlueLightestOutlinedButton>)
 
         const text = 'Button testing'
         fireEvent.click(getByText(text));

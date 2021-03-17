@@ -12,7 +12,8 @@ export {
 
 export {
   BlueDarkButton, 
-  BlueDarkOutlinedButton,
+  BlueDarkTransparentOutlinedButton,
+  BlueLightestOutlinedButton,
   RedButton,
   GreenButton
 } from './buttons'
