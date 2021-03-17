@@ -4,7 +4,8 @@ import { Meta, Story } from '@storybook/react'
 import {
   BlueDarkButton,
   BlueDarkOutlinedButton,
-  RedButton
+  RedButton,
+  GreenButton
 } from '../src/buttons'
 
 const meta: Meta = {
@@ -32,7 +33,7 @@ export const Red_Button: Story = () => (
     Button
   </RedButton>
 )
-// RedButton story
+// BlueDarkOutlinedButton story
 export const Blue_Outlined_Button: Story = () => (
   <BlueDarkOutlinedButton
     onClick={() => alert('Blue Otlined Button clicked')}
@@ -41,4 +42,15 @@ export const Blue_Outlined_Button: Story = () => (
   >
     Button
   </BlueDarkOutlinedButton>
+)
+
+//GreenButton story
+export const Green_Button: Story = () => (
+  <GreenButton
+    onClick={() => alert('Green Button clicked')}
+    disabled={false}
+    className="text-white font-bold"
+  >
+    Button
+  </GreenButton>
 )
