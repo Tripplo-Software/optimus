@@ -15,7 +15,7 @@ export const BlueDarkButton: FC<Props> = ({
   disabled,
 }: Props) => (
   <button
-    className={` ${className} rounded-lg bg-blue-300`}
+    className={` ${className} border-2 border-solid bg-blue-400`}
     onClick={onClick}
     disabled={disabled}
   >

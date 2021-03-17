@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Meta, Story } from '@storybook/react'
 
 import { BlueDarkButton } from '../src/buttons'
@@ -11,7 +10,7 @@ export default meta
 
 export const Blue: Story = () => (
   <BlueDarkButton
-    onClick={() => alert('hi')}
+    onClick={() => alert('Button clicked')}
     disabled={false}
     className="text-white-500"
   >
