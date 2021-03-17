@@ -2,13 +2,7 @@ import React from 'react'
 import { Meta, Story } from '@storybook/react'
 
 import {
-  BlueDarkButton,
-  BlueDarkTransparentOutlinedButton,
-  BlueLightestOutlinedButton,
-  BlueActionButton,
-  RedButton,
-  GreenButton,
-  Button,
+  Button
 } from '../src/buttons'
 
 const meta: Meta = {
@@ -16,70 +10,57 @@ const meta: Meta = {
 }
 export default meta
 
-//BlueDarkButton story
-export const Blue_Dark_Button: Story = () => (
-  <BlueDarkButton
-    onClick={() => alert('Blue Button clicked')}
-    disabled={false}
-    className="text-white font-semibold"
-  >
-    Button
-  </BlueDarkButton>
-)
-
-export const Default_button: Story = () => (
-  <Button variant="GreenButton" onClick={() => alert('Red Button clicked')}>
-    Test
+export const BlueActionButton: Story = () => (
+  <Button
+    className="text-white"
+    variant="BlueActionButton"
+    onClick={() => alert('Action Button clicked')}
+    disabled={false}>
+    +
   </Button>
 )
-// RedButton story
-export const Red_Button: Story = () => (
-  <RedButton
-    onClick={() => alert('Red Button clicked')}
-    disabled={false}
-    className="text-white font-semibold"
-  >
+export const BlueDarkButton: Story = () => (
+  <Button
+    className="text-white"
+    variant="BlueDarkButton"
+    onClick={() => alert('Blue Dark Button clicked')}
+    disabled={false}>
     Button
-  </RedButton>
+  </Button>
 )
-// BlueDarkTransparentOutlinedButton story
-export const Blue_Transparent_Outlined_Button: Story = () => (
-  <BlueDarkTransparentOutlinedButton
-    onClick={() => alert('Blue Otlined Button clicked')}
-    disabled={false}
-    className="text-white font-semibold"
-  >
+export const BlueDarkTransparentOutlinedButton: Story = () => (
+  <Button
+    className="text-white"
+    variant="BlueDarkTransparentOutlinedButton"
+    onClick={() => alert('Blue Dark Trans Button clicked')}
+    disabled={false}>
     Button
-  </BlueDarkTransparentOutlinedButton>
+  </Button>
 )
-
-//GreenButton story
-export const Green_Button: Story = () => (
-  <GreenButton
+export const BlueLightestOutlinedButton: Story = () => (
+  <Button
+    className="text-white"
+    variant="BlueLightestOutlinedButton"
+    onClick={() => alert('Blue Lightest Outlined Button clicked')}
+    disabled={false}>
+    Button
+  </Button>
+)
+export const Green_button: Story = () => (
+  <Button
+    className="text-white"
+    variant="GreenButton"
     onClick={() => alert('Green Button clicked')}
-    disabled={false}
-    className="text-white font-semibold"
-  >
+    disabled={false}>
     Button
-  </GreenButton>
+  </Button>
 )
-//BlueLightestOutlinedButton story
-export const Blue_Lightest_Outlined_Button: Story = () => (
-  <BlueLightestOutlinedButton
-    onClick={() => alert('Blue Lightest Outline Button clicked')}
-    disabled={false}
-    className="text-white font-semibold"
-  >
+export const Red_Button: Story = () => (
+  <Button
+    className="text-white"
+    variant="RedButton"
+    onClick={() => alert('Red Button clicked')}
+    disabled={false}>
     Button
-  </BlueLightestOutlinedButton>
-)
-//BlueActionButton story
-export const Blue_Action_Button: Story = () => (
-  <BlueActionButton
-    onClick={() => alert('Blue Action Button clicked')}
-    disabled={false}
-    className="text-white font-bold"
-  >
-    +
-  </BlueActionButton>
+  </Button>
 )

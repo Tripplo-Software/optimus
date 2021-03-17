@@ -11,10 +11,5 @@ export {
 } from './typography'
 
 export {
-  BlueDarkButton, 
-  BlueDarkTransparentOutlinedButton,
-  BlueLightestOutlinedButton,
-  BlueActionButton,
-  RedButton,
-  GreenButton
+  Button
 } from './buttons'

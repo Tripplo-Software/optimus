@@ -25,20 +25,40 @@ export const Button: FC<Props> = ({
   variant,
 }: Props) => {
   const types: any = {
-    BlueDarkTransparentOutlined: {
+    BlueActionButton: {
+      borderColor: '',
+      backgroundColor: 'bg-blue-500',
+      dimensions: 'py-2 px-4 rounded-lg',
+      textUtils: 'text-white font-poppins',
+    },
+    BlueDarkButton:{
+      borderColor: '',
+      backgroundColor: 'bg-blue-500',
+      dimensions: 'py-2 px-10 rounded',
+      textUtils: 'text-white font-poppins',
+    },
+    BlueDarkTransparentOutlinedButton: {
       borderColor: 'border-2 border-solid border-blue-500',
       backgroundColor: 'bg-transparent',
-      dimensions: 'py-2 px-10',
+      dimensions: 'py-2 px-10 rounded',
       textUtils: 'text-blue-500 font-poppins',
-    },
-    BlueAction: {
-      borderColor: 'red',
-      backgroundColor: 'bg-green-500',
     },
     GreenButton: {
       borderColor: '',
       backgroundColor: 'bg-green-500',
-      dimensions: 'py-2 px-10',
+      dimensions: 'py-2 px-10 rounded',
+      textUtils: 'text-white font-poppins',
+    },
+    BlueLightestOutlinedButton: {
+      borderColor: 'border-2 border-solid border-blue-500',
+      backgroundColor: 'bg-blue-100',
+      dimensions: 'py-2 px-10 rounded',
+      textUtils: 'text-blue-500 font-poppins',
+    },
+    RedButton: {
+      borderColor: '',
+      backgroundColor: 'bg-red-500',
+      dimensions: 'py-2 px-10 rounded',
       textUtils: 'text-white font-poppins',
     },
   }
