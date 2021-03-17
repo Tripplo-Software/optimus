@@ -11,19 +11,5 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local('Poppins-Regular'), url(../assets/fonts/Poppins-Regular.ttf) format('truetype');
+    src: local('Poppins-Regular'), url(./assets/fonts/Poppins-Regular.ttf) format('truetype');
 }
-@font-face {
-    font-family: 'Kanit';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Kanit-Regular'), url(../assets//fonts/Kanit-Regular.ttf) format('truetype');
-  }
-  @font-face {
-    font-family: 'Rubik Mono One';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src:  local('RubikMonoOne-Regular'), url(../assets//fonts/RubikMonoOne-Regular.ttf) format('truetype');
-  }

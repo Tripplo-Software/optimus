@@ -16,7 +16,7 @@ export default {
 
 // By passing optional props to this story, you can control the props of the component when
 // you consume the story in a test.
-export const Default = () => (
+export const Heading_1 = () => (
   <HeadingOne className="text-black-500">Heading 1</HeadingOne>
 )
 export const Heading_2 = () => (
