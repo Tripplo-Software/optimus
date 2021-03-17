@@ -21,4 +21,5 @@ export const RedButton: FC<Props> = ({
   >
     {children}
   </button>
-)
+  //weirdly I managed to fix that TS005 expected ; issue but putting this semicolon
+); 

@@ -10,4 +10,7 @@ export {
   Link,
 } from './typography'
 
-export { BlueDarkButton } from './buttons'
+export {
+  BlueDarkButton,
+  RedButton
+} from './buttons'
