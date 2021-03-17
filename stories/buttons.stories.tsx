@@ -8,11 +8,11 @@ const meta: Meta = {
 }
 export default meta
 
-export const Blue: Story = () => (
+export const Blue_Button: Story = () => (
   <BlueDarkButton
     onClick={() => alert('Button clicked')}
     disabled={false}
-    className="text-white-500"
+    className="text-white font-bold"
   >
     Button
   </BlueDarkButton>
