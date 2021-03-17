@@ -5,6 +5,7 @@ import {
     BlueDarkButton,
     BlueDarkTransparentOutlinedButton,
     BlueLightestOutlinedButton,
+    BlueActionButton,
     RedButton,
     GreenButton
 } from '../src/index'
@@ -81,6 +82,21 @@ describe('Button', () => {
                 disabled={false}
                 className="text-white-500">Button testing
             </BlueLightestOutlinedButton>)
+
+        const text = 'Button testing'
+        fireEvent.click(getByText(text));
+        expect(onClick).toHaveBeenCalled();
+    })
+    // BlueActionButton Test
+    it('[BlueActionButton] - it calls "onClick" prop on button click', () => {
+        afterEach(cleanup)
+        const onClick = jest.fn();
+        const { getByText } = render(
+            <BlueActionButton
+                onClick={onClick}
+                disabled={false}
+                className="text-white-500">Button testing
+            </BlueActionButton>)
 
         const text = 'Button testing'
         fireEvent.click(getByText(text));
