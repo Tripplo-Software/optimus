@@ -15,7 +15,7 @@ export const BlueActionButton: FC<Props> = ({
   disabled,
 }: Props) => (
   <button
-    className={` ${className} bg-blue-500 text-center py-2 px-4 rounded-lg`}
+    className={` ${className} bg-blue-500 text-center py-2 px-4 rounded-lg font-poppins`}
     onClick={onClick}
     disabled={disabled}
   >

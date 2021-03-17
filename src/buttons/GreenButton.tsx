@@ -15,7 +15,7 @@ export const GreenButton: FC<Props> = ({
     disabled,
 }: Props) => (
     <button
-        className={` ${className} bg-green-500 py-2 px-10 rounded`}
+        className={` ${className} bg-green-500 py-2 px-10 rounded font-poppins`}
         onClick={onClick}
         disabled={disabled}
     >

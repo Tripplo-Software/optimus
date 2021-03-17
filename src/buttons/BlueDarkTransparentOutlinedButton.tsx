@@ -15,7 +15,7 @@ export const BlueDarkTransparentOutlinedButton: FC<Props> = ({
   disabled,
 }: Props) => (
   <button
-    className={` ${className} border-2 border-solid border-blue-500 bg-transparent text-blue-500 py-2 px-10 rounded`}
+    className={` ${className} border-2 border-solid border-blue-500 bg-transparent text-blue-500 py-2 px-10 rounded font-poppins`}
     onClick={onClick}
     disabled={disabled}
   >
