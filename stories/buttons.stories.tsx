@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {MouseEvent} from 'react'
 import { Meta, Story } from '@storybook/react'
 
 import {
@@ -9,12 +9,16 @@ const meta: Meta = {
   title: 'Buttons',
 }
 export default meta
+const onClick=(event: MouseEvent) =>{
+  event.preventDefault();
+  alert(event.currentTarget.tagName + " clicked");
+}
 
 export const BlueActionButton: Story = () => (
   <Button
     className="text-white"
     variant="BlueActionButton"
-    onClick={() => alert('Action Button clicked')}
+    onClick={onClick}
     disabled={false}>
     +
   </Button>
@@ -23,7 +27,7 @@ export const BlueDarkButton: Story = () => (
   <Button
     className="text-white"
     variant="BlueDarkButton"
-    onClick={() => alert('Blue Dark Button clicked')}
+    onClick={onClick}
     disabled={false}>
     Button
   </Button>
@@ -32,7 +36,7 @@ export const BlueDarkTransparentOutlinedButton: Story = () => (
   <Button
     className="text-white"
     variant="BlueDarkTransparentOutlinedButton"
-    onClick={() => alert('Blue Dark Trans Button clicked')}
+    onClick={onClick}
     disabled={false}>
     Button
   </Button>
@@ -41,7 +45,7 @@ export const BlueLightestOutlinedButton: Story = () => (
   <Button
     className="text-white"
     variant="BlueLightestOutlinedButton"
-    onClick={() => alert('Blue Lightest Outlined Button clicked')}
+    onClick={onClick}
     disabled={false}>
     Button
   </Button>
@@ -50,7 +54,7 @@ export const Green_button: Story = () => (
   <Button
     className="text-white"
     variant="GreenButton"
-    onClick={() => alert('Green Button clicked')}
+    onClick={onClick}
     disabled={false}>
     Button
   </Button>
@@ -59,7 +63,7 @@ export const Red_Button: Story = () => (
   <Button
     className="text-white"
     variant="RedButton"
-    onClick={() => alert('Red Button clicked')}
+    onClick={onClick}
     disabled={false}>
     Button
   </Button>

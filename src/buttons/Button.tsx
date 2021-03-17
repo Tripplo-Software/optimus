@@ -10,11 +10,11 @@ import '../index.css'
  *
  * */
 export interface Props {
-  className: string
-  onClick: any
-  children: string
-  disabled: boolean
-  variant: string
+  className: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  children: string;
+  disabled: boolean;
+  variant: string;
 }
 
 export const Button: FC<Props> = ({
@@ -31,7 +31,7 @@ export const Button: FC<Props> = ({
       dimensions: 'py-2 px-4 rounded-lg',
       textUtils: 'text-white font-poppins',
     },
-    BlueDarkButton:{
+    BlueDarkButton: {
       borderColor: '',
       backgroundColor: 'bg-blue-500',
       dimensions: 'py-2 px-10 rounded',
