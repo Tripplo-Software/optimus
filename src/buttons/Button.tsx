@@ -10,7 +10,7 @@ import '../index.css'
  *
  * */
 export interface Props {
-  className: string;
+  className?: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   children: string;
   disabled: boolean;
@@ -27,13 +27,13 @@ export const Button: FC<Props> = ({
   const types: any = {
     BlueActionButton: {
       borderColor: '',
-      backgroundColor: 'bg-blue-500',
+      backgroundColor: 'bg-blue-300',
       dimensions: 'py-2 px-4 rounded-lg',
       textUtils: 'text-white font-poppins',
     },
     BlueDarkButton: {
       borderColor: '',
-      backgroundColor: 'bg-blue-500',
+      backgroundColor: 'bg-blue-400',
       dimensions: 'py-2 px-10 rounded',
       textUtils: 'text-white font-poppins',
     },
@@ -41,11 +41,11 @@ export const Button: FC<Props> = ({
       borderColor: 'border-2 border-solid border-blue-500',
       backgroundColor: 'bg-transparent',
       dimensions: 'py-2 px-10 rounded',
-      textUtils: 'text-blue-500 font-poppins',
+      textUtils: 'text-blue-400 font-poppins',
     },
     GreenButton: {
       borderColor: '',
-      backgroundColor: 'bg-green-500',
+      backgroundColor: 'bg-green-300',
       dimensions: 'py-2 px-10 rounded',
       textUtils: 'text-white font-poppins',
     },
@@ -57,7 +57,7 @@ export const Button: FC<Props> = ({
     },
     RedButton: {
       borderColor: '',
-      backgroundColor: 'bg-red-500',
+      backgroundColor: 'bg-red-300',
       dimensions: 'py-2 px-10 rounded',
       textUtils: 'text-white font-poppins',
     },
