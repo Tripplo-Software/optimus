@@ -1,4 +1,5 @@
 import React, { MouseEvent } from 'react'
+import { storiesOf } from "@storybook/react"
 import { Meta, Story } from '@storybook/react'
 
 import { Button } from '../src/buttons'
@@ -66,3 +67,77 @@ export const Red_Button: Story = () => (
     Button
   </Button>
 )
+storiesOf("Blue Action Button", module).add("Default", () => (
+  <Button
+    variant="BlueActionButton"
+    onClick={onClick}
+    disabled={false}>
+    +
+  </Button>
+)).add("Large", () => (
+  <Button
+    variant="BlueActionButton"
+    onClick={onClick}
+    disabled={false}
+    large={true}
+  >
+    +
+  </Button>
+)).add("Long", () => (
+  <Button
+    variant="BlueActionButton"
+    onClick={onClick}
+    disabled={false}
+    long={true}
+  >
+    +
+  </Button>
+)).add("Loading", () => (
+  <Button
+    variant="BlueActionButton"
+    onClick={onClick}
+    disabled={false}
+    large={true}
+    isloading={true}
+  >
+    +
+  </Button>
+))
+
+//BlueDarkButton stories
+storiesOf("Blue Dark Button", module).add("Default", () => (
+  <Button
+    variant="BlueDarkButton"
+    onClick={onClick}
+    disabled={false}>
+    Button
+  </Button>
+)).add("Large", () => (
+  <Button
+    variant="BlueDarkButton"
+    onClick={onClick}
+    disabled={false}
+    large={true}
+  >
+    Button
+  </Button>
+)).add("Long", () => (
+  <Button
+    variant="BlueDarkButton"
+    onClick={onClick}
+    disabled={false}
+    long={true}
+  >
+    Button
+  </Button>
+)).add("Loading", () => (
+  <Button
+    variant="BlueDarkButton"
+    onClick={onClick}
+    disabled={false}
+    large={true}
+    isloading={true}
+  >
+    Button
+  </Button>
+))

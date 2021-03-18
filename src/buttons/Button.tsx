@@ -15,6 +15,9 @@ export interface Props {
   children: string;
   disabled: boolean;
   variant: string;
+  large?: boolean;
+  long?: boolean;
+  isloading?: boolean;
 }
 
 export const Button: FC<Props> = ({
