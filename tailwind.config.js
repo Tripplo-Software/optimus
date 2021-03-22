@@ -231,9 +231,7 @@ module.exports = {
       default: '1',
     },
     fontFamily: {
-      poppins: ['Poppins'],
-      display: ['Rubik Mono One'],
-      body: ['Kanit'],
+      poppins: ['Poppins']
     },
     fontSize: {
       xs: '0.75rem',
