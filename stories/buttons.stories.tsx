@@ -1,77 +1,20 @@
 import React, { MouseEvent } from 'react'
 import { storiesOf } from "@storybook/react"
-import { Meta, Story } from '@storybook/react'
-
 import { Button } from '../src/buttons'
 
-const meta: Meta = {
-  title: 'Buttons',
-}
-export default meta
+
 const onClick = (event: MouseEvent) => {
   event.preventDefault();
   alert(event.currentTarget.tagName + " clicked");
 }
 
-export const BlueActionButton: Story = () => (
-  <Button
-    className="text-white"
-    variant="BlueActionButton"
-    onClick={onClick}
-    disabled={false}>
-    +
-  </Button>
-)
-export const BlueDarkButton: Story = () => (
-  <Button
-    className="text-white"
-    variant="BlueDarkButton"
-    onClick={onClick}
-    disabled={false}>
-    Button
-  </Button>
-)
-export const BlueDarkTransparentOutlinedButton: Story = () => (
-  <Button
-    className="text-white"
-    variant="BlueDarkTransparentOutlinedButton"
-    onClick={onClick}
-    disabled={false}>
-    Button
-  </Button>
-)
-export const BlueLightestOutlinedButton: Story = () => (
-  <Button
-    className="text-white"
-    variant="BlueLightestOutlinedButton"
-    onClick={onClick}
-    disabled={false}>
-    Button
-  </Button>
-)
-export const Green_button: Story = () => (
-  <Button
-    className="text-white"
-    variant="GreenButton"
-    onClick={onClick}
-    disabled={false}>
-    Button
-  </Button>
-)
-export const Red_Button: Story = () => (
-  <Button
-    className="text-white"
-    variant="RedButton"
-    onClick={onClick}
-    disabled={false}>
-    Button
-  </Button>
-)
 storiesOf("Blue Action Button", module).add("Default", () => (
   <Button
     variant="BlueActionButton"
     onClick={onClick}
-    disabled={false}>
+    disabled={false}
+    isloading={false}
+    size={'medium'}>
     +
   </Button>
 )).add("Large", () => (
@@ -79,7 +22,7 @@ storiesOf("Blue Action Button", module).add("Default", () => (
     variant="BlueActionButton"
     onClick={onClick}
     disabled={false}
-    large={true}
+    size={'large'}
   >
     +
   </Button>
@@ -88,7 +31,7 @@ storiesOf("Blue Action Button", module).add("Default", () => (
     variant="BlueActionButton"
     onClick={onClick}
     disabled={false}
-    long={true}
+    size={'long'}
   >
     +
   </Button>
@@ -96,9 +39,9 @@ storiesOf("Blue Action Button", module).add("Default", () => (
   <Button
     variant="BlueActionButton"
     onClick={onClick}
-    disabled={false}
-    large={true}
+    disabled={true}
     isloading={true}
+    size={'medium'}
   >
     +
   </Button>
@@ -109,7 +52,9 @@ storiesOf("Blue Dark Button", module).add("Default", () => (
   <Button
     variant="BlueDarkButton"
     onClick={onClick}
-    disabled={false}>
+    disabled={false}
+    size={'medium'}
+    >
     Button
   </Button>
 )).add("Large", () => (
@@ -117,7 +62,7 @@ storiesOf("Blue Dark Button", module).add("Default", () => (
     variant="BlueDarkButton"
     onClick={onClick}
     disabled={false}
-    large={true}
+    size='large'
   >
     Button
   </Button>
@@ -126,7 +71,7 @@ storiesOf("Blue Dark Button", module).add("Default", () => (
     variant="BlueDarkButton"
     onClick={onClick}
     disabled={false}
-    long={true}
+    size='long'
   >
     Button
   </Button>
@@ -134,9 +79,9 @@ storiesOf("Blue Dark Button", module).add("Default", () => (
   <Button
     variant="BlueDarkButton"
     onClick={onClick}
-    disabled={false}
-    large={true}
+    disabled={true}
     isloading={true}
+    size={'medium'}
   >
     Button
   </Button>

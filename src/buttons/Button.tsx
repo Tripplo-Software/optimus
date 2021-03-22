@@ -1,24 +1,29 @@
 import React, { FC } from 'react'
 import '../index.css'
+// @ts-ignore
+import styled, { keyframes } from 'styled-components'
+// @ts-ignore
+import loadingIcon from '../../assets/icons/loadingIcon.svg';
 
-/**
- * finsihed the types object in this file witth all the styles from the remain buttons
- * delete the other buttons and their stories from
- * create new stories with the variants
- * refactor the tests
- * add correct types for the onClick event
- *
- * */
+
 export interface Props {
   className?: string;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   children: string;
   disabled: boolean;
   variant: string;
-  large?: boolean;
-  long?: boolean;
+  size: string;
   isloading?: boolean;
 }
+const animate_loading = keyframes`
+  to {
+	  transform: rotate(360deg);
+  }
+`;
+const ImageLoading = styled.img`
+ display: inline-block;  
+ animation: ${animate_loading} 2s  infinite linear;
+`;
 
 export const Button: FC<Props> = ({
   className,
@@ -26,6 +31,8 @@ export const Button: FC<Props> = ({
   children,
   disabled,
   variant,
+  size = 'medium',
+  isloading,
 }: Props) => {
   const types: any = {
     BlueActionButton: {
@@ -68,13 +75,54 @@ export const Button: FC<Props> = ({
 
   const classNames: string = Object.values(types[variant]).join(' ')
 
-  return (
-    <button
-      className={` ${className} ${classNames}`}
-      onClick={onClick}
-      disabled={disabled || false}
-    >
-      {children}
-    </button>
-  )
+  if (!isloading) {
+    if (size === 'large') {
+      return (
+        <button
+          className={` ${className} ${classNames} ${'py-4'} `}
+          onClick={onClick}
+          disabled={disabled || false}
+        >
+          {children}
+        </button>
+      )
+    }
+    else if (size === 'long') {
+      return (
+        <button
+          className={` ${className} ${classNames} ${'px-16 '}`}
+          onClick={onClick}
+          disabled={disabled || false}
+        >
+          {children}
+        </button>
+      )
+
+    }
+    return (
+      <button
+        className={` ${className} ${classNames} ${'py-2 px-10'}`}
+        onClick={onClick}
+        disabled={disabled || false}
+        value={size || 'medium'}
+      >
+        {children}
+      </button>
+    )
+  }
+  else {
+    return (
+      <button
+        className={` ${className} ${classNames} ${'cursor-wait'}`}
+        onClick={onClick}
+        disabled={disabled}
+        value={size || 'medium'}
+      >
+        <ImageLoading
+          src={loadingIcon}
+          alt='loading...' />
+      </button>
+    )
+  }
+
 }
