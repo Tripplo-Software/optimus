@@ -2,47 +2,30 @@ import React, { FC } from 'react'
 import '../index.css'
 
 export interface Props {
-    className?: string;
     variant: string;
-    children: string;
+    className: string;
 }
 
 export const Typography: FC<Props> = ({
-    className,
     variant,
-    children,
+    className
 }: Props) => {
     const types: any = {
         HeadingOne: {
-            textUtils: 'text-black font-poppins',
+           component: 
+        },HeadingTwo:{
+            component:
+
         }
     }
 
-    const classNames: string = Object.values(types[variant]).join(' ')
-
-    // switch (variant) {
-    //     case 'HeadingOne':
-    //             <h1
-    //                 className={` ${className} ${classNames}`}
-    //             >
-    //                 {children}
-    //             </h1>
-    //             break;
-    //     default:
-    //         <p className={` ${className} ${classNames}`}>
-    //             {children}
-    //         </p>
-
-    // }
-    if(variant === 'HeadingOne'){
-        return (
-            <h1
-              className={` ${className} ${classNames}`}
-            >
-                {children}
-            </h1>
-          )
-    }
+    const Component: any = ()=> types[variant].component
+    
+   return (
+<Component 
+className={className}
+/>
+   )
 
 
 
