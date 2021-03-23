@@ -54,6 +54,7 @@ export const Button: FC<Props> = ({
       backgroundColor: 'bg-transparent',
       dimensions: 'py-2 px-10 rounded',
       textUtils: 'text-blue-400 font-poppins',
+      hoverState: 'hover:bg-blue-500 focus:outline-none hover:text-white'
     },
     GreenButton: {
       borderColor: '',
