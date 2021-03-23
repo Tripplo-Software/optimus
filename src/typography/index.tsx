@@ -6,6 +6,7 @@ import HeadingFive from './HeadingFive'
 import HeadingSix from './HeadingSix'
 import BodyText from './BodyText'
 import Link from './Link'
+import { Typography } from './Typography'
 
 export {
   HeadingOne,
@@ -16,6 +17,5 @@ export {
   HeadingSix,
   BodyText,
   Link,
+  Typography,
 }
-import { Typography } from './Typography'
-export { Typography } 
