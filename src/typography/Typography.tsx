@@ -27,3 +27,10 @@ export const Typography: FC<Props> = ({
   console.log('Component', Component, className)
   return <Child />
 }
+
+/**
+ *  finsh up the typograph + its test
+ *  make sure that when you run tsdx build it works
+ *
+ *
+ * */
