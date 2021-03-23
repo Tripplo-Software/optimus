@@ -9,7 +9,8 @@ import { storiesOf } from "@storybook/react"
 // export const Heading_1 = () => (
 //   <HeadingOne className="text-black-500">Heading 1</HeadingOne>
 // )
-storiesOf("Typography", module).add("Default", () => (
+let url: string = "https://www.tripplo.co/";
+storiesOf("Typography", module).add("Heading 1", () => (
   <Typography
     variant="HeadingOne">
       Heading 1
@@ -44,5 +45,17 @@ storiesOf("Typography", module).add("Default", () => (
   >
     Heading 6
   </Typography>
+)).add("Body Text", () => (
+  <Typography
+    variant="BodyText"
+  >
+    This is a paragraph
+  </Typography>
+)).add("Text Link", () => (
+  <Typography
+    variant="Link"
+    className="text-black-500 no-underline hover:underline"
+  >
+    This is a link
+  </Typography>
 ))
-
