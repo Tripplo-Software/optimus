@@ -2,6 +2,10 @@ import React, { FC } from 'react'
 import '../index.css'
 import HeadingOne from './HeadingOne'
 import HeadingTwo from './HeadingTwo'
+import HeadingThree from './HeadingThree'
+import HeadingFour from './HeadingFour'
+import HeadingFive from './HeadingFive'
+import HeadingSix from './HeadingSix'
 export interface Props {
   variant: string
   className?: string
@@ -20,11 +24,21 @@ export const Typography: FC<Props> = ({
     HeadingTwo: {
       component: HeadingTwo,
     },
+    HeadingThree: {
+      component: HeadingThree,
+    },
+    HeadingFour: {
+      component: HeadingFour,
+    },
+    HeadingFive: {
+      component: HeadingFive,
+    },HeadingSix: {
+      component: HeadingSix,
+    },
   }
 
   const Component: any = types[variant].component
   const Child = () => <Component>{children}</Component>
-  console.log('Component', Component, className)
   return <Child />
 }
 

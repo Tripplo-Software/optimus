@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 import '../index.css'
 // @ts-ignore
-// import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 // @ts-ignore
-// import loadingIcon from '../../assets/icons/loadingIcon.svg';
+import loadingIcon from '../../assets/icons/loadingIcon.svg';
 
 export interface Props {
   className?: string
@@ -14,15 +14,15 @@ export interface Props {
   size: string
   isloading?: boolean
 }
-// const animate_loading = keyframes`
-//   to {
-// 	  transform: rotate(360deg);
-//   }
-// `
-// const ImageLoading = styled.img`
-//   display: inline-block;
-//   animation: ${animate_loading} 2s infinite linear;
-// `
+const animate_loading = keyframes`
+  to {
+	  transform: rotate(360deg);
+  }
+`
+const ImageLoading = styled.img`
+  display: inline-block;
+  animation: ${animate_loading} 2s infinite linear;
+`
 
 export const Button: FC<Props> = ({
   className,
@@ -124,8 +124,8 @@ export const Button: FC<Props> = ({
         disabled={disabled}
         value={size || 'medium'}
       >
-        {/* <ImageLoading src={loadingIcon} alt="loading..." /> */}
-        {children}
+        <ImageLoading src={loadingIcon} alt="loading..." />
+        {/* {children} */}
       </button>
     )
   }

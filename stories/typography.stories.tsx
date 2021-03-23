@@ -14,5 +14,35 @@ storiesOf("Typography", module).add("Default", () => (
     variant="HeadingOne">
       Heading 1
   </Typography>
+)).add("Heading 2", () => (
+  <Typography
+    variant="HeadingTwo"
+  >
+    Heading 2
+  </Typography>
+)).add("Heading 3", () => (
+  <Typography
+    variant="HeadingThree"
+  >
+    Heading 3
+  </Typography>
+)).add("Heading 4", () => (
+  <Typography
+    variant="HeadingFour"
+  >
+    Heading 4
+  </Typography>
+)).add("Heading 5", () => (
+  <Typography
+    variant="HeadingFive"
+  >
+    Heading 5
+  </Typography>
+)).add("Heading 6", () => (
+  <Typography
+    variant="HeadingSix"
+  >
+    Heading 6
+  </Typography>
 ))
 
