@@ -17,3 +17,5 @@ export {
   BodyText,
   Link,
 }
+import { Typography } from './Typography'
+export { Typography } 
