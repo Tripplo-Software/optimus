@@ -13,6 +13,7 @@ describe('Button', () => {
                 variant="BlueDarkButton"
                 onClick={onClick}
                 disabled={false}
+                size="medium"
                 className="text-white">Button testing
             </Button>)
         const text = 'Button testing'
@@ -25,6 +26,7 @@ describe('Button', () => {
             variant={variantTest}
             onClick={onClick}
             disabled={false}
+            size="medium"
             className={testClassName}
         >Button testing
             </Button>)
@@ -40,6 +42,7 @@ describe('Button', () => {
                 variant="RedButton"
                 onClick={onClick}
                 disabled={false}
+                size="medium"
                 className="text-white-500">Button testing
             </Button>)
         fireEvent.click(getByText('Button testing'));
@@ -51,6 +54,7 @@ describe('Button', () => {
             variant={variantTest}
             onClick={onClick}
             disabled={false}
+            size="medium"
             className={testClassName}
         >Button testing
             </Button>)
@@ -65,6 +69,7 @@ describe('Button', () => {
                 variant="BlueDarkTransparentOutlinedButton"
                 onClick={onClick}
                 disabled={false}
+                size="medium"
                 className="text-white-500">Button testing
             </Button>)
 
@@ -78,6 +83,7 @@ describe('Button', () => {
             variant={variantTest}
             onClick={onClick}
             disabled={false}
+            size="medium"
             className={testClassName}
         >Button testing
             </Button>)
@@ -92,6 +98,7 @@ describe('Button', () => {
                 variant="GreenButton"
                 onClick={onClick}
                 disabled={false}
+                size="medium"
                 className="text-white-500">Button testing
             </Button>)
         const text = 'Button testing'
@@ -105,6 +112,7 @@ describe('Button', () => {
             variant={variantTest}
             onClick={onClick}
             disabled={false}
+            size="medium"
             className={testClassName}
         >Button testing
             </Button>)
@@ -119,6 +127,7 @@ describe('Button', () => {
                 variant="BlueLightestOutlinedButton"
                 onClick={onClick}
                 disabled={false}
+                size="medium"
                 className="text-white-500">Button testing
             </Button>)
         const text = 'Button testing'
@@ -131,6 +140,7 @@ describe('Button', () => {
             variant={variantTest}
             onClick={onClick}
             disabled={false}
+            size="medium"
             className={testClassName}
         >Button testing
             </Button>)
@@ -145,6 +155,7 @@ describe('Button', () => {
                 variant="BlueActionButton"
                 onClick={onClick}
                 disabled={false}
+                size="medium"
                 className="text-white-500">Button testing
             </Button>)
         const text = 'Button testing'
@@ -157,6 +168,7 @@ describe('Button', () => {
             variant={variantTest}
             onClick={onClick}
             disabled={false}
+            size="medium"
             className={testClassName}
         >Button testing
             </Button>)
