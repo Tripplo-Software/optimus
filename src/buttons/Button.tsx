@@ -46,6 +46,7 @@ export const Button: FC<Props> = ({
       backgroundColor: 'bg-blue-400',
       dimensions: 'py-2 px-10 rounded',
       textUtils: 'text-white font-poppins',
+      hoverState: 'hover:bg-blue-100 focus:outline-none  border-2 hover:border-blue-500 hover:text-blue-400'
     },
     BlueDarkTransparentOutlinedButton: {
       borderColor: 'border-2 border-solid border-blue-500',
@@ -79,7 +80,7 @@ export const Button: FC<Props> = ({
     if (size === 'large') {
       return (
         <button
-          className={` ${className} ${classNames} ${'py-4'} `}
+          className={` ${className} ${classNames} ${'py-4 font-bold'} `}
           onClick={onClick}
           disabled={disabled || false}
         >
@@ -90,7 +91,7 @@ export const Button: FC<Props> = ({
     else if (size === 'long') {
       return (
         <button
-          className={` ${className} ${classNames} ${'px-16 '}`}
+          className={` ${className} ${classNames} ${'px-16 font-bold'}`}
           onClick={onClick}
           disabled={disabled || false}
         >
