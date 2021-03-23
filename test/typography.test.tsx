@@ -126,12 +126,19 @@ describe('Typography', () => {
     it('[BodyText] - it matches the Text prop passed to it', () => {
         afterEach(cleanup)
 
-        const { getByText } = render(<BodyText className="text-black-3000" >Body Text testing</BodyText>)
+        const { getByText, container, rerender } = render(<BodyText className="text-black-3000" >Body Text testing</BodyText>)
 
         const text = 'Body Text testing'
         expect(getByText(text)).toHaveTextContent(
             'Body Text testing'
         )
+        //Checks if it returns the correct classname based on variant
+        const variantTest = "BodyText"
+        rerender(<Typography
+            variant={variantTest}
+        >Button testing
+            </Typography>)
+        expect(container.getElementsByClassName('BodyText'))
     })
     //Link Test
     it('[Link] - It renders the url prop passed to it', () => {
