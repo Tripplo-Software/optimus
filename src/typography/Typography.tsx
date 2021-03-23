@@ -49,7 +49,6 @@ export const Typography: FC<Props> = ({
   }
 
   const Component: any = types[variant].component
-  // const classNames: string = Object.values(types[variant]).join(' ')
   const Child = () =>
     variant === 'Link' ? (
       <Component className={`${className}`} url={href}>
@@ -60,10 +59,3 @@ export const Typography: FC<Props> = ({
     )
   return <Child />
 }
-
-/**
- *  finsh up the typograph + its test
- *  make sure that when you run tsdx build it works
- *
- *
- * */
