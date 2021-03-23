@@ -36,56 +36,91 @@ describe('Typography', () => {
     it('[HeadingTwo] - it matches the Text prop passed to it', () => {
         afterEach(cleanup)
 
-        const { getByText } = render(<HeadingTwo className="text-black-3000" >Heading 2 testing</HeadingTwo>)
+        const { getByText, container, rerender } = render(<HeadingTwo className="text-black-3000" >Heading 2 testing</HeadingTwo>)
 
         const text = 'Heading 2 testing'
         expect(getByText(text)).toHaveTextContent(
             'Heading 2 testing'
         )
+        //Checks if it returns the correct classname based on variant
+        const variantTest = "HeadingTwo"
+        rerender(<Typography
+            variant={variantTest}
+        >Button testing
+            </Typography>)
+        expect(container.getElementsByClassName('HeadingTwo'))
     })
     // Heading three Test
     it('[HeadingThree] - it matches the Text prop passed to it', () => {
         afterEach(cleanup)
 
-        const { getByText } = render(<HeadingThree className="text-black-3000" >Heading 3 testing</HeadingThree>)
+        const { getByText, container, rerender } = render(<HeadingThree className="text-black-3000" >Heading 3 testing</HeadingThree>)
 
         const text = 'Heading 3 testing'
         expect(getByText(text)).toHaveTextContent(
             'Heading 3 testing'
         )
+        //Checks if it returns the correct classname based on variant
+        const variantTest = "HeadingThree"
+        rerender(<Typography
+            variant={variantTest}
+        >Button testing
+            </Typography>)
+        expect(container.getElementsByClassName('HeadingThree'))
     })
-    //Heeading four Test
+    //Heading four Test
     it('[HeadingFour] - it matches the Text prop passed to it', () => {
         afterEach(cleanup)
 
-        const { getByText } = render(<HeadingFour className="text-black-3000" >Heading 4 testing</HeadingFour>)
+        const { getByText, container, rerender } = render(<HeadingFour className="text-black-3000" >Heading 4 testing</HeadingFour>)
 
         const text = 'Heading 4 testing'
         expect(getByText(text)).toHaveTextContent(
             'Heading 4 testing'
         )
+        //Checks if it returns the correct classname based on variant
+        const variantTest = "HeadingFour"
+        rerender(<Typography
+            variant={variantTest}
+        >Button testing
+            </Typography>)
+        expect(container.getElementsByClassName('HeadingFour'))
     })
-    //Heeading five Test
+    //Heading five Test
     it('[HeadingFive] - it matches the Text prop passed to it', () => {
         afterEach(cleanup)
 
-        const { getByText } = render(<HeadingFive className="text-black-3000" >Heading 5 testing</HeadingFive>)
+        const { getByText, container, rerender } = render(<HeadingFive className="text-black-3000" >Heading 5 testing</HeadingFive>)
 
         const text = 'Heading 5 testing'
         expect(getByText(text)).toHaveTextContent(
             'Heading 5 testing'
         )
+        //Checks if it returns the correct classname based on variant
+        const variantTest = "HeadingFive"
+        rerender(<Typography
+            variant={variantTest}
+        >Button testing
+            </Typography>)
+        expect(container.getElementsByClassName('HeadingFive'))
     })
-    //Heeading six Test
+    //Heading six Test
     it('[HeadingSix] - it matches the Text prop passed to it', () => {
         afterEach(cleanup)
 
-        const { getByText } = render(<HeadingSix className="text-black-3000" >Heading 6 testing</HeadingSix>)
+        const { getByText, container, rerender } = render(<HeadingSix className="text-black-3000" >Heading 6 testing</HeadingSix>)
 
         const text = 'Heading 6 testing'
         expect(getByText(text)).toHaveTextContent(
             'Heading 6 testing'
         )
+        //Checks if it returns the correct classname based on variant
+        const variantTest = "HeadingSix"
+        rerender(<Typography
+            variant={variantTest}
+        >Button testing
+            </Typography>)
+        expect(container.getElementsByClassName('HeadingSix'))
     })
     //Body Text Test
     it('[BodyText] - it matches the Text prop passed to it', () => {
