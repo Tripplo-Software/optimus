@@ -4,7 +4,7 @@ import HeadingOne from './HeadingOne'
 import HeadingTwo from './HeadingTwo'
 export interface Props {
   variant: string
-  className: string
+  className?: string
 }
 
 export const Typography: FC<Props> = ({ variant, className }: Props) => {
