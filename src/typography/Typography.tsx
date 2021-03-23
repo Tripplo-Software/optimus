@@ -6,6 +6,8 @@ import HeadingThree from './HeadingThree'
 import HeadingFour from './HeadingFour'
 import HeadingFive from './HeadingFive'
 import HeadingSix from './HeadingSix'
+import BodyText from './BodyText'
+import Link from './Link'
 export interface Props {
   variant: string
   className?: string
@@ -35,10 +37,18 @@ export const Typography: FC<Props> = ({
     },HeadingSix: {
       component: HeadingSix,
     },
+    BodyText: {
+      component: BodyText,
+    },
+    Link: {
+      component: Link,
+    },
   }
 
   const Component: any = types[variant].component
-  const Child = () => <Component>{children}</Component>
+  const Child = () => <Component
+  className={`${className}`}
+  >{children}</Component>
   return <Child />
 }
 
