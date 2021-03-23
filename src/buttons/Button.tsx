@@ -40,13 +40,14 @@ export const Button: FC<Props> = ({
       backgroundColor: 'bg-blue-300',
       dimensions: 'py-2 px-4 rounded-lg',
       textUtils: 'text-white font-poppins',
+      hoverState: 'hover:bg-blue-100 focus:outline-none  border-2 hover:border-blue-300 hover:text-blue-400'
     },
     BlueDarkButton: {
       borderColor: '',
       backgroundColor: 'bg-blue-400',
       dimensions: 'py-2 px-10 rounded',
       textUtils: 'text-white font-poppins',
-      hoverState: 'hover:bg-blue-100 focus:outline-none  border-2 hover:border-blue-500 hover:text-blue-400'
+      hoverState: 'hover:bg-blue-100 focus:outline-none  border-2 hover:border-blue-300 hover:text-blue-400'
     },
     BlueDarkTransparentOutlinedButton: {
       borderColor: 'border-2 border-solid border-blue-500',
