@@ -11,18 +11,26 @@ import {
 } from '../src/index'
 import { render, cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
+import {Typography} from '../src/index'
 
 describe('Typography', () => {
     // Heading one Test
     it('[HeadingOne] - it matches the Text prop passed to it', () => {
         afterEach(cleanup)
 
-        const { getByText } = render(<HeadingOne className="text-black-3000" >Heading 1 testing</HeadingOne>)
+        const { getByText, container, rerender } = render(<HeadingOne className="text-black-3000" >Heading 1 testing</HeadingOne>)
 
         const text = 'Heading 1 testing'
         expect(getByText(text)).toHaveTextContent(
             'Heading 1 testing'
         )
+        //Checks if it returns the correct classname based on variant
+        const variantTest = "HeadingOne"
+        rerender(<Typography
+            variant={variantTest}
+        >Button testing
+            </Typography>)
+        expect(container.getElementsByClassName('HeadingOne'))
     })
     // Heading two Test
     it('[HeadingTwo] - it matches the Text prop passed to it', () => {
