@@ -19,6 +19,7 @@ export const Typography: FC<Props> = ({
   variant,
   className,
   children,
+  href,
 }: Props) => {
   const types: any = {
     HeadingOne: {
@@ -35,7 +36,8 @@ export const Typography: FC<Props> = ({
     },
     HeadingFive: {
       component: HeadingFive,
-    }, HeadingSix: {
+    },
+    HeadingSix: {
       component: HeadingSix,
     },
     BodyText: {
@@ -43,15 +45,19 @@ export const Typography: FC<Props> = ({
     },
     Link: {
       component: Link,
-
     },
   }
 
   const Component: any = types[variant].component
   // const classNames: string = Object.values(types[variant]).join(' ')
-  const Child = () => <Component
-    className={`${className}`}
-  >{children}</Component>
+  const Child = () =>
+    variant === 'Link' ? (
+      <Component className={`${className}`} url={href}>
+        {children}
+      </Component>
+    ) : (
+      <Component className={`${className}`}>{children}</Component>
+    )
   return <Child />
 }
 
