@@ -88,7 +88,7 @@ export const Button: FC<Props> = ({
     if (size === 'large') {
       return (
         <button
-          className={` ${className} ${classNames} ${'py-4 font-bold'} `}
+          className={` ${className} ${classNames} py-4 font-bold `}
           onClick={onClick}
           disabled={disabled || false}
         >
@@ -98,7 +98,7 @@ export const Button: FC<Props> = ({
     } else if (size === 'long') {
       return (
         <button
-          className={` ${className} ${classNames} ${'px-16 font-bold'}`}
+          className={` ${className} ${classNames} px-16 font-bold`}
           onClick={onClick}
           disabled={disabled || false}
         >
@@ -108,7 +108,7 @@ export const Button: FC<Props> = ({
     }
     return (
       <button
-        className={` ${className} ${classNames} ${'py-2 px-10'}`}
+        className={` ${className} ${classNames} py-2 px-10`}
         onClick={onClick}
         disabled={disabled || false}
         value={size || 'medium'}
@@ -119,7 +119,7 @@ export const Button: FC<Props> = ({
   } else {
     return (
       <button
-        className={` ${className} ${classNames} ${'cursor-wait'}`}
+        className={` ${className} ${classNames} cursor-wait`}
         onClick={onClick}
         disabled={disabled}
         value={size || 'medium'}
