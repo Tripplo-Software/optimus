@@ -11,7 +11,7 @@ import {
 } from '../src/index'
 import { render, cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import {Typography} from '../src/index'
+import { Typography } from '../src/index'
 
 describe('Typography', () => {
     // Heading one Test
@@ -143,7 +143,7 @@ describe('Typography', () => {
     //Link Test
     it('[Link] - It renders the url prop passed to it', () => {
         const link = 'https://www.tripplo.co/'
-        const { getByRole } = render(
+        const { getByRole, container, rerender } = render(
             <Link
                 url={link}
                 className="text-black-3000 underline"
@@ -151,5 +151,12 @@ describe('Typography', () => {
         )
         //The <a> tag is considered a Role, hence use getByRole.
         expect(getByRole('link')).toHaveAttribute('href', 'https://www.tripplo.co/');
+        //Checks if it returns the correct classname based on variant
+        const variantTest = "Link"
+        rerender(<Typography
+            variant={variantTest}
+        >Button testing
+        </Typography>)
+        expect(container.getElementsByClassName('Link'))
     })
 })
