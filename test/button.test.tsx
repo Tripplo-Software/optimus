@@ -14,23 +14,22 @@ describe('Button', () => {
                 onClick={onClick}
                 disabled={false}
                 size="medium"
-                className="text-white">Button testing
+            >Button testing
             </Button>)
         const text = 'Button testing'
         fireEvent.click(getByText(text));
         expect(onClick).toHaveBeenCalled();
         //Checks if it returns the correct classname based on variant
-        const variantTest = "BlueDarkButton"
-        const testClassName = "bg-blue-400 py-2 px- rounded text-white font-poppins"
+        const testClassName = "border-white bg-blue-400 py-2 px-10 rounded text-white font-poppins hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400"
         rerender(<Button
-            variant={variantTest}
+            variant="BlueDarkButton"
             onClick={onClick}
             disabled={false}
             size="medium"
             className={testClassName}
         >Button testing
             </Button>)
-        expect(container.getElementsByClassName('BlueDarkButton'))
+        expect(container.getElementsByClassName(testClassName))
     })
 
     // RedButton Test
@@ -48,17 +47,16 @@ describe('Button', () => {
         fireEvent.click(getByText('Button testing'));
         expect(onClick).toHaveBeenCalled();
         //Checks if it returns the correct classname based on variant
-        const variantTest = "RedButton"
-        const testClassName = "bg-red-300 py-2 px-10 rounded text-white font-poppins"
+        const testClassName = "border-white bg-red-300 py-2 px-10 rounded text-white font-poppins hover:bg-red-100 focus:outline-none  border-2 hover:border-red-500 hover:text-red-500"
         rerender(<Button
-            variant={variantTest}
+            variant="RedButton"
             onClick={onClick}
             disabled={false}
             size="medium"
             className={testClassName}
         >Button testing
             </Button>)
-        expect(container.getElementsByClassName('RedButton'))
+        expect(container.getElementsByClassName(testClassName))
     })
     // BlueDarkTransparentOutlinedButton Test
     it('[BlueDarkTransparentOutlinedButton] - it calls "onClick" prop on button click', () => {
@@ -70,24 +68,23 @@ describe('Button', () => {
                 onClick={onClick}
                 disabled={false}
                 size="medium"
-                className="text-white-500">Button testing
+            >Button testing
             </Button>)
 
         const text = 'Button testing'
         fireEvent.click(getByText(text));
         expect(onClick).toHaveBeenCalled();
         //Checks if it returns the correct classname based on variant
-        const variantTest = "BlueDarkTransparentOutlinedButton"
-        const testClassName = "boder-2 border-solid border-blue-500 bg-transparent py-2 px-10 rounded text-blue-400 font-poppins"
+        const testClassName = "boder-2 border-solid border-blue-500 bg-transparent py-2 px-10 rounded text-blue-400 font-poppins hover:bg-blue-500 focus:outline-none hover:text-white"
         rerender(<Button
-            variant={variantTest}
+            variant="BlueDarkTransparentOutlinedButton"
             onClick={onClick}
             disabled={false}
             size="medium"
             className={testClassName}
         >Button testing
             </Button>)
-        expect(container.getElementsByClassName('BlueDarkTransparentOutlinedButton'))
+        expect(container.getElementsByClassName(testClassName))
     })
     // GreenButton 
     it('[GreenButton] - it calls "onClick" prop on button click', () => {
@@ -99,24 +96,23 @@ describe('Button', () => {
                 onClick={onClick}
                 disabled={false}
                 size="medium"
-                className="text-white-500">Button testing
+            >Button testing
             </Button>)
         const text = 'Button testing'
         fireEvent.click(getByText(text));
         expect(onClick).toHaveBeenCalled();
 
         //Checks if it returns the correct classname based on variant
-        const variantTest = "BlueDarkButton"
-        const testClassName = "bg-green-300 py-2 px-10 rounded text-white font-poppins"
+        const testClassName = "border-white bg-green-300 py-2 px-10 rounded text-white font-poppins hover:bg-green-100 focus:outline-none border-2 hover:border-green-500 hover:text-green-500"
         rerender(<Button
-            variant={variantTest}
+            variant="BlueDarkButton"
             onClick={onClick}
             disabled={false}
             size="medium"
             className={testClassName}
         >Button testing
             </Button>)
-        expect(container.getElementsByClassName('GreenButton'))
+        expect(container.getElementsByClassName(testClassName))
     })
     // BlueLightestOutlinedButton Test
     it('[BlueLightestOutlinedButton] - it calls "onClick" prop on button click', () => {
@@ -128,23 +124,22 @@ describe('Button', () => {
                 onClick={onClick}
                 disabled={false}
                 size="medium"
-                className="text-white-500">Button testing
+            >Button testing
             </Button>)
         const text = 'Button testing'
         fireEvent.click(getByText(text));
         expect(onClick).toHaveBeenCalled();
         //Checks if it returns the correct classname based on variant
-        const variantTest = "BlueLightestOutlinedButton"
-        const testClassName = "border-2 border-solid border-blue-500 bg-blue-100 py-2 px-10 rounded text-blue-500 font-poppins"
+        const testClassName = "border-2 border-solid border-blue-500 bg-blue-100 py-2 px-10 rounded text-blue-500 font-poppins hover:bg-blue-300 focus:outline-none hover:text-white"
         rerender(<Button
-            variant={variantTest}
+            variant="BlueLightestOutlinedButton"
             onClick={onClick}
             disabled={false}
             size="medium"
             className={testClassName}
         >Button testing
             </Button>)
-        expect(container.getElementsByClassName('RedButton'))
+        expect(container.getElementsByClassName(testClassName))
     })
     // BlueActionButton Test
     it('[BlueActionButton] - it calls "onClick" prop on button click', () => {
@@ -156,22 +151,21 @@ describe('Button', () => {
                 onClick={onClick}
                 disabled={false}
                 size="medium"
-                className="text-white-500">Button testing
+            >Button testing
             </Button>)
         const text = 'Button testing'
         fireEvent.click(getByText(text));
         expect(onClick).toHaveBeenCalled();
         //Checks if it returns the correct classname based on variant
-        const variantTest = "BlueActionButton"
-        const testClassName = "bg-blue-400 py-2 px-4 rounded text-white font-poppins"
+        const testClassName = "border-white bg-blue-300 py-2 px-4 rounded-lg text-white font-poppins hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-300 hover:text-blue-400"
         rerender(<Button
-            variant={variantTest}
+            variant="BlueActionButton"
             onClick={onClick}
             disabled={false}
             size="medium"
             className={testClassName}
         >Button testing
             </Button>)
-        expect(container.getElementsByClassName('BlueActionButton'))
+        expect(container.getElementsByClassName(testClassName))
     })
 })

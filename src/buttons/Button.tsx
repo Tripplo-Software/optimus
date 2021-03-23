@@ -37,7 +37,7 @@ export const Button: FC<Props> = ({
     BlueActionButton: {
       borderColor: 'border-white',
       backgroundColor: 'bg-blue-300',
-      dimensions: 'py-2 px-4 rounded-lg',
+      dimensions: 'py-2 border-white px-4 rounded-lg',
       textUtils: 'text-white font-poppins',
       hoverState:
         'hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-300 hover:text-blue-400',
@@ -83,6 +83,7 @@ export const Button: FC<Props> = ({
   }
 
   const classNames: string = Object.values(types[variant]).join(' ')
+  console.log(classNames);
 
   if (!isloading) {
     if (size === 'large') {
