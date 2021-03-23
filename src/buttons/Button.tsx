@@ -36,18 +36,18 @@ export const Button: FC<Props> = ({
 }: Props) => {
   const types: any = {
     BlueActionButton: {
-      borderColor: '',
+      borderColor: 'border-white',
       backgroundColor: 'bg-blue-300',
       dimensions: 'py-2 px-4 rounded-lg',
       textUtils: 'text-white font-poppins',
-      hoverState: 'hover:bg-blue-100 focus:outline-none  border-2 hover:border-blue-300 hover:text-blue-400'
+      hoverState: 'hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-300 hover:text-blue-400'
     },
     BlueDarkButton: {
-      borderColor: '',
+      borderColor: 'border-white',
       backgroundColor: 'bg-blue-400',
       dimensions: 'py-2 px-10 rounded',
       textUtils: 'text-white font-poppins',
-      hoverState: 'hover:bg-blue-100 focus:outline-none  border-2 hover:border-blue-300 hover:text-blue-400'
+      hoverState: 'hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400'
     },
     BlueDarkTransparentOutlinedButton: {
       borderColor: 'border-2 border-solid border-blue-500',
@@ -57,22 +57,28 @@ export const Button: FC<Props> = ({
       hoverState: 'hover:bg-blue-500 focus:outline-none hover:text-white'
     },
     GreenButton: {
-      borderColor: '',
+      borderColor: 'border-white',
       backgroundColor: 'bg-green-300',
       dimensions: 'py-2 px-10 rounded',
       textUtils: 'text-white font-poppins',
+      hoverState: 'hover:bg-green-100 focus:outline-none border-2 hover:border-green-500 hover:text-green-500'
+
     },
     BlueLightestOutlinedButton: {
       borderColor: 'border-2 border-solid border-blue-500',
       backgroundColor: 'bg-blue-100',
       dimensions: 'py-2 px-10 rounded',
       textUtils: 'text-blue-500 font-poppins',
+      hoverState: 'hover:bg-blue-300 focus:outline-none hover:text-white'
+
     },
     RedButton: {
-      borderColor: '',
+      borderColor: 'border-white',
       backgroundColor: 'bg-red-300',
       dimensions: 'py-2 px-10 rounded',
       textUtils: 'text-white font-poppins',
+      hoverState: 'hover:bg-red-100 focus:outline-none  border-2 hover:border-red-500 hover:text-red-500'
+
     },
   }
 
