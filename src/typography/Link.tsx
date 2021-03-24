@@ -9,7 +9,7 @@ interface Props {
 const Link: FC<Props> = ({ children, className, url }: Props) => (
   <a
     href={url}
-    className={` ${className} text-black font-poppins no-underline hover:underline hover:text-blue-500`}
+    className={` ${className} text-black font-poppins no-underline hover:underline hover:text-blue-400`}
   >
     {children}
   </a>

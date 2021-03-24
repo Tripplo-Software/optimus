@@ -25,12 +25,12 @@ describe('Typography', () => {
             'Heading 1 testing'
         )
         //Checks if it returns the correct classname based on variant
-        const variantTest = "HeadingOne"
+        const variantTest = "text-6xl text-black font-poppins"
         rerender(<Typography
-            variant={variantTest}
+            variant="HeadingOne"
         >Button testing
             </Typography>)
-        expect(container.getElementsByClassName('HeadingOne'))
+        expect(container.getElementsByClassName(variantTest))
     })
     // Heading two Test
     it('[HeadingTwo] - it matches the Text prop passed to it', () => {
@@ -43,12 +43,12 @@ describe('Typography', () => {
             'Heading 2 testing'
         )
         //Checks if it returns the correct classname based on variant
-        const variantTest = "HeadingTwo"
+        const variantTest = "text-5xl text-black font-poppins"
         rerender(<Typography
-            variant={variantTest}
+            variant="HeadingTwo"
         >Button testing
             </Typography>)
-        expect(container.getElementsByClassName('HeadingTwo'))
+        expect(container.getElementsByClassName(variantTest))
     })
     // Heading three Test
     it('[HeadingThree] - it matches the Text prop passed to it', () => {
@@ -61,12 +61,12 @@ describe('Typography', () => {
             'Heading 3 testing'
         )
         //Checks if it returns the correct classname based on variant
-        const variantTest = "HeadingThree"
+        const variantTest = "text-4xl text-black font-poppins"
         rerender(<Typography
-            variant={variantTest}
+            variant="HeadingThree"
         >Button testing
             </Typography>)
-        expect(container.getElementsByClassName('HeadingThree'))
+        expect(container.getElementsByClassName(variantTest))
     })
     //Heading four Test
     it('[HeadingFour] - it matches the Text prop passed to it', () => {
@@ -79,12 +79,12 @@ describe('Typography', () => {
             'Heading 4 testing'
         )
         //Checks if it returns the correct classname based on variant
-        const variantTest = "HeadingFour"
+        const variantTest = "text-3xl text-black font-poppins"
         rerender(<Typography
-            variant={variantTest}
+            variant="HeadingFour"
         >Button testing
             </Typography>)
-        expect(container.getElementsByClassName('HeadingFour'))
+        expect(container.getElementsByClassName(variantTest))
     })
     //Heading five Test
     it('[HeadingFive] - it matches the Text prop passed to it', () => {
@@ -97,12 +97,12 @@ describe('Typography', () => {
             'Heading 5 testing'
         )
         //Checks if it returns the correct classname based on variant
-        const variantTest = "HeadingFive"
+        const variantTest = "text-2xl text-black font-poppins"
         rerender(<Typography
-            variant={variantTest}
+            variant="HeadingFive"
         >Button testing
             </Typography>)
-        expect(container.getElementsByClassName('HeadingFive'))
+        expect(container.getElementsByClassName(variantTest))
     })
     //Heading six Test
     it('[HeadingSix] - it matches the Text prop passed to it', () => {
@@ -115,12 +115,12 @@ describe('Typography', () => {
             'Heading 6 testing'
         )
         //Checks if it returns the correct classname based on variant
-        const variantTest = "HeadingSix"
+        const variantTest = "text-1xl text-black font-poppins"
         rerender(<Typography
-            variant={variantTest}
+            variant="HeadingSix"
         >Button testing
             </Typography>)
-        expect(container.getElementsByClassName('HeadingSix'))
+        expect(container.getElementsByClassName(variantTest))
     })
     //Body Text Test
     it('[BodyText] - it matches the Text prop passed to it', () => {
@@ -133,12 +133,12 @@ describe('Typography', () => {
             'Body Text testing'
         )
         //Checks if it returns the correct classname based on variant
-        const variantTest = "BodyText"
+        const variantTest = "text-black text-base"
         rerender(<Typography
-            variant={variantTest}
+            variant="BodyText"
         >Button testing
             </Typography>)
-        expect(container.getElementsByClassName('BodyText'))
+        expect(container.getElementsByClassName(variantTest))
     })
     //Link Test
     it('[Link] - It renders the url prop passed to it', () => {
@@ -152,11 +152,11 @@ describe('Typography', () => {
         //The <a> tag is considered a Role, hence use getByRole.
         expect(getByRole('link')).toHaveAttribute('href', 'https://www.tripplo.co/');
         //Checks if it returns the correct classname based on variant
-        const variantTest = "Link"
+        const variantTest = "text-black font-poppins no-underline hover:underline hover:text-blue-500"
         rerender(<Typography
-            variant={variantTest}
+            variant="Link"
         >Button testing
         </Typography>)
-        expect(container.getElementsByClassName('Link'))
+        expect(container.getElementsByClassName(variantTest))
     })
 })
