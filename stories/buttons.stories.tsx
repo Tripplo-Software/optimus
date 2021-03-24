@@ -164,45 +164,43 @@ storiesOf("Blue Lightest Outlined Button", module).add("Default", () => (
   </Button>
 ))
 
-// //GreenButton stories
-// storiesOf("Green Button", module).add("Default", () => (
-//   <Button
-//     variant="GreenButton"
-//     onClick={onClick}
-//     disabled={false}
-//     size={'medium'}
-//     >
-//     Button
-//   </Button>
-// )).add("Large", () => (
-//   <Button
-//     variant="GreenButton"
-//     onClick={onClick}
-//     disabled={false}
-//     size='large'
-//   >
-//     Button
-//   </Button>
-// )).add("Long", () => (
-//   <Button
-//     variant="GreenButton"
-//     onClick={onClick}
-//     disabled={false}
-//     size='long'
-//   >
-//     Button
-//   </Button>
-// )).add("Loading", () => (
-//   <Button
-//     variant="GreenButton"
-//     onClick={onClick}
-//     disabled={true}
-//     isloading={true}
-//     size={'medium'}
-//   >
-//     Button
-//   </Button>
-// ))
+//GreenButton stories
+storiesOf("Green Button", module).add("Default", () => (
+  <Button
+    variant="GreenButton"
+    onClick={onClick}
+    disabled={false}
+    >
+    Button
+  </Button>
+)).add("Long", () => (
+  <Button
+    variant="GreenButton"
+    onClick={onClick}
+    disabled={false}
+    size='long'
+  >
+    Button
+  </Button>
+)).add("Small", () => (
+  <Button
+    variant="GreenButton"
+    onClick={onClick}
+    disabled={false}
+    size='small'
+  >
+    Button
+  </Button>
+)).add("Loading", () => (
+  <Button
+    variant="GreenButton"
+    onClick={onClick}
+    disabled={true}
+    isloading={true}
+  >
+    Button
+  </Button>
+))
 
 // //RedButton stories
 // storiesOf("Red Button", module).add("Default", () => (

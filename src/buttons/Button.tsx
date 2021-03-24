@@ -93,7 +93,7 @@ const selectedDimenison = dimensons[size]
       hoverState: 'hover:bg-blue-500 focus:outline-none hover:text-white',
     },
     GreenButton: {
-      borderColor: 'border-white',
+      borderColor: 'border-transparent',
       backgroundColor: 'bg-green-300',
       dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
       textUtils: 'text-white font-poppins rounded',
