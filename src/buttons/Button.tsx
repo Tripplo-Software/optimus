@@ -32,6 +32,24 @@ export const Button: FC<Props> = ({
   size = 'medium',
   isloading,
 }: Props) => {
+  const dimensions = {
+    regular: {
+      height: 'py-2',
+      width: 'px-4',
+    },
+    square: {
+      height: 'py-2',
+      width: 'px-1',
+    },
+    long: {
+      height: 'py-2',
+      width: 'px-6',
+    },
+    small: {
+      height: 'py-2',
+      width: 'px-2',
+    },
+  }
   const types: any = {
     BlueActionButton: {
       borderColor: 'border-white',
