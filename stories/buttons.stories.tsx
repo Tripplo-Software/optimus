@@ -57,7 +57,6 @@ storiesOf("Blue Dark Button", module).add("Default", () => (
     variant="BlueDarkButton"
     onClick={onClick}
     disabled={false}
-    size="regular"
     >
     Button
   </Button>
@@ -85,50 +84,47 @@ storiesOf("Blue Dark Button", module).add("Default", () => (
     onClick={onClick}
     disabled={true}
     isloading={true}
-    size='regular'
   >
     Button
   </Button>
 ))
-// //BlueDarkTransparentOutlinedButton stories
-// storiesOf("BlueDarkTransparentOutlinedButton", module).add("Default", () => (
-//   <Button
-//     variant="BlueDarkTransparentOutlinedButton"
-//     onClick={onClick}
-//     disabled={false}
-//     size={'medium'}
-//     >
-//     Button
-//   </Button>
-// )).add("Large", () => (
-//   <Button
-//     variant="BlueDarkTransparentOutlinedButton"
-//     onClick={onClick}
-//     disabled={false}
-//     size='large'
-//   >
-//     Button
-//   </Button>
-// )).add("Long", () => (
-//   <Button
-//     variant="BlueDarkTransparentOutlinedButton"
-//     onClick={onClick}
-//     disabled={false}
-//     size='long'
-//   >
-//     Button
-//   </Button>
-// )).add("Loading", () => (
-//   <Button
-//     variant="BlueDarkTransparentOutlinedButton"
-//     onClick={onClick}
-//     disabled={true}
-//     isloading={true}
-//     size={'medium'}
-//   >
-//     Button
-//   </Button>
-// ))
+//BlueDarkTransparentOutlinedButton stories
+storiesOf("BlueDarkTransparentOutlinedButton", module).add("Default", () => (
+  <Button
+    variant="BlueDarkTransparentOutlinedButton"
+    onClick={onClick}
+    disabled={false}
+    >
+    Button
+  </Button>
+)).add("Long", () => (
+  <Button
+    variant="BlueDarkTransparentOutlinedButton"
+    onClick={onClick}
+    disabled={false}
+    size="long"
+  >
+    Button
+  </Button>
+)).add("Small", () => (
+  <Button
+    variant="BlueDarkTransparentOutlinedButton"
+    onClick={onClick}
+    disabled={false}
+    size='small'
+  >
+    Button
+  </Button>
+)).add("Loading", () => (
+  <Button
+    variant="BlueDarkTransparentOutlinedButton"
+    onClick={onClick}
+    disabled={true}
+    isloading={true}
+  >
+    Button
+  </Button>
+))
 
 // //BlueLightestOutlinedButton stories
 // storiesOf("Blue Lightest Outlined Button", module).add("Default", () => (
