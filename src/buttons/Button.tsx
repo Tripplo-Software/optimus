@@ -70,7 +70,7 @@ const selectedDimenison = dimensons[size]
   const selectedDimenison: any = dimensions[size]
   const types: any = {
     BlueActionButton: {
-      borderColor: 'border-white',
+      borderColor: '',
       backgroundColor: 'bg-blue-400',
       dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
       textUtils: 'text-white font-poppins border-white rounded-lg',
