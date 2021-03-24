@@ -126,45 +126,43 @@ storiesOf("BlueDarkTransparentOutlinedButton", module).add("Default", () => (
   </Button>
 ))
 
-// //BlueLightestOutlinedButton stories
-// storiesOf("Blue Lightest Outlined Button", module).add("Default", () => (
-//   <Button
-//     variant="BlueLightestOutlinedButton"
-//     onClick={onClick}
-//     disabled={false}
-//     size={'medium'}
-//     >
-//     Button
-//   </Button>
-// )).add("Large", () => (
-//   <Button
-//     variant="BlueLightestOutlinedButton"
-//     onClick={onClick}
-//     disabled={false}
-//     size='large'
-//   >
-//     Button
-//   </Button>
-// )).add("Long", () => (
-//   <Button
-//     variant="BlueLightestOutlinedButton"
-//     onClick={onClick}
-//     disabled={false}
-//     size='long'
-//   >
-//     Button
-//   </Button>
-// )).add("Loading", () => (
-//   <Button
-//     variant="BlueLightestOutlinedButton"
-//     onClick={onClick}
-//     disabled={true}
-//     isloading={true}
-//     size={'medium'}
-//   >
-//     Button
-//   </Button>
-// ))
+//BlueLightestOutlinedButton stories
+storiesOf("Blue Lightest Outlined Button", module).add("Default", () => (
+  <Button
+    variant="BlueLightestOutlinedButton"
+    onClick={onClick}
+    disabled={false}
+    >
+    Button
+  </Button>
+)).add("Long", () => (
+  <Button
+    variant="BlueLightestOutlinedButton"
+    onClick={onClick}
+    disabled={false}
+    size='long'
+  >
+    Button
+  </Button>
+)).add("Small", () => (
+  <Button
+    variant="BlueLightestOutlinedButton"
+    onClick={onClick}
+    disabled={false}
+    size='small'
+  >
+    Button
+  </Button>
+)).add("Loading", () => (
+  <Button
+    variant="BlueLightestOutlinedButton"
+    onClick={onClick}
+    disabled={true}
+    isloading={true}
+  >
+    Button
+  </Button>
+))
 
 // //GreenButton stories
 // storiesOf("Green Button", module).add("Default", () => (
