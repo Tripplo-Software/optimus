@@ -23,7 +23,7 @@
     "watch:css": "postcss src/tailwind.css -o src/index.css -w",
     "prepare": "tsdx build",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -c ./storybook",
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {
