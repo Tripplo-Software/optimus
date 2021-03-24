@@ -8,6 +8,27 @@ module.exports = {
   typescript: {
     check: false,
     reactDocgen: 'react-docgen-typescript',
+    compilerOptions: {
+      module: 'esnext',
+      lib: ['dom', 'esnext'],
+      importHelpers: true,
+      declaration: true,
+      sourceMap: true,
+      rootDir: './',
+      strict: true,
+      noUnusedLocals: true,
+      noUnusedParameters: true,
+      noImplicitReturns: true,
+      noFallthroughCasesInSwitch: true,
+      moduleResolution: 'node',
+      baseUrl: './',
+      paths: {
+        '@': ['./'],
+        '*': ['src/*', 'node_modules/*'],
+      },
+      jsx: 'react',
+      esModuleInterop: true,
+    },
     reactDocgenTypescriptOptions: {
       compilerOptions: {
         allowSyntheticDefaultImports: true,

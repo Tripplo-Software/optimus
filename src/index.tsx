@@ -8,4 +8,7 @@ export {
   HeadingSix,
   BodyText,
   Link,
+  Typography
 } from './typography'
+
+export { Button } from './buttons'

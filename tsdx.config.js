@@ -3,6 +3,7 @@ const autoprefixer = require('autoprefixer')
 const tailwindcss = require('tailwindcss')
 const css = require('rollup-plugin-css-only')
 const cssnano = require('cssnano')
+// const svg = require('rollup-plugin-svg')
 
 module.exports = {
   rollup(config, options) {
@@ -15,6 +16,7 @@ module.exports = {
           cssnano({
             preset: 'default',
           }),
+          // svg(),
         ],
         inject: false,
         // only write out CSS for the first bundle (avoids pointless extra files):

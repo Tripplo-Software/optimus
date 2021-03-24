@@ -1,43 +1,39 @@
 import React from 'react'
-import {
-  HeadingOne,
-  HeadingTwo,
-  HeadingThree,
-  HeadingFour,
-  HeadingFive,
-  HeadingSix,
-  BodyText,
-  Link,
-} from '../src/typography'
-
-export default {
-  title: 'Typography',
-}
+import { Typography, Link } from '../src/typography'
+import { storiesOf } from '@storybook/react'
 
 // By passing optional props to this story, you can control the props of the component when
 // you consume the story in a test.
-export const Default = () => (
-  <HeadingOne className="text-black-500">Heading 1</HeadingOne>
-)
-export const Heading_2 = () => (
-  <HeadingTwo className="text-black-500">Heading 2</HeadingTwo>
-)
-export const Heading_3 = () => (
-  <HeadingThree className="text-black-500">Heading 3</HeadingThree>
-)
-export const Heading_4 = () => (
-  <HeadingFour className="text-black-500">Heading 4</HeadingFour>
-)
-export const Heading_5 = () => (
-  <HeadingFive className="text-black-500">Heading 5</HeadingFive>
-)
-export const Heading_6 = () => (
-  <HeadingSix className="text-black-500">Heading 6</HeadingSix>
-)
-export const Body = () => (
-  <BodyText className="text-black-500">This is a paragraph</BodyText>
-)
-let destination: string = "https://www.tripplo.co/";
-export const LinkText = () => (
-  <Link url={destination} className="text-black-500 underline">This is a link</Link>
-)
+
+let url: string = 'https://www.tripplo.co/'
+storiesOf('Typography', module)
+  .add('Heading 1', () => (
+    <Typography variant="HeadingOne">Heading 1</Typography>
+  ))
+  .add('Heading 2', () => (
+    <Typography variant="HeadingTwo">Heading 2</Typography>
+  ))
+  .add('Heading 3', () => (
+    <Typography variant="HeadingThree">Heading 3</Typography>
+  ))
+  .add('Heading 4', () => (
+    <Typography variant="HeadingFour">Heading 4</Typography>
+  ))
+  .add('Heading 5', () => (
+    <Typography variant="HeadingFive">Heading 5</Typography>
+  ))
+  .add('Heading 6', () => (
+    <Typography variant="HeadingSix">Heading 6</Typography>
+  ))
+  .add('Body Text', () => (
+    <Typography variant="BodyText">This is a paragraph</Typography>
+  ))
+  .add('Text Link', () => (
+    <Typography
+      variant="Link"
+      // className="text-blue-500 no-underline hover:underline"
+      href={url}
+    >
+      This is a link
+    </Typography>
+  ))
