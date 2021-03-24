@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-const loading_spinner = () => (
+const LoadingSpinner: FC = () => (
   <svg
     width="24"
     height="24"
@@ -17,4 +17,4 @@ const loading_spinner = () => (
   </svg>
 )
 
-export { loading_spinner }
+export { LoadingSpinner }

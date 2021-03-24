@@ -3,8 +3,7 @@ import '../index.css'
 // @ts-ignore
 import styled, { keyframes } from 'styled-components'
 // @ts-ignore
-import loadingIcon from '../../assets/icons/loadingIcon.svg';
-
+import { loading_spinner } from '../../assets/icons'
 export interface Props {
   className?: string
   onClick: React.MouseEventHandler<HTMLButtonElement>
@@ -19,7 +18,7 @@ const animate_loading = keyframes`
 	  transform: rotate(360deg);
   }
 `
-const ImageLoading = styled.img`
+const ImageLoading = styled.div`
   display: inline-block;
   animation: ${animate_loading} 2s infinite linear;
 `
@@ -83,7 +82,7 @@ export const Button: FC<Props> = ({
   }
 
   const classNames: string = Object.values(types[variant]).join(' ')
-  console.log(classNames);
+  console.log(classNames)
 
   if (!isloading) {
     if (size === 'large') {
@@ -125,7 +124,9 @@ export const Button: FC<Props> = ({
         disabled={disabled}
         value={size || 'medium'}
       >
-        <ImageLoading src={loadingIcon} alt="loading..." />
+        <ImageLoading>
+          <loading_spinner />
+        </ImageLoading>
         {/* {children} */}
       </button>
     )
