@@ -19,7 +19,7 @@ const animate_loading = keyframes`
   }
 `
 const ImageLoading = styled.div`
-  display: inline-block;
+  display: flex;
   animation: ${animate_loading} 2s infinite linear;
 `
 
@@ -39,7 +39,15 @@ export const Button: FC<Props> = ({
     },
     square: {
       height: 'py-2',
-      width: 'px-1',
+      width: 'px-4',
+    },
+    squareLarge: {
+      height: 'py-4',
+      width: 'px-8'
+    },
+    squareSmall: {
+      height: 'py-1',
+      width: 'px-2'
     },
     long: {
       height: 'py-2',
@@ -63,7 +71,7 @@ const selectedDimenison = dimensons[size]
   const types: any = {
     BlueActionButton: {
       borderColor: 'border-white',
-      backgroundColor: 'bg-blue-300',
+      backgroundColor: 'bg-blue-400',
       dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
       textUtils: 'text-white font-poppins border-white rounded-lg',
       hoverState:
@@ -114,7 +122,7 @@ const selectedDimenison = dimensons[size]
 
   return (
     <button
-      className={` ${className} ${classNames} cursor-wait`}
+      className={` ${className} ${classNames}`}
       onClick={onClick}
       disabled={disabled}
     >

@@ -14,8 +14,9 @@ storiesOf('Blue Action Button', module)
       onClick={onClick}
       disabled={false}
       isloading={false}
+      size="square"
     >
-      Regular
+      +
     </Button>
   ))
   .add('Large', () => (
@@ -23,17 +24,17 @@ storiesOf('Blue Action Button', module)
       variant="BlueActionButton"
       onClick={onClick}
       disabled={false}
-      size="long"
+      size="squareLarge"
     >
-      Long
+      +
     </Button>
   ))
-  .add('Long', () => (
+  .add('Small', () => (
     <Button
       variant="BlueActionButton"
       onClick={onClick}
       disabled={false}
-      size="square"
+      size="squareSmall"
     >
       +
     </Button>
@@ -44,6 +45,7 @@ storiesOf('Blue Action Button', module)
       onClick={onClick}
       disabled={true}
       isloading={true}
+      size="square"
     >
       loading
     </Button>
