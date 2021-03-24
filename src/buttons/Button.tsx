@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import '../index.css'
 // @ts-ignore
 import styled, { keyframes } from 'styled-components'
-// @ts-ignore
 import { LoadingSpinner } from '../../assets/icons'
 export interface Props {
   className?: string
@@ -41,14 +40,6 @@ export const Button: FC<Props> = ({
       height: 'py-2',
       width: 'px-4',
     },
-    squareLarge: {
-      height: 'py-4',
-      width: 'px-8',
-    },
-    squareSmall: {
-      height: 'py-1',
-      width: 'px-2',
-    },
     long: {
       height: 'py-2',
       width: 'px-12',
@@ -59,19 +50,12 @@ export const Button: FC<Props> = ({
     },
   }
 
-  /*
-
-const selectedDimenison = dimensons[size]
-
-`${selectedDimenison.height} ${selectedDimenison.width}`
-
-  */
 
   const selectedDimenison: any = dimensions[size]
   const types: any = {
     BlueActionButton: {
       borderColor: 'border-transparent',
-      backgroundColor: 'bg-blue-400',
+      backgroundColor: 'bg-blue-300',
       dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
       textUtils: 'text-white font-poppins border-white rounded-lg',
       hoverState:
