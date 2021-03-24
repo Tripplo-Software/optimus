@@ -16,3 +16,5 @@ const loading_spinner = () => (
     />
   </svg>
 )
+
+export { loading_spinner }
