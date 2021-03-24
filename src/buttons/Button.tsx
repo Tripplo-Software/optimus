@@ -35,7 +35,7 @@ export const Button: FC<Props> = ({
   const dimensions: any = {
     regular: {
       height: 'py-2',
-      width: 'px-10',
+      width: 'px-8',
     },
     square: {
       height: 'py-2',
@@ -51,11 +51,11 @@ export const Button: FC<Props> = ({
     },
     long: {
       height: 'py-2',
-      width: 'px-6',
+      width: 'px-12',
     },
     small: {
-      height: 'py-2',
-      width: 'px-2',
+      height: 'py-1',
+      width: 'px-4',
     },
   }
 
@@ -70,7 +70,7 @@ const selectedDimenison = dimensons[size]
   const selectedDimenison: any = dimensions[size]
   const types: any = {
     BlueActionButton: {
-      borderColor: '',
+      borderColor: 'border-transparent',
       backgroundColor: 'bg-blue-400',
       dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
       textUtils: 'text-white font-poppins border-white rounded-lg',
@@ -78,10 +78,10 @@ const selectedDimenison = dimensons[size]
         'hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-300 hover:text-blue-400',
     },
     BlueDarkButton: {
-      borderColor: 'border-white',
+      borderColor: 'border-transparent',
       backgroundColor: 'bg-blue-400',
       dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
-      textUtils: 'text-white font-poppins  rounded',
+      textUtils: 'text-white font-poppins rounded',
       hoverState:
         'hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400',
     },
