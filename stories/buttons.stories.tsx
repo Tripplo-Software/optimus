@@ -19,26 +19,6 @@ storiesOf('Blue Action Button', module)
       +
     </Button>
   ))
-  .add('Large', () => (
-    <Button
-      variant="BlueActionButton"
-      onClick={onClick}
-      disabled={false}
-      size="squareLarge"
-    >
-      +
-    </Button>
-  ))
-  .add('Small', () => (
-    <Button
-      variant="BlueActionButton"
-      onClick={onClick}
-      disabled={false}
-      size="squareSmall"
-    >
-      +
-    </Button>
-  ))
   .add('Loading', () => (
     <Button
       variant="BlueActionButton"
@@ -89,7 +69,7 @@ storiesOf("Blue Dark Button", module).add("Regular", () => (
   </Button>
 ))
 //BlueDarkTransparentOutlinedButton stories
-storiesOf("BlueDarkTransparentOutlinedButton", module).add("Regular", () => (
+storiesOf("Blue Dark Transparent Outlined Button", module).add("Regular", () => (
   <Button
     variant="BlueDarkTransparentOutlinedButton"
     onClick={onClick}
