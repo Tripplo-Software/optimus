@@ -43,11 +43,11 @@ export const Button: FC<Props> = ({
     },
     squareLarge: {
       height: 'py-4',
-      width: 'px-8'
+      width: 'px-8',
     },
     squareSmall: {
       height: 'py-1',
-      width: 'px-2'
+      width: 'px-2',
     },
     long: {
       height: 'py-2',
@@ -109,7 +109,7 @@ const selectedDimenison = dimensons[size]
     },
     RedButton: {
       borderColor: 'border-transparent',
-      backgroundColor: 'bg-red-400',
+      backgroundColor: 'bg-red-600',
       dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
       textUtils: 'text-white font-poppins rounded',
       hoverState:
