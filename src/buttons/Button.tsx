@@ -3,7 +3,7 @@ import '../index.css'
 // @ts-ignore
 import styled, { keyframes } from 'styled-components'
 // @ts-ignore
-import { loading_spinner } from '../../assets/icons'
+import { LoadingSpinner } from '../../assets/icons'
 export interface Props {
   className?: string
   onClick: React.MouseEventHandler<HTMLButtonElement>
@@ -125,7 +125,7 @@ export const Button: FC<Props> = ({
         value={size || 'medium'}
       >
         <ImageLoading>
-          <loading_spinner />
+          <LoadingSpinner />
         </ImageLoading>
         {/* {children} */}
       </button>
