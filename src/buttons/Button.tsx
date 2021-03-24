@@ -71,7 +71,7 @@ const selectedDimenison = dimensons[size]
   const types: any = {
     BlueActionButton: {
       borderColor: 'border-transparent',
-      backgroundColor: 'bg-blue-400',
+      backgroundColor: 'bg-blue-300',
       dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
       textUtils: 'text-white font-poppins border-white rounded-lg',
       hoverState:
