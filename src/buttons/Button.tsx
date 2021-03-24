@@ -102,51 +102,20 @@ export const Button: FC<Props> = ({
   const classNames: string = Object.values(types[variant]).join(' ')
   console.log(classNames)
 
-  if (!isloading) {
-    if (size === 'large') {
-      return (
-        <button
-          className={` ${className} ${classNames} py-4 font-bold `}
-          onClick={onClick}
-          disabled={disabled || false}
-        >
-          {children}
-        </button>
-      )
-    } else if (size === 'long') {
-      return (
-        <button
-          className={` ${className} ${classNames} px-16 font-bold`}
-          onClick={onClick}
-          disabled={disabled || false}
-        >
-          {children}
-        </button>
-      )
-    }
-    return (
-      <button
-        className={` ${className} ${classNames} py-2 px-10`}
-        onClick={onClick}
-        disabled={disabled || false}
-        value={size || 'medium'}
-      >
-        {children}
-      </button>
-    )
-  } else {
-    return (
-      <button
-        className={` ${className} ${classNames} cursor-wait`}
-        onClick={onClick}
-        disabled={disabled}
-        value={size || 'medium'}
-      >
+  return (
+    <button
+      className={` ${className} ${classNames} cursor-wait`}
+      onClick={onClick}
+      disabled={disabled}
+      value={size || 'medium'}
+    >
+      {isloading ? (
         <ImageLoading>
           <LoadingSpinner />
         </ImageLoading>
-        {/* {children} */}
-      </button>
-    )
-  }
+      ) : (
+        children
+      )}
+    </button>
+  )
 }
