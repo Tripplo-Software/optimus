@@ -10,7 +10,7 @@ export interface Props {
   children: string
   disabled: boolean
   variant: string
-  size: string
+  size?: string
   isloading?: boolean
 }
 const animate_loading = keyframes`
@@ -29,13 +29,13 @@ export const Button: FC<Props> = ({
   children,
   disabled,
   variant,
-  size = 'medium',
+  size = 'regular',
   isloading,
 }: Props) => {
-  const dimensions = {
+  const dimensions: any = {
     regular: {
       height: 'py-2',
-      width: 'px-4',
+      width: 'px-10',
     },
     square: {
       height: 'py-2',
@@ -50,50 +50,60 @@ export const Button: FC<Props> = ({
       width: 'px-2',
     },
   }
+
+  /*
+
+const selectedDimenison = dimensons[size]
+
+`${selectedDimenison.height} ${selectedDimenison.width}`
+
+  */
+
+  const selectedDimenison: any = dimensions[size]
   const types: any = {
     BlueActionButton: {
       borderColor: 'border-white',
       backgroundColor: 'bg-blue-300',
-      dimensions: 'py-2 border-white px-4 rounded-lg',
-      textUtils: 'text-white font-poppins',
+      dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
+      textUtils: 'text-white font-poppins border-white rounded-lg',
       hoverState:
         'hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-300 hover:text-blue-400',
     },
     BlueDarkButton: {
       borderColor: 'border-white',
       backgroundColor: 'bg-blue-400',
-      dimensions: 'py-2 px-10 rounded',
-      textUtils: 'text-white font-poppins',
+      dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
+      textUtils: 'text-white font-poppins  rounded',
       hoverState:
         'hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400',
     },
     BlueDarkTransparentOutlinedButton: {
       borderColor: 'border-2 border-solid border-blue-500',
       backgroundColor: 'bg-transparent',
-      dimensions: 'py-2 px-10 rounded',
-      textUtils: 'text-blue-400 font-poppins',
+      dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
+      textUtils: 'text-blue-400 font-poppins rounded',
       hoverState: 'hover:bg-blue-500 focus:outline-none hover:text-white',
     },
     GreenButton: {
       borderColor: 'border-white',
       backgroundColor: 'bg-green-300',
-      dimensions: 'py-2 px-10 rounded',
-      textUtils: 'text-white font-poppins',
+      dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
+      textUtils: 'text-white font-poppins rounded',
       hoverState:
         'hover:bg-green-100 focus:outline-none border-2 hover:border-green-500 hover:text-green-500',
     },
     BlueLightestOutlinedButton: {
       borderColor: 'border-2 border-solid border-blue-500',
       backgroundColor: 'bg-blue-100',
-      dimensions: 'py-2 px-10 rounded',
+      dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
       textUtils: 'text-blue-500 font-poppins',
       hoverState: 'hover:bg-blue-300 focus:outline-none hover:text-white',
     },
     RedButton: {
       borderColor: 'border-white',
       backgroundColor: 'bg-red-300',
-      dimensions: 'py-2 px-10 rounded',
-      textUtils: 'text-white font-poppins',
+      dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
+      textUtils: 'text-white font-poppins rounded',
       hoverState:
         'hover:bg-red-100 focus:outline-none  border-2 hover:border-red-500 hover:text-red-500',
     },
@@ -107,7 +117,6 @@ export const Button: FC<Props> = ({
       className={` ${className} ${classNames} cursor-wait`}
       onClick={onClick}
       disabled={disabled}
-      value={size || 'medium'}
     >
       {isloading ? (
         <ImageLoading>
