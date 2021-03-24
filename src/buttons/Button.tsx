@@ -108,8 +108,8 @@ const selectedDimenison = dimensons[size]
       hoverState: 'hover:bg-blue-500 focus:outline-none hover:text-white',
     },
     RedButton: {
-      borderColor: 'border-white',
-      backgroundColor: 'bg-red-300',
+      borderColor: 'border-transparent',
+      backgroundColor: 'bg-red-400',
       dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
       textUtils: 'text-white font-poppins rounded',
       hoverState:
