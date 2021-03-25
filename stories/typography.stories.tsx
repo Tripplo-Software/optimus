@@ -6,7 +6,7 @@ import { Typography, Link } from '../src/typography'
 // you consume the story in a test.
 
 export default {
-  title: 'Design System/Typography',
+  title: 'Typography/Typography',
   component: Typography,
 };
 let url: string = 'https://www.tripplo.co/'
