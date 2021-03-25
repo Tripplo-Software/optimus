@@ -14,8 +14,7 @@ export interface Props {
   children: any
   href?: string
 }
-
-export const Typography: FC<Props> = ({
+const Typography: FC<Props> = ({
   variant,
   className,
   children,
@@ -59,3 +58,5 @@ export const Typography: FC<Props> = ({
     )
   return <Child />
 }
+
+export default Typography
