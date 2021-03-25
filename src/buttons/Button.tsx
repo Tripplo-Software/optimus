@@ -22,7 +22,7 @@ const ImageLoading = styled.div`
   animation: ${animate_loading} 2s infinite linear;
 `
 
-export const Button: FC<Props> = ({
+const Button: FC<Props> = ({
   className,
   onClick,
   children,
@@ -49,7 +49,6 @@ export const Button: FC<Props> = ({
       width: 'px-4',
     },
   }
-
 
   const selectedDimenison: any = dimensions[size]
   const types: any = {
@@ -120,3 +119,5 @@ export const Button: FC<Props> = ({
     </button>
   )
 }
+
+export default Button
