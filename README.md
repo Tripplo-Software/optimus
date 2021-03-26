@@ -49,13 +49,14 @@ export default function App() {
 }
 ```
 
-## CodeSandbox Templates
+## CodeSandbox Templates 💵
 
-- JavaScript Starter: https://codesandbox.io/s/black-leaf-vxh85?file=/src/App.js
-- TypeScript Starter: https://codesandbox.io/s/upbeat-babbage-ji60r?file=/src/App.tsx
-  ### Tests
+- [JavaScript Starter](https://codesandbox.io/s/black-leaf-vxh85?file=/src/App.js)
+- [TypeScript Starter](https://codesandbox.io/s/upbeat-babbage-ji60r?file=/src/App.tsx)
 
-We use `jest` and `testing-library` for unit/integration tests.
+## How to contribute
+
+TBA
 
 ## License
 
