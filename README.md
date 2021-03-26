@@ -19,20 +19,22 @@ To read up on how to use the components head over to <a href="https://optimus-ui
 ## Getting started ⛑️
 
 ```shell
-npm i optimus-ui
-or
-yarn add optimus-ui
+$ yarn add optimus-ui
 ```
 
-## Usage
+Or use NPM if you prefer:
 
-1. Import the styles from "optimus-ui/dist/optimus-ui.css";
+```
+$ npm i optimus-ui
+```
 
-2. Import the Components you desire into your JS/TS app from the `@optimus-ui` package.
+## Usage 🍩
 
 ```tsx
 import './styles.css'
+//import the components from the package
 import { Button, Typography } from 'optimus-ui'
+//make sure to include the stylesheet in the root of your app
 import 'optimus-ui/dist/optimus-ui.css'
 export default function App() {
   return (
