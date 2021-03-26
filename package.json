@@ -5,12 +5,13 @@
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     }
   },
-  "version": "0.0.0-development",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src/assets/*"
   ],
   "engines": {
     "node": ">=10"
@@ -73,7 +74,8 @@
   "dependencies": {
     "rollup-plugin-svg": "^2.0.0",
     "styled-components": "^5.2.1",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.4.6",
+    "typeface-roboto": "^1.1.13"
   },
   "repository": {
     "type": "git",

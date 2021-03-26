@@ -1,14 +1,4 @@
 export { default as Input } from './inputs/Input'
-export {
-  HeadingOne,
-  HeadingTwo,
-  HeadingThree,
-  HeadingFour,
-  HeadingFive,
-  HeadingSix,
-  BodyText,
-  Link,
-  Typography
-} from './typography'
+export { default as Typography } from './typography/Typography'
 
-export { Button } from './buttons'
+export { default as Button } from './buttons/Button'

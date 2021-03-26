@@ -22,7 +22,7 @@ const ImageLoading = styled.div`
   animation: ${animate_loading} 2s infinite linear;
 `
 
-export const Button: FC<Props> = ({
+const Button: FC<Props> = ({
   className,
   onClick,
   children,
@@ -50,7 +50,6 @@ export const Button: FC<Props> = ({
     },
   }
 
-
   const selectedDimenison: any = dimensions[size]
   const types: any = {
     BlueActionButton: {
@@ -63,7 +62,7 @@ export const Button: FC<Props> = ({
     },
     BlueDarkButton: {
       borderColor: 'border-transparent',
-      backgroundColor: 'bg-blue-400',
+      backgroundColor: 'bg-blue-600',
       dimensions: `${selectedDimenison.height} ${selectedDimenison.width}`,
       textUtils: 'text-white font-poppins rounded',
       hoverState:
@@ -120,3 +119,5 @@ export const Button: FC<Props> = ({
     </button>
   )
 }
+
+export default Button
