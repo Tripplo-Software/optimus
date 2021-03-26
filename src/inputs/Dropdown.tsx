@@ -2,14 +2,13 @@ import React, { FC } from 'react'
 import '../index.css'
 
 export interface Props {
-    className: string
+    className?: string
     children: HTMLAreaElement
 }
 
 const Dropdown: FC<Props> = ({ children, className }: Props) => (
     <select
-        className={`${className}`}
-        placeholder=""
+        className={`${className} border bg-white border-gray-300 w-auto p-2 hover:border-blue-400 rounded font-poppins `}
     >
         {children}
     </select>

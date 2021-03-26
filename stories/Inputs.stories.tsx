@@ -7,8 +7,7 @@ export default {
 
 export const Default = () => <Input />
 export const Dropdown_Menu = () =>
-  <Dropdown
-  className="border bg-white border-gray-300 w-auto h-auto hover:border-blue-400 rounded font-poppins">
+  <Dropdown>
     <option>ZAR-South African Rand</option>
     <option>USD-American Dollar</option>
     <option>MTN-Mozambican Metical</option>
