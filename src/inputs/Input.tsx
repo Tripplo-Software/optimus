@@ -4,6 +4,7 @@ import '../index.css'
 export interface Props {
   className: string
   placeholder: string
+  value?: string
 }
 
 const defaultProps = {
