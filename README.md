@@ -10,46 +10,42 @@
       <img src="https://img.shields.io/npm/v/optimus-ui">
     </p>
   </div>
-  Optimus UI provides a set of accessible, reusable, and composable React
-  components that make it super easy to create websites and apps.
+  Optimus UI is a React component library built with TailwindCSS for  <a href="htpps://tripplo.co">Tripplo</a>'s frontends.
 
-  ## Documentation 📝
-  Documentation will be found <a href="optimus-ui.netlify.app/">here.</a>
+## Documentation 📝
 
-  ## Getting started
+To read up on how to use the components head over to <a href="https://optimus-ui.netlify.app/">Storybook</a>.
 
-  ```shell
-  npm i optimus-ui
-  or
-  yarn add optimus-ui
-  ```
+## Getting started ⛑️
 
-  ## Usage
+```shell
+npm i optimus-ui
+or
+yarn add optimus-ui
+```
 
-  1. Import the styles from "optimus-ui/dist/optimus-ui.css";
+## Usage
 
-  2. Import the Components you desire into your JS/TS app from the `@optimus-ui` package.
+1. Import the styles from "optimus-ui/dist/optimus-ui.css";
 
-  ```tsx
-  import "./styles.css";
-  import { Button, Typography } from "optimus-ui";
-  import "optimus-ui/dist/optimus-ui.css";
-  export default function App() {
+2. Import the Components you desire into your JS/TS app from the `@optimus-ui` package.
+
+```tsx
+import './styles.css'
+import { Button, Typography } from 'optimus-ui'
+import 'optimus-ui/dist/optimus-ui.css'
+export default function App() {
   return (
     <div className="App">
-      <Typography
-        variant="HeadingThree">Hello CodeSandbox
-      </Typography>
+      <Typography variant="HeadingThree">Hello CodeSandbox</Typography>
       <h2>Start editing to see some magic happen!</h2>
-      <Button 
-      variant="BlueDarkButton" 
-      size="small">
+      <Button variant="BlueDarkButton" size="small">
         Button
       </Button>
     </div>
-  );
+  )
 }
-  ```
+```
 
 ## CodeSandbox Templates
 
