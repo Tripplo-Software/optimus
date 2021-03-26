@@ -13,7 +13,7 @@
   Optimus UI provides a set of accessible, reusable, and composable React
   components that make it super easy to create websites and apps.
 
-  ## Documentation? 📝
+  ## Documentation 📝
   Documentation will be found <a href="optimus-ui.netlify.app/">here.</a>
 
   ## Getting started
@@ -51,6 +51,14 @@
 }
   ```
 
+## CodeSandbox Templates
+
+- JavaScript Starter: https://codesandbox.io/s/black-leaf-vxh85?file=/src/App.js
+- TypeScript Starter: https://codesandbox.io/s/upbeat-babbage-ji60r?file=/src/App.tsx
   ### Tests
 
 We use `jest` and `testing-library` for unit/integration tests.
+
+## License
+
+MIT © [Tripplo Software](https://github.com/Tripplo-Software)
