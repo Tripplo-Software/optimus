@@ -5,7 +5,8 @@ export default {
   title: 'Input/Inputs',
 }
 
-export const Default = () => <Input />
+export const Default = () => <Input
+  placeholder="Enter your message here" />
 export const Dropdown_Menu = () =>
   <Dropdown>
     <option>ZAR-South African Rand</option>
