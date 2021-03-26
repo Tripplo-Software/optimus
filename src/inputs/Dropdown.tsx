@@ -3,7 +3,7 @@ import '../index.css'
 
 export interface Props {
     className?: string
-    children: HTMLAreaElement
+    children: any
 }
 
 const Dropdown: FC<Props> = ({ children, className }: Props) => (
