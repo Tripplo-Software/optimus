@@ -3,7 +3,7 @@ import '../index.css'
 
 export interface Props {
     className: string
-    children: string
+    children: HTMLElement
 }
 
 const Dropdown: FC<Props> = ({ children, className }: Props) => (
@@ -14,4 +14,4 @@ const Dropdown: FC<Props> = ({ children, className }: Props) => (
     </select>
 )
 
-export default Dropdown
+export default Dropdown;
