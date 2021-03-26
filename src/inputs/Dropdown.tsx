@@ -3,12 +3,13 @@ import '../index.css'
 
 export interface Props {
     className: string
-    children: HTMLElement
+    children: HTMLAreaElement
 }
 
 const Dropdown: FC<Props> = ({ children, className }: Props) => (
     <select
         className={`${className}`}
+        placeholder=""
     >
         {children}
     </select>
