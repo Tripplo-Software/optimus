@@ -6,10 +6,12 @@ export interface Props {
 }
 
 const defaultProps = {
-  className: 'bg-white border border-gray-400 rounded p-2 w-auto',
+  className: 'bg-white border border-gray-400 hover:border-blue-400 rounded p-2 w-auto',
 }
 const Input = (props: Props) => {
-  return <input {...props} />
+  return <input 
+  placeholder="Enter your message here"
+  {...props} />
 }
 
 Input.defaultProps = defaultProps
