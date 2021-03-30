@@ -9,9 +9,9 @@ export const Default = () => <Input placeholder="Enter your message here" />
 
 export const Dropdown_Menu = () => (
   <Dropdown>
-    <Option>ZAR-South African Rand</Option>
-    <Option>USD-American Dollar</Option>
-    <Option>MTN-Mozambican Metical</Option>
-    <Option>ZMD-Zimbabwean Dollar</Option>
+    <Option value="zar">ZAR-South African Rand</Option>
+    <Option value="usd">USD-American Dollar</Option>
+    <Option value="mtn">MTN-Mozambican Metical</Option>
+    <Option value="zmd">ZMD-Zimbabwean Dollar</Option>
   </Dropdown>
 )
