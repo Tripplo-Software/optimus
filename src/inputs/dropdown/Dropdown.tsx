@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import '../index.css'
+import '../../index.css'
 
 export interface Props {
     className?: string
