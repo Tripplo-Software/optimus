@@ -2,11 +2,19 @@ import React, { FC } from 'react'
 import '../../index.css'
 import { Select } from 'antd';
 import 'antd/dist/antd.css';
+// const { Option } = Select;
+
 const { Option } = Select;
+
+// const children = [];
+// for (let i = 10; i < 36; i++) {
+//   children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
+// }
 
 export interface Props {
     className?: string
     children?: any
+
 }
 
 function onChange(value: any) {
@@ -39,10 +47,7 @@ const Dropdown: FC<Props> = ({ children }: Props) => (
             option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
         }
     >
-        <Option value="zar">ZAR-South African Rand</Option>
-        <Option value="usd">USD-American Dollar</Option>
-        <Option value="mtn">MTN-Mozambican Metical</Option>
-        <Option value="zmd">ZMD-Zimbabwean Dollar</Option>
+        {children}
     </Select>
 )
 
