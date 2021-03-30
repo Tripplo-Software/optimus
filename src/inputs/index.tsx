@@ -1,5 +1,5 @@
-import Input from './Input'
-import Dropdown from './Dropdown'
+import Input from './input/Input'
+import Dropdown from './dropdown/Dropdown'
 
 export { Input, Dropdown }
 
