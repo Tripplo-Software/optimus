@@ -29,7 +29,7 @@ const Dropdown: FC<Props> = ({ children }: Props) => (
     <Select
         showSearch
         style={{ width: 200 }}
-        placeholder="Select a person"
+        placeholder="Select the currency"
         optionFilterProp={children}
         onChange={onChange}
         onFocus={onFocus}
