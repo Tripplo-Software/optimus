@@ -2,39 +2,20 @@ import React, { FC } from 'react'
 import '../../index.css'
 import { Select } from 'antd'
 import 'antd/dist/antd.css'
-// const { Option } = Select;
-
 export const { Option } = Select
-
-// const children = [];
-// for (let i = 10; i < 36; i++) {
-//   children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
-// }
 
 export interface Props {
   className?: string
   children?: any
+  onChange:  any
+  onBlur: any
+  onFocus: any
+  onSearch: any
 }
 
-function onChange(value: any) {
-  console.log(`selected ${value}`)
-}
-
-function onBlur() {
-  console.log('blur')
-}
-
-function onFocus() {
-  console.log('focus')
-}
-
-function onSearch(val: any) {
-  console.log('search:', val)
-}
-
-const Dropdown: FC<Props> = ({ children }: Props) => (
+const Dropdown: FC<Props> = ({ children, onBlur, onChange, onFocus, onSearch }: Props) => (
   <Select
-    showSearch
+     showSearch
     style={{ width: 200 }}
     placeholder="Select the currency"
     optionFilterProp={children}
