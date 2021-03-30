@@ -1,5 +1,5 @@
-import Dropdown from './Dropdown'
+import Dropdown, { Option } from './Dropdown'
 
-export { Dropdown }
+export { Dropdown, Option }
 
-export default { Dropdown}
+export default { Dropdown }
