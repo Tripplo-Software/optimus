@@ -1,7 +1,7 @@
 import Input from './input/Input'
-import Dropdown from './dropdown/Dropdown'
+import Dropdown, { Option } from './dropdown/Dropdown'
 
-export { Input, Dropdown }
+export { Input, Dropdown, Option }
 
-export default {Input, Dropdown}
+export default { Input, Dropdown, Option }
 
