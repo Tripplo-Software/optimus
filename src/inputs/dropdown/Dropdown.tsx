@@ -16,7 +16,7 @@ export interface Props {
 
 const Dropdown: FC<Props> = ({ className, children, onBlur, onChange, onFocus, onSearch }: Props) => (
     <Select
-        className={`${className} border border-gray-300 text-gray-600 h-10 pl-15 pr-10`}
+        className={`${className}`}
         showSearch
         style={{ width: 200 }}
         optionFilterProp={children}
