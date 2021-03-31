@@ -81,5 +81,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Tripplo-Software/optimus.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
