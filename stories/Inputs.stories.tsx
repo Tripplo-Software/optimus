@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input, Dropdown } from '../src/inputs'
+import { Input, Dropdown, DatePicker} from '../src/inputs'
 import { Option } from '../src/inputs/dropdown'
 export default {
   title: 'Input/Inputs',
@@ -35,4 +35,10 @@ export const Dropdown_Menu = () => (
     <Option value="mtn">MTN-Mozambican Metical</Option>
     <Option value="zmd">ZMD-Zimbabwean Dollar</Option>
   </Dropdown>
+)
+
+export const Date_Picker = () =>(
+  <DatePicker
+    onChange={onChange}>
+  </DatePicker>
 )
