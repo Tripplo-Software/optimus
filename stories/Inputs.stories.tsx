@@ -41,16 +41,21 @@ export const Dropdown_Menu = () => (
 )
 
 export const Date_Picker = () => (
-  <DatePicker
-    onChange={onChange}
-    variant="dp">
-    <RangePicker />
-  </DatePicker>
-)
-export const Range_Picker = () => (
-  <DatePicker
-    onChange={onChange}>
-    <RangePicker />
-  </DatePicker>
+  <ul>
+    <li>
+      <DatePicker
+        onChange={onChange}
+        variant="dp">
+        <RangePicker />
+      </DatePicker>
+    </li><br/>
+    <li>
+      <DatePicker
+        onChange={onChange}>
+        <RangePicker />
+      </DatePicker>
+    </li>
+  </ul>
+
 )
 
