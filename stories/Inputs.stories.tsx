@@ -43,6 +43,7 @@ export const Dropdown_Menu = () => (
 export const Date_Picker = () => (
   <ul>
     <li>
+      <b>Date Picker</b>{'\u00A0'}
       <DatePicker
         onChange={onChange}
         variant="dp">
@@ -50,6 +51,7 @@ export const Date_Picker = () => (
       </DatePicker>
     </li><br/>
     <li>
+      <b>Range Picker</b>{'\u00A0'}
       <DatePicker
         onChange={onChange}>
         <RangePicker />
