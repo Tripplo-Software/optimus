@@ -45,15 +45,14 @@ export const Date_Picker = () => (
     <li>
       <b>Date Picker</b>{'\u00A0'}
       <DatePicker
-        onChange={onChange}
-        variant="dp">
-        <RangePicker />
+        onChange={onChange}>
       </DatePicker>
     </li><br/>
     <li>
       <b>Range Picker</b>{'\u00A0'}
       <DatePicker
-        onChange={onChange}>
+        onChange={onChange}
+        variant="rangePicker">
         <RangePicker />
       </DatePicker>
     </li>

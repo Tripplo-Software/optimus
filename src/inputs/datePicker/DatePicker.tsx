@@ -11,15 +11,15 @@ export interface Props {
 }
 
 
-const DatePicker: FC<Props> = ({ className, onChange, children, variant }: Props) => (
+const DatePicker: FC<Props> = ({ className, onChange, variant="datePicker" }: Props) => (
     <Space
         className={`${className}`}
         direction="vertical"
     >
-        {variant==="dp" ? (
-             <DP onChange={onChange} />
+        {variant==="rangePicker" ? (
+             <RangePicker onChange={onChange} />
         ) : (
-            children
+           <DP onChange={onChange}></DP>
         )}
     </Space>
 )
