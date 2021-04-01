@@ -1,6 +1,7 @@
 import React from 'react'
 import { Input, Dropdown, DatePicker } from '../src/inputs'
 import { Option } from '../src/inputs/dropdown'
+import { RangePicker } from '../src/inputs/datePicker'
 export default {
   title: 'Input/Inputs',
 }
@@ -41,6 +42,15 @@ export const Dropdown_Menu = () => (
 
 export const Date_Picker = () => (
   <DatePicker
-    onChange={onChange}>
+    onChange={onChange}
+    variant="dp">
+    <RangePicker />
   </DatePicker>
 )
+export const Range_Picker = () => (
+  <DatePicker
+    onChange={onChange}>
+    <RangePicker />
+  </DatePicker>
+)
+
