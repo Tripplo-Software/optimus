@@ -57,7 +57,7 @@ export const BlueDarkButton = () => (
         >
           Small
          </Button>
-      </li>
+      </li><br/>
       <li>
         <Button
           variant="BlueDarkButton"
@@ -67,7 +67,7 @@ export const BlueDarkButton = () => (
         >
           Button
         </Button>
-      </li>
+      </li><br/>
       <li>
         <Button
           variant="BlueDarkButton"
@@ -77,7 +77,7 @@ export const BlueDarkButton = () => (
         >
           Regular
          </Button>
-      </li>
+      </li><br/>
       <li>
         <Button
           variant="BlueDarkButton"
@@ -106,7 +106,7 @@ export const BlueDarkTransparentOutlinedButton = () => (
         >
           Small
          </Button>
-      </li>
+      </li><br/>
       <li>
         <Button
           variant="BlueDarkTransparentOutlinedButton"
@@ -116,7 +116,7 @@ export const BlueDarkTransparentOutlinedButton = () => (
         >
           Button
         </Button>
-      </li>
+      </li><br/>
       <li>
         <Button
           variant="BlueDarkTransparentOutlinedButton"
@@ -126,7 +126,7 @@ export const BlueDarkTransparentOutlinedButton = () => (
         >
           Regular
          </Button>
-      </li>
+      </li><br/>
       <li>
         <Button
           variant="BlueDarkTransparentOutlinedButton"
@@ -155,7 +155,7 @@ export const BlueLightestOutlinedButton = () => (
         >
           Small
          </Button>
-      </li>
+      </li><br/>
       <li>
         <Button
           variant="BlueLightestOutlinedButton"
@@ -165,7 +165,7 @@ export const BlueLightestOutlinedButton = () => (
         >
           Button
         </Button>
-      </li>
+      </li><br/>
       <li>
         <Button
           variant="BlueLightestOutlinedButton"
@@ -175,7 +175,7 @@ export const BlueLightestOutlinedButton = () => (
         >
           Regular
          </Button>
-      </li>
+      </li><br/>
       <li>
         <Button
           variant="BlueLightestOutlinedButton"
@@ -204,7 +204,7 @@ export const GreenButton = () =>
         >
           Small
          </Button>
-      </li>
+      </li><br/>
       <li>
         <Button
           variant="GreenButton"
@@ -214,7 +214,7 @@ export const GreenButton = () =>
         >
           Button
         </Button>
-      </li>
+      </li><br/>
       <li>
         <Button
           variant="GreenButton"
@@ -224,7 +224,7 @@ export const GreenButton = () =>
         >
           Regular
          </Button>
-      </li>
+      </li><br/>
       <li>
         <Button
           variant="GreenButton"
@@ -252,7 +252,7 @@ export const RedButton = () =>
       >
         Small
        </Button>
-    </li>
+    </li><br/>
     <li>
       <Button
         variant="RedButton"
@@ -262,7 +262,7 @@ export const RedButton = () =>
       >
         Button
       </Button>
-    </li>
+    </li><br/>
     <li>
       <Button
         variant="RedButton"
@@ -272,7 +272,7 @@ export const RedButton = () =>
       >
         Regular
        </Button>
-    </li>
+    </li><br/>
     <li>
       <Button
         variant="RedButton"
