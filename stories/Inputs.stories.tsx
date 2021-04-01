@@ -1,7 +1,6 @@
 import React from 'react'
 import { Input, Dropdown, DatePicker } from '../src/inputs'
 import { Option } from '../src/inputs/dropdown'
-import { RangePicker } from '../src/inputs/datePicker'
 export default {
   title: 'Input/Inputs',
 }
