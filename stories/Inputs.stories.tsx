@@ -53,7 +53,6 @@ export const Date_Picker = () => (
       <DatePicker
         onChange={onChange}
         variant="rangePicker">
-        <RangePicker />
       </DatePicker>
     </li>
   </ul>
