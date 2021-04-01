@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input, Dropdown, DatePicker} from '../src/inputs'
+import { Input, Dropdown, DatePicker } from '../src/inputs'
 import { Option } from '../src/inputs/dropdown'
 export default {
   title: 'Input/Inputs',
@@ -21,7 +21,9 @@ function onFocus() {
 function onSearch(val: any) {
   console.log('search:', val)
 }
-export const Default = () => <Input placeholder="Enter your message here" />
+export const Default = () => <Input
+  placeholder="Enter your message here"
+  onChange={onChange} />
 
 export const Dropdown_Menu = () => (
   <Dropdown
@@ -37,7 +39,7 @@ export const Dropdown_Menu = () => (
   </Dropdown>
 )
 
-export const Date_Picker = () =>(
+export const Date_Picker = () => (
   <DatePicker
     onChange={onChange}>
   </DatePicker>
