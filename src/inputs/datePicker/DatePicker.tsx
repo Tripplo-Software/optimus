@@ -8,10 +8,12 @@ export interface Props {
     onChange: any
     children: any
     variant?: string
+    format?: string
+    value?: any
 }
 
 
-const DatePicker: FC<Props> = ({ className, onChange, variant="datePicker" }: Props) => (
+const DatePicker: FC<Props> = ({ className, onChange, variant="datePicker", format="DD/MM/YYYY", value}: Props) => (
     <Space
         className={`${className}`}
         direction="vertical"
@@ -19,7 +21,10 @@ const DatePicker: FC<Props> = ({ className, onChange, variant="datePicker" }: Pr
         {variant==="rangePicker" ? (
              <RangePicker onChange={onChange} />
         ) : (
-           <DP onChange={onChange}/>
+           <DP onChange={onChange}
+           format={format}
+           value={value}
+           />
         )}
     </Space>
 )
