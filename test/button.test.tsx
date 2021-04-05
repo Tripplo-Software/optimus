@@ -5,7 +5,7 @@ import { Button } from '../src/index'
 
 describe('Button', () => {
     //BlueDarkButton Test
-    it('[BlueDarkButton] - it calls "onClick" prop on button click', () => {
+    it('[BlueDarkButton] - It calls "onClick" prop on button click && Checks if it returns the correct classname based on variant', () => {
         afterEach(cleanup)
         const onClick = jest.fn();
         const { getByText, rerender, container } = render(
@@ -33,7 +33,7 @@ describe('Button', () => {
     })
 
     // RedButton Test
-    it('[RedButton] - it calls "onClick" prop on button click', () => {
+    it('[RedButton] - It calls "onClick" prop on button click && Checks if it returns the correct classname based on variant', () => {
         afterEach(cleanup)
         const onClick = jest.fn();
         const { getByText, container, rerender } = render(
@@ -59,7 +59,7 @@ describe('Button', () => {
         expect(container.getElementsByClassName(testClassName))
     })
     // BlueDarkTransparentOutlinedButton Test
-    it('[BlueDarkTransparentOutlinedButton] - it calls "onClick" prop on button click', () => {
+    it('[BlueDarkTransparentOutlinedButton] - It calls "onClick" prop on button click && Checks if it returns the correct classname based on variant', () => {
         afterEach(cleanup)
         const onClick = jest.fn();
         const { getByText, container, rerender } = render(
@@ -87,7 +87,7 @@ describe('Button', () => {
         expect(container.getElementsByClassName(testClassName))
     })
     // GreenButton 
-    it('[GreenButton] - it calls "onClick" prop on button click', () => {
+    it('[GreenButton] - It calls "onClick" prop on button click && Checks if it returns the correct classname based on variant', () => {
         afterEach(cleanup)
         const onClick = jest.fn();
         const { getByText, container, rerender } = render(
@@ -115,7 +115,7 @@ describe('Button', () => {
         expect(container.getElementsByClassName(testClassName))
     })
     // BlueLightestOutlinedButton Test
-    it('[BlueLightestOutlinedButton] - it calls "onClick" prop on button click', () => {
+    it('[BlueLightestOutlinedButton] - It calls "onClick" prop on button click && Checks if it returns the correct classname based on variant', () => {
         afterEach(cleanup)
         const onClick = jest.fn();
         const { getByText, container, rerender } = render(
@@ -142,7 +142,7 @@ describe('Button', () => {
         expect(container.getElementsByClassName(testClassName))
     })
     // BlueActionButton Test
-    it('[BlueActionButton] - it calls "onClick" prop on button click', () => {
+    it('[BlueActionButton] - It calls "onClick" prop on button click && Checks if it returns the correct classname based on variant', () => {
         afterEach(cleanup)
         const onClick = jest.fn();
         const { getByText, container, rerender } = render(
