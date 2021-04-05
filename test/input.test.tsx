@@ -20,8 +20,8 @@ function onSearch(val: any) {
   console.log('search:', val)
 }
 
-describe('Dropdown', () => {
-  it('Loads the menu and Allows you to select something', () => {
+describe('Input Components', () => {
+  it('[Drpdown] - Loads the menu and Allows you to select something && Check to see if it loads the menu options.', () => {
     const { getByText, container, queryByText, rerender } = render(
       <Dropdown
         onBlur={onBlur}
@@ -53,7 +53,7 @@ describe('Dropdown', () => {
     expect(queryByText('MTN-Mozambican Metical'))
   })
 
-  test('It accepts the placeholder', () => {
+  test('[Input] - It accepts the placeholder && check to see if it accepts a value', () => {
     const testPlaceholder = 'Type here'
     const { queryByPlaceholderText, queryByText, rerender } = render(
       <Input
