@@ -64,15 +64,61 @@ describe('Input Components', () => {
     //opens the Date Picker panel
     fireEvent.click(getByPlaceholderText("Select date"));
     expect(container.getElementsByClassName(testDP))
-    //Checks if it returns the correct variant
+
+    //Checks if it returns the correct variant=RangePicker
     const testRP = "ant-picker-date-panels"
     rerender(
       <DatePickerAPI
         onChange={onChange}
         variant="RP">
       </DatePickerAPI>)
-      fireEvent.click(getByPlaceholderText("Select date"));
+    fireEvent.click(getByPlaceholderText("Select date"));
     expect(container.getElementsByClassName(testRP))
+
+    // Test to check the date correctness
+    const testValue = "06-04-2021"
+    rerender(
+      <DatePickerAPI
+        onChange={onChange}
+        variant="DP"
+        value={testValue}>
+      </DatePickerAPI>)
+
+    // const datePicker = getByTestId("ant-picker");
+    // fireEvent.click(datePicker);
+    // console.log(datePicker);
+    // fireEvent.change(datePicker, { target: { value: "06-04-2021" } });
+    // expect(datePicker).toBe(testValue);
+
+    // const { getByTestId } = render(<Datepicker />);
+
+    // const dateinput = getByTestId("date-picker") as HTMLInputElement;
+
+    // fireEvent.change(dateinput, { target: { value: testValue } });
+
+    // expect(dateinput).toHaveValue(testValue);
+    // expect(dateinput).toBeValid();
+
+    // const startDate = getByTestId("date-picker");
+    // fireEvent.mouseDown(startDate);
+    // fireEvent.change(startDate, { target: { value: testValue } });
+    // fireEvent.click(document.querySelectorAll(".ant-picker-cell-selected")[0]);
+  })
+
+  it('[DatePicker2] - Date correctness.', () => {
+    const testValue = "06-04-2021"
+    const { getByTestId } = render(
+      <DatePickerAPI
+        onChange={onChange}
+        variant="DP">
+      </DatePickerAPI>
+    )
+    //opens the Date Picker panel
+    const dateinput = getByTestId("ant-picker") as HTMLInputElement;
+    fireEvent.change(dateinput, { target: { value: testValue } });
+    expect(dateinput).toHaveValue(testValue);
+    expect(dateinput).toBeValid();
+
   })
 
   test('[Input] - It accepts the placeholder && check to see if it accepts a value', () => {
