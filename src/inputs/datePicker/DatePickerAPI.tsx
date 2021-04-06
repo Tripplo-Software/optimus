@@ -25,6 +25,7 @@ const DatePickerAPI: FC<Props> = ({ className, onChange, variant="datePicker", f
            <DatePicker onChange={onChange}
            format={format}
            value={value}
+           data-testid="ant-picker"
            />
         )}
     </Space>
