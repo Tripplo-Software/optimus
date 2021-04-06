@@ -1,8 +1,8 @@
 import Input from './input/Input'
 import Dropdown, { Option } from './dropdown/Dropdown'
-import DatePicker from './datePicker/DatePicker'
+import DatePickerAPI from './datePicker/DatePickerAPI'
 
-export { Input, Dropdown, Option, DatePicker}
+export { Input, Dropdown, Option, DatePickerAPI }
 
-export default { Input, Dropdown, Option, DatePicker }
+export default { Input, Dropdown, Option, DatePickerAPI }
 

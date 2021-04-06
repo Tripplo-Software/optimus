@@ -1,5 +1,5 @@
-import DatePicker from './DatePicker'
+import DatePickerAPI from './DatePickerAPI'
 
-export { DatePicker }
+export { DatePickerAPI }
 
-export default { DatePicker }
+export default { DatePickerAPI }
