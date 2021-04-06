@@ -20,7 +20,7 @@ describe('Button', () => {
         fireEvent.click(getByText(text));
         expect(onClick).toHaveBeenCalled();
         //Checks if it returns the correct classname based on variant
-        const testClassName = "border-white bg-blue-400 py-2 px-10 rounded text-white font-poppins hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400"
+        const testClassName = "border-white bg-blue-400 py-2 px-8 rounded text-white font-poppins hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400"
         rerender(<Button
             variant="BlueDarkButton"
             onClick={onClick}
@@ -30,6 +30,29 @@ describe('Button', () => {
         >Button testing
             </Button>)
         expect(container.getElementsByClassName(testClassName))
+        //Check to  see if it returns the correct dimensions.
+        const dimensions = "py-2 px-8"
+        // const classObject = {
+        //     borderColor: 'border-transparent',
+        //     backgroundColor: 'bg-blue-600',
+        //     textUtils: 'text-white font-poppins rounded',
+        //     hoverState:
+        //         'hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400',
+        //     height: "py-2",
+        //     width: "px-8"
+        // }
+        rerender(<Button
+            variant="BlueDarkButton"
+            onClick={onClick}
+            disabled={false}
+            size="regular"
+            className={testClassName}
+        >Button testing
+                </Button>)
+        // expect(classObject).toHaveProperty('height', 'py-2')
+        // expect(classObject).toHaveProperty('width', 'px-8')
+        expect(testClassName).toContain(dimensions)
+
     })
 
     // RedButton Test
