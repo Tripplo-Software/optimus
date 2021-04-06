@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input, Dropdown, DatePicker } from '../src/inputs'
+import { Input, Dropdown, DatePickerAPI } from '../src/inputs'
 import { Option } from '../src/inputs/dropdown'
 export default {
   title: 'Input/Inputs',
@@ -43,16 +43,16 @@ export const Date_Picker = () => (
   <ul>
     <li>
       <b>Date Picker</b>{'\u00A0'}
-      <DatePicker
+      <DatePickerAPI
         onChange={onChange}>
-      </DatePicker>
+      </DatePickerAPI>
     </li><br/>
     <li>
       <b>Range Picker</b>{'\u00A0'}
-      <DatePicker
+      <DatePickerAPI
         onChange={onChange}
         variant="rangePicker">
-      </DatePicker>
+      </DatePickerAPI>
     </li>
   </ul>
 
