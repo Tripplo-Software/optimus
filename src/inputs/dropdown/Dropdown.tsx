@@ -16,6 +16,8 @@ export interface Props {
 
 const Dropdown: FC<Props> = ({ className, children, onBlur, onChange, onFocus, onSearch }: Props) => (
     <Select
+        virtual={false}
+        defaultValue="Select an Item"
         className={`${className}`}
         showSearch
         style={{ width: 200 }}
