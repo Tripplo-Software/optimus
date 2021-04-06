@@ -53,9 +53,9 @@ describe('Input Components', () => {
     expect(queryByText('MTN-Mozambican Metical'))
   })
 
-  it('[DatePicker] - Selects the correct Date variant.', () => {
+  it('[DatePicker] - Selects the correct Date variant for DP and RP && Tests the Date value for correctness.', () => {
     const testDP = "ant-picker-date-panel"
-    const { container, rerender, getByPlaceholderText } = render(
+    const { container, rerender, getByPlaceholderText, getByTestId } = render(
       <DatePickerAPI
         onChange={onChange}
         variant="DP">
@@ -71,43 +71,14 @@ describe('Input Components', () => {
       <DatePickerAPI
         onChange={onChange}
         variant="RP">
-      </DatePickerAPI>)
+      </DatePickerAPI>
+    )
     fireEvent.click(getByPlaceholderText("Select date"));
     expect(container.getElementsByClassName(testRP))
 
-    // Test to check the date correctness
+    // Checks for date correctness
     const testValue = "06-04-2021"
     rerender(
-      <DatePickerAPI
-        onChange={onChange}
-        variant="DP"
-        value={testValue}>
-      </DatePickerAPI>)
-
-    // const datePicker = getByTestId("ant-picker");
-    // fireEvent.click(datePicker);
-    // console.log(datePicker);
-    // fireEvent.change(datePicker, { target: { value: "06-04-2021" } });
-    // expect(datePicker).toBe(testValue);
-
-    // const { getByTestId } = render(<Datepicker />);
-
-    // const dateinput = getByTestId("date-picker") as HTMLInputElement;
-
-    // fireEvent.change(dateinput, { target: { value: testValue } });
-
-    // expect(dateinput).toHaveValue(testValue);
-    // expect(dateinput).toBeValid();
-
-    // const startDate = getByTestId("date-picker");
-    // fireEvent.mouseDown(startDate);
-    // fireEvent.change(startDate, { target: { value: testValue } });
-    // fireEvent.click(document.querySelectorAll(".ant-picker-cell-selected")[0]);
-  })
-
-  it('[DatePicker2] - Date correctness.', () => {
-    const testValue = "06-04-2021"
-    const { getByTestId } = render(
       <DatePickerAPI
         onChange={onChange}
         variant="DP">
