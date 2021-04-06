@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import { Input, Dropdown, DatePicker } from '../src/index';
+import { Input, Dropdown, DatePickerAPI } from '../src/index';
 import { Option } from '../src/inputs/dropdown'
 
 function onChange(value: any) {
@@ -53,17 +53,26 @@ describe('Input Components', () => {
     expect(queryByText('MTN-Mozambican Metical'))
   })
 
-  it('[DatePicker] - Loads the menu and Allows you to select something && Check to see if it loads the menu options.', () => {
-    const { getByText, container, queryByText, rerender } = render(
-      <DatePicker
+  it('[DatePicker] - Selects the correct Date variant.', () => {
+    const testDP = "ant-picker-date-panel"
+    const { container, rerender, getByPlaceholderText } = render(
+      <DatePickerAPI
         onChange={onChange}
         variant="DP">
-      </DatePicker>
+      </DatePickerAPI>
     )
-    //opens the Select
-    fireEvent.click(getByText("Select an Item"));
-    //Checks the container if it container the ant class with Option
-    expect(container.getElementsByClassName(".ant-select-selection-item")).toBeInTheDocument
+    //opens the Date Picker panel
+    fireEvent.click(getByPlaceholderText("Select date"));
+    expect(container.getElementsByClassName(testDP))
+    //Checks if it returns the correct variant
+    const testRP = "ant-picker-date-panels"
+    rerender(
+      <DatePickerAPI
+        onChange={onChange}
+        variant="RP">
+      </DatePickerAPI>)
+      fireEvent.click(getByPlaceholderText("Select date"));
+    expect(container.getElementsByClassName(testRP))
   })
 
   test('[Input] - It accepts the placeholder && check to see if it accepts a value', () => {
