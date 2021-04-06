@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import { Input, Dropdown, DatePickerAPI } from '../src/index';
+import { Input, Dropdown, DatePickerAPI, NumberInput } from '../src/index';
 import { Option } from '../src/inputs/dropdown'
 
 function onChange(value: any) {
@@ -111,4 +111,17 @@ describe('Input Components', () => {
     )
     expect(queryByText("Typing"))
   })
+
+  test('[InputNumber] - Checks to see if it returns the correct Placeholder, Minimum and Maximum values', () => {
+    const testPlaceholder = '1'
+    const { queryByPlaceholderText, rerender, getByTestId } = render(
+      <NumberInput
+        onChange={onChange}
+        min={1}
+        max={10}
+        defaultValue={1}>
+      </NumberInput>
+    )
+    expect(queryByPlaceholderText(testPlaceholder))
+
 })
