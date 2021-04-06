@@ -124,4 +124,19 @@ describe('Input Components', () => {
     )
     expect(queryByPlaceholderText(testPlaceholder))
 
+    const testMin: number = 5
+    //opens the Date Picker panel
+    rerender(
+      <NumberInput
+        onChange={onChange}
+        min={testMin}
+        max={10}
+        defaultValue={1}>
+      </NumberInput>
+    )
+    const numberInput = getByTestId("number-input") as HTMLInputElement;
+    console.log("Type: ", typeof(numberInput));
+    fireEvent.change(numberInput, { target: { value: testMin } });
+    expect(numberInput).toBeValid();
+  })
 })
