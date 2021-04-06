@@ -54,7 +54,19 @@ describe('Button', () => {
         >Button testing
                 </Button>)
         expect(testLongClassName).toContain(LongDimensions)
-
+        
+         // Tests for the Small variant
+        const testSmallClassName = "border-white bg-blue-400 py-1 px-4 rounded text-white font-poppins hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400"
+        const smallDimensions = "py-1 px-4"
+        rerender(<Button
+            variant="BlueDarkButton"
+            onClick={onClick}
+            disabled={false}
+            size="regular"
+            className={testClassName}
+        >Button testing
+                </Button>)
+        expect(testSmallClassName).toContain(smallDimensions)
     })
 
     // RedButton Test
@@ -105,6 +117,19 @@ describe('Button', () => {
         >Button testing
                 </Button>)
         expect(testLongClassName).toContain(LongDimensions)
+
+        // Tests for the Small variant
+        const testSmallClassName = "border-white bg-blue-400 py-1 px-4 rounded text-white font-poppins hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400"
+        const smallDimensions = "py-1 px-4"
+        rerender(<Button
+            variant="BlueDarkButton"
+            onClick={onClick}
+            disabled={false}
+            size="regular"
+            className={testClassName}
+        >Button testing
+                </Button>)
+        expect(testSmallClassName).toContain(smallDimensions)
     })
     // BlueDarkTransparentOutlinedButton Test
     it('[BlueDarkTransparentOutlinedButton] - It calls "onClick" prop on button click && Checks if it returns the correct classname based on variant', () => {
@@ -156,6 +181,19 @@ describe('Button', () => {
         >Button testing
                 </Button>)
         expect(testLongClassName).toContain(LongDimensions)
+
+        // Tests for the Small variant
+        const testSmallClassName = "border-white bg-blue-400 py-1 px-4 rounded text-white font-poppins hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400"
+        const smallDimensions = "py-1 px-4"
+        rerender(<Button
+            variant="BlueDarkButton"
+            onClick={onClick}
+            disabled={false}
+            size="regular"
+            className={testClassName}
+        >Button testing
+                </Button>)
+        expect(testSmallClassName).toContain(smallDimensions)
     })
     // GreenButton 
     it('[GreenButton] - It calls "onClick" prop on button click && Checks if it returns the correct classname based on variant', () => {
@@ -207,6 +245,19 @@ describe('Button', () => {
         >Button testing
                 </Button>)
         expect(testLongClassName).toContain(LongDimensions)
+
+        // Tests for the Small variant
+        const testSmallClassName = "border-white bg-blue-400 py-1 px-4 rounded text-white font-poppins hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400"
+        const smallDimensions = "py-1 px-4"
+        rerender(<Button
+            variant="BlueDarkButton"
+            onClick={onClick}
+            disabled={false}
+            size="regular"
+            className={testClassName}
+        >Button testing
+                </Button>)
+        expect(testSmallClassName).toContain(smallDimensions)
     })
     // BlueLightestOutlinedButton Test
     it('[BlueLightestOutlinedButton] - It calls "onClick" prop on button click && Checks if it returns the correct classname based on variant', () => {
@@ -257,6 +308,19 @@ describe('Button', () => {
         >Button testing
                 </Button>)
         expect(testLongClassName).toContain(LongDimensions)
+
+        // Tests for the Small variant
+        const testSmallClassName = "border-white bg-blue-400 py-1 px-4 rounded text-white font-poppins hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400"
+        const smallDimensions = "py-1 px-4"
+        rerender(<Button
+            variant="BlueDarkButton"
+            onClick={onClick}
+            disabled={false}
+            size="regular"
+            className={testClassName}
+        >Button testing
+                </Button>)
+        expect(testSmallClassName).toContain(smallDimensions)
     })
     // BlueActionButton Test
     it('[BlueActionButton] - It calls "onClick" prop on button click && Checks if it returns the correct classname based on variant', () => {
