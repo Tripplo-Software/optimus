@@ -125,7 +125,6 @@ describe('Input Components', () => {
     expect(queryByPlaceholderText(testPlaceholder))
 
     const testMin: number = 5
-    //opens the Date Picker panel
     rerender(
       <NumberInput
         onChange={onChange}
@@ -137,6 +136,18 @@ describe('Input Components', () => {
     const numberInput = getByTestId("number-input") as HTMLInputElement;
     console.log("Type: ", typeof(numberInput));
     fireEvent.change(numberInput, { target: { value: testMin } });
+    expect(numberInput).toBeValid();
+
+    const testMax: number = 100
+    rerender(
+      <NumberInput
+        onChange={onChange}
+        min={1}
+        max={testMax}
+        defaultValue={1}>
+      </NumberInput>
+    )
+    fireEvent.change(numberInput, { target: { value: testMax } });
     expect(numberInput).toBeValid();
   })
 })
