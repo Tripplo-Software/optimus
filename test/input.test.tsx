@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import { Input, Dropdown } from '../src/index';
+import { Input, Dropdown, DatePicker } from '../src/index';
 import { Option } from '../src/inputs/dropdown'
 
 function onChange(value: any) {
@@ -21,7 +21,7 @@ function onSearch(val: any) {
 }
 
 describe('Input Components', () => {
-  it('[Drpdown] - Loads the menu and Allows you to select something && Check to see if it loads the menu options.', () => {
+  it('[Dropdown] - Loads the menu and Allows you to select something && Check to see if it loads the menu options.', () => {
     const { getByText, container, queryByText, rerender } = render(
       <Dropdown
         onBlur={onBlur}
@@ -51,6 +51,19 @@ describe('Input Components', () => {
       <Option value="zmd" data-testid="select-option">ZMD-Zimbabwean Dollar</Option>
     </Dropdown>)
     expect(queryByText('MTN-Mozambican Metical'))
+  })
+
+  it('[DatePicker] - Loads the menu and Allows you to select something && Check to see if it loads the menu options.', () => {
+    const { getByText, container, queryByText, rerender } = render(
+      <DatePicker
+        onChange={onChange}
+        variant="DP">
+      </DatePicker>
+    )
+    //opens the Select
+    fireEvent.click(getByText("Select an Item"));
+    //Checks the container if it container the ant class with Option
+    expect(container.getElementsByClassName(".ant-select-selection-item")).toBeInTheDocument
   })
 
   test('[Input] - It accepts the placeholder && check to see if it accepts a value', () => {
