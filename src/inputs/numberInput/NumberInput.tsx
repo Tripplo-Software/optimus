@@ -15,6 +15,7 @@ export interface Props {
 const NumberInput: FC<Props> = ({ className, onChange, defaultValue = 0, min, max }: Props) => (
     <InputNumber
         className={`${className}`}
+        data-testid="number-input"
         min={min}
         max={max}
         defaultValue={defaultValue}
