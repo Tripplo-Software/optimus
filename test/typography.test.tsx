@@ -15,7 +15,7 @@ import { Typography } from '../src/index'
 
 describe('Typography', () => {
     // Heading one Test
-    it('[HeadingOne] - it matches the Text prop passed to it', () => {
+    it('[HeadingOne] - It matches the Text prop passed to it && returns the correct classname based on variant', () => {
         afterEach(cleanup)
 
         const { getByText, container, rerender } = render(<HeadingOne className="text-black-3000" >Heading 1 testing</HeadingOne>)
@@ -33,7 +33,7 @@ describe('Typography', () => {
         expect(container.getElementsByClassName(variantTest))
     })
     // Heading two Test
-    it('[HeadingTwo] - it matches the Text prop passed to it', () => {
+    it('[HeadingTwo] - It matches the Text prop passed to it && returns the correct classname based on variant', () => {
         afterEach(cleanup)
 
         const { getByText, container, rerender } = render(<HeadingTwo className="text-black-3000" >Heading 2 testing</HeadingTwo>)
@@ -51,7 +51,7 @@ describe('Typography', () => {
         expect(container.getElementsByClassName(variantTest))
     })
     // Heading three Test
-    it('[HeadingThree] - it matches the Text prop passed to it', () => {
+    it('[HeadingThree] - It matches the Text prop passed to it && returns the correct classname based on variant', () => {
         afterEach(cleanup)
 
         const { getByText, container, rerender } = render(<HeadingThree className="text-black-3000" >Heading 3 testing</HeadingThree>)
@@ -69,7 +69,7 @@ describe('Typography', () => {
         expect(container.getElementsByClassName(variantTest))
     })
     //Heading four Test
-    it('[HeadingFour] - it matches the Text prop passed to it', () => {
+    it('[HeadingFour] - It matches the Text prop passed to it && returns the correct classname based on variant', () => {
         afterEach(cleanup)
 
         const { getByText, container, rerender } = render(<HeadingFour className="text-black-3000" >Heading 4 testing</HeadingFour>)
@@ -87,7 +87,7 @@ describe('Typography', () => {
         expect(container.getElementsByClassName(variantTest))
     })
     //Heading five Test
-    it('[HeadingFive] - it matches the Text prop passed to it', () => {
+    it('[HeadingFive] - It matches the Text prop passed to it && returns the correct classname based on variant', () => {
         afterEach(cleanup)
 
         const { getByText, container, rerender } = render(<HeadingFive className="text-black-3000" >Heading 5 testing</HeadingFive>)
@@ -105,7 +105,7 @@ describe('Typography', () => {
         expect(container.getElementsByClassName(variantTest))
     })
     //Heading six Test
-    it('[HeadingSix] - it matches the Text prop passed to it', () => {
+    it('[HeadingSix] - It matches the Text prop passed to it && returns the correct classname based on variant', () => {
         afterEach(cleanup)
 
         const { getByText, container, rerender } = render(<HeadingSix className="text-black-3000" >Heading 6 testing</HeadingSix>)
@@ -123,7 +123,7 @@ describe('Typography', () => {
         expect(container.getElementsByClassName(variantTest))
     })
     //Body Text Test
-    it('[BodyText] - it matches the Text prop passed to it', () => {
+    it('[BodyText] - It matches the Text prop passed to it && returns the correct classname based on variant', () => {
         afterEach(cleanup)
 
         const { getByText, container, rerender } = render(<BodyText className="text-black-3000" >Body Text testing</BodyText>)
@@ -141,7 +141,7 @@ describe('Typography', () => {
         expect(container.getElementsByClassName(variantTest))
     })
     //Link Test
-    it('[Link] - It renders the url prop passed to it', () => {
+    it('[Link] - It renders the url prop passed to it && returns the correct classname based on variant', () => {
         const link = 'https://www.tripplo.co/'
         const { getByRole, container, rerender } = render(
             <Link

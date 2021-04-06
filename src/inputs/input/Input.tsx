@@ -5,6 +5,7 @@ export interface Props {
   className: string
   placeholder: string
   value?: string
+  onChange: any
 }
 
 const defaultProps = {
