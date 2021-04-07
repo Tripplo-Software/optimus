@@ -136,7 +136,7 @@ describe('Input Components', () => {
       </Input>
     )
     const numberInput = getByTestId("input") as HTMLInputElement;
-    console.log("Type: ", typeof(numberInput));
+    console.log("Type: ", typeof (numberInput));
     fireEvent.change(numberInput, { target: { value: testMin } });
     expect(numberInput).toBeValid();
 
