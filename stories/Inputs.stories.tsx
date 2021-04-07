@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input, Dropdown, DatePickerAPI, NumberInput } from '../src/inputs'
+import { Input, Dropdown, DatePickerAPI } from '../src/inputs'
 import { Option } from '../src/inputs/dropdown'
 export default {
   title: 'Input/Inputs',
@@ -39,14 +39,6 @@ export const Default = () =>
         max={10} />
     </li>
   </ul>
-
-
-export const InputNumber = () =>
-  <NumberInput
-    min={0}
-    max={1000}
-    defaultValue={0}
-    onChange={onChange} />
 
 
 export const Dropdown_Menu = () => (
