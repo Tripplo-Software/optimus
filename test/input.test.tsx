@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import { Input, Dropdown, DatePickerAPI } from '../src/index';
+import { Input, Dropdown, DatePickerAPI, TextArea } from '../src/index';
 import { Option } from '../src/inputs/dropdown'
 
 function onChange(value: any) {
@@ -136,7 +136,7 @@ describe('Input Components', () => {
       </Input>
     )
     const numberInput = getByTestId("input") as HTMLInputElement;
-    console.log("Type: ", typeof(numberInput));
+    console.log("Type: ", typeof (numberInput));
     fireEvent.change(numberInput, { target: { value: testMin } });
     expect(numberInput).toBeValid();
 
@@ -152,5 +152,17 @@ describe('Input Components', () => {
     )
     fireEvent.change(numberInput, { target: { value: testMax } });
     expect(numberInput).toBeValid();
+  })
+
+  // Test the TextArea Component
+  test('[TextArea]-It accepts text/value and a placeholder as a prop', () => {
+    const testValue = 'Type this.'
+    const { queryByText, queryByPlaceholderText, rerender } = render(
+      <TextArea
+        onChange={onChange}
+        value={testValue}
+      />
+    )
+    expect(queryByText(testValue))
   })
 })
