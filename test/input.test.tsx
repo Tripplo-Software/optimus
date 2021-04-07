@@ -92,7 +92,7 @@ describe('Input Components', () => {
 
   })
 
-  test('[Input] - It accepts the placeholder && check to see if it accepts a value', () => {
+  test('[TextInput] - It accepts the Variant="TEXT", Placeholder && check to see if it accepts a value', () => {
     const testPlaceholder = 'Type here'
     const { queryByPlaceholderText, queryByText, rerender } = render(
       <Input
@@ -110,5 +110,47 @@ describe('Input Components', () => {
       />
     )
     expect(queryByText("Typing"))
+  })
+
+  test('[InputNumber] - Checks to see if it returns the correct Variant="NUMBER", Placeholder, Minimum and Maximum values', () => {
+    const testPlaceholder = '1'
+    const { queryByPlaceholderText, rerender, getByTestId } = render(
+      <Input
+        onChange={onChange}
+        min={1}
+        max={10}
+        defaultValue={1}
+        variant="number">
+      </Input>
+    )
+    expect(queryByPlaceholderText(testPlaceholder))
+
+    const testMin: number = 5
+    rerender(
+      <Input
+        onChange={onChange}
+        min={testMin}
+        max={10}
+        defaultValue={1}
+        variant="number">
+      </Input>
+    )
+    const numberInput = getByTestId("input") as HTMLInputElement;
+    console.log("Type: ", typeof (numberInput));
+    fireEvent.change(numberInput, { target: { value: testMin } });
+    expect(numberInput).toBeValid();
+
+    const testMax: number = 100
+    rerender(
+      <Input
+        onChange={onChange}
+        min={1}
+        max={testMax}
+        defaultValue={1}
+        variant="number">
+      </Input>
+    )
+    fireEvent.change(numberInput, { target: { value: testMax } });
+    expect(numberInput).toBeValid();
   })
 })

@@ -54,8 +54,8 @@ describe('Button', () => {
         >Button testing
                 </Button>)
         expect(testLongClassName).toContain(LongDimensions)
-        
-         // Tests for the Small variant
+
+        // Tests for the Small variant
         const testSmallClassName = "border-white bg-blue-400 py-1 px-4 rounded text-white font-poppins hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400"
         const smallDimensions = "py-1 px-4"
         rerender(<Button

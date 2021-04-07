@@ -21,9 +21,25 @@ function onFocus() {
 function onSearch(val: any) {
   console.log('search:', val)
 }
-export const Default = () => <Input
-  placeholder="Enter your message here"
-  onChange={onChange} />
+export const Default = () =>
+  <ul>
+    <li>
+      <b>Text Input</b>{'\u00A0'}
+      <Input
+        placeholder="Type here"
+        onChange={onChange} />
+    </li><br />
+    <li>
+      <b>Number Input</b>{'\u00A0'}
+      <Input
+        onChange={onChange}
+        variant="number"
+        defaultValue={0}
+        min={1}
+        max={10} />
+    </li>
+  </ul>
+
 
 export const Dropdown_Menu = () => (
   <Dropdown
@@ -46,7 +62,7 @@ export const Date_Picker = () => (
       <DatePickerAPI
         onChange={onChange}>
       </DatePickerAPI>
-    </li><br/>
+    </li><br />
     <li>
       <b>Range Picker</b>{'\u00A0'}
       <DatePickerAPI
@@ -55,6 +71,5 @@ export const Date_Picker = () => (
       </DatePickerAPI>
     </li>
   </ul>
-
 )
 
