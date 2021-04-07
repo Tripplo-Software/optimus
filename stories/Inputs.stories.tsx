@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input, Dropdown, DatePickerAPI } from '../src/inputs'
+import { Input, Dropdown, DatePickerAPI, TextArea } from '../src/inputs'
 import { Option } from '../src/inputs/dropdown'
 export default {
   title: 'Input/Inputs',
@@ -73,3 +73,7 @@ export const Date_Picker = () => (
   </ul>
 )
 
+export const Text_Area = () =>
+  <TextArea
+    onChange={onChange}
+    placeholder="Enter Text here.."/>
