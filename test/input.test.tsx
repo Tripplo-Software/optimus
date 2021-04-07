@@ -164,5 +164,14 @@ describe('Input Components', () => {
       />
     )
     expect(queryByText(testValue))
+    //Test for the Placeholder text
+    const testPH = 'This is a placeholder text'
+    rerender(
+      <TextArea
+        onChange={onChange}
+        placeholder={testPH}
+      />
+    )
+    expect(queryByPlaceholderText(testPH))
   })
 })
