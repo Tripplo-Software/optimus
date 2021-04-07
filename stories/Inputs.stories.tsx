@@ -3,6 +3,7 @@ import { Input, Dropdown, DatePickerAPI, TextArea } from '../src/inputs'
 import { Option } from '../src/inputs/dropdown'
 export default {
   title: 'Input/Inputs',
+  component: Input, Dropdown, DatePickerAPI
 }
 
 
