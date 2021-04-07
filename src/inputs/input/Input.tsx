@@ -1,6 +1,7 @@
 import React, { FC, InputHTMLAttributes } from 'react'
 import '../../index.css'
-
+// @ts-ignore
+// import styled from 'styled-components'
 
 export interface Props extends InputHTMLAttributes<HTMLInputElement> {
   className?: string
@@ -13,7 +14,14 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement> {
   max?: number
 }
 
-
+// const StyledInput = styled.input`
+// input[type=number].input-number–noSpinners { -moz-appearance: textfield; }
+// input[type=number].input-number–noSpinners::-webkit-inner-spin-button,
+// input[type=number].input-number–noSpinners::-webkit-outer-spin-button {
+// -webkit-appearance: none;
+// margin: 0;
+// }
+// `
 
 const Input: FC<Props> = ({
   className,
