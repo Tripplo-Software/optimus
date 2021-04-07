@@ -51,7 +51,7 @@ export const BlueDarkButton = () => (
         >
           Small
          </Button>
-      </li><br/>
+      </li><br />
       <li>
         <Button
           variant="BlueDarkButton"
@@ -61,7 +61,7 @@ export const BlueDarkButton = () => (
         >
           Button
         </Button>
-      </li><br/>
+      </li><br />
       <li>
         <Button
           variant="BlueDarkButton"
@@ -71,7 +71,7 @@ export const BlueDarkButton = () => (
         >
           Regular
          </Button>
-      </li><br/>
+      </li><br />
       <li>
         <Button
           variant="BlueDarkButton"
@@ -100,7 +100,7 @@ export const BlueDarkTransparentOutlinedButton = () => (
         >
           Small
          </Button>
-      </li><br/>
+      </li><br />
       <li>
         <Button
           variant="BlueDarkTransparentOutlinedButton"
@@ -110,7 +110,7 @@ export const BlueDarkTransparentOutlinedButton = () => (
         >
           Button
         </Button>
-      </li><br/>
+      </li><br />
       <li>
         <Button
           variant="BlueDarkTransparentOutlinedButton"
@@ -120,7 +120,7 @@ export const BlueDarkTransparentOutlinedButton = () => (
         >
           Regular
          </Button>
-      </li><br/>
+      </li><br />
       <li>
         <Button
           variant="BlueDarkTransparentOutlinedButton"
@@ -149,7 +149,7 @@ export const BlueLightestOutlinedButton = () => (
         >
           Small
          </Button>
-      </li><br/>
+      </li><br />
       <li>
         <Button
           variant="BlueLightestOutlinedButton"
@@ -159,7 +159,7 @@ export const BlueLightestOutlinedButton = () => (
         >
           Button
         </Button>
-      </li><br/>
+      </li><br />
       <li>
         <Button
           variant="BlueLightestOutlinedButton"
@@ -169,7 +169,7 @@ export const BlueLightestOutlinedButton = () => (
         >
           Regular
          </Button>
-      </li><br/>
+      </li><br />
       <li>
         <Button
           variant="BlueLightestOutlinedButton"
@@ -198,7 +198,7 @@ export const GreenButton = () =>
         >
           Small
          </Button>
-      </li><br/>
+      </li><br />
       <li>
         <Button
           variant="GreenButton"
@@ -208,7 +208,7 @@ export const GreenButton = () =>
         >
           Button
         </Button>
-      </li><br/>
+      </li><br />
       <li>
         <Button
           variant="GreenButton"
@@ -218,7 +218,7 @@ export const GreenButton = () =>
         >
           Regular
          </Button>
-      </li><br/>
+      </li><br />
       <li>
         <Button
           variant="GreenButton"
@@ -234,49 +234,49 @@ export const GreenButton = () =>
   </div>
 
 export const RedButton = () =>
-<div>
-  <ul>
-    <li>
-      <Button
-        variant="RedButton"
-        onClick={onClick}
-        disabled={false}
-        isloading={false}
-        size='small'
-      >
-        Small
+  <div>
+    <ul>
+      <li>
+        <Button
+          variant="RedButton"
+          onClick={onClick}
+          disabled={false}
+          isloading={false}
+          size='small'
+        >
+          Small
        </Button>
-    </li><br/>
-    <li>
-      <Button
-        variant="RedButton"
-        onClick={onClick}
-        disabled={false}
-        isloading={true}
-      >
-        Button
+      </li><br />
+      <li>
+        <Button
+          variant="RedButton"
+          onClick={onClick}
+          disabled={false}
+          isloading={true}
+        >
+          Button
       </Button>
-    </li><br/>
-    <li>
-      <Button
-        variant="RedButton"
-        onClick={onClick}
-        disabled={false}
-        isloading={false}
-      >
-        Regular
+      </li><br />
+      <li>
+        <Button
+          variant="RedButton"
+          onClick={onClick}
+          disabled={false}
+          isloading={false}
+        >
+          Regular
        </Button>
-    </li><br/>
-    <li>
-      <Button
-        variant="RedButton"
-        onClick={onClick}
-        disabled={false}
-        isloading={false}
-        size='long'
-      >
-        Long
+      </li><br />
+      <li>
+        <Button
+          variant="RedButton"
+          onClick={onClick}
+          disabled={false}
+          isloading={false}
+          size='long'
+        >
+          Long
        </Button>
-    </li>
-  </ul>
-</div>
+      </li>
+    </ul>
+  </div>
