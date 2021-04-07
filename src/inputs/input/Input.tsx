@@ -1,20 +1,34 @@
-import React from 'react'
+import React, { FC, InputHTMLAttributes } from 'react'
 import '../../index.css'
 
-export interface Props {
-  className: string
-  placeholder: string
+
+export interface Props extends InputHTMLAttributes<HTMLInputElement> {
+  className?: string
+  placeholder?: string
   value?: string
   onChange: any
+  variant?: string,
+  defaultValue?: number
+  min?: number
+  max?: number
 }
 
-const defaultProps = {
-  className: 'bg-white border border-gray-400 hover:border-blue-400 focus:outline-none rounded py-2 w-auto',
-}
-const Input = (props: Props) => {
-  return <input 
-  {...props} />
+
+
+const Input: FC<Props> = ({
+  className,
+  onChange,
+  variant = "text",
+  ...rest
+}: Props) => {
+  return (
+    <input
+      className={` ${className} bg-white border border-gray-400 hover:border-blue-400 focus:outline-none rounded py-2 w-24 stepper:style-none`}
+      onChange={onChange}
+      type={variant}
+      {...rest}
+    />
+  )
 }
 
-Input.defaultProps = defaultProps
-export default Input
+export default Input;
