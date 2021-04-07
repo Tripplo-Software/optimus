@@ -14,3 +14,15 @@
         src: local('Poppins-Regular') url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
     }
   }
+
+  @layer utilities {
+    @variants stepper {
+      .style-none{
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+}
