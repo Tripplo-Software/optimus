@@ -1,9 +1,9 @@
 import React from 'react'
-import { Input, Dropdown, DatePickerAPI, TextArea, Checkbox } from '../src/inputs'
+import { Input, Dropdown, DatePicker, TextArea, Checkbox } from '../src/inputs'
 import { Option } from '../src/inputs/dropdown'
 export default {
   title: 'Input/Inputs',
-  component: Input, Dropdown, DatePickerAPI
+  component: Input, Dropdown, DatePicker
 }
 
 
@@ -65,16 +65,16 @@ export const Date_Picker = () => (
   <ul>
     <li>
       <b>Date Picker</b>{'\u00A0'}
-      <DatePickerAPI
+      <DatePicker
         onChange={onChange}>
-      </DatePickerAPI>
+      </DatePicker>
     </li><br />
     <li>
       <b>Range Picker</b>{'\u00A0'}
-      <DatePickerAPI
+      <DatePicker
         onChange={onChange}
         variant="rangePicker">
-      </DatePickerAPI>
+      </DatePicker>
     </li>
   </ul>
 )
