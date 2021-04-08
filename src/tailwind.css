@@ -4,25 +4,15 @@
 
 @tailwind utilities;
 
-  @layer base {
-    @font-face{
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap') format('truetype');
-        src: local('Poppins-Regular') url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
-    }
-  }
-
-  @layer utilities {
-    @variants stepper {
-      .style-none{
-        input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-    }
+@layer base {
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://fonts.googleapis.com/css2?family=Poppins&display=swap')
+      format('truetype');
+    src: local('Poppins-Regular') url('../assets/fonts/Poppins-Regular.ttf')
+      format('truetype');
   }
 }
