@@ -2147,8 +2147,8 @@ video {
 
 .bg-blue-400 {
   --bg-opacity: 1;
-  background-color: #63b3ed;
-  background-color: rgba(99, 179, 237, var(--bg-opacity));
+  background-color: #003EB2;
+  background-color: rgba(0, 62, 178, var(--bg-opacity));
 }
 
 .bg-blue-500 {

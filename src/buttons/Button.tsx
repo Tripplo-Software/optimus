@@ -64,7 +64,7 @@ const Button: FC<Props> = ({
     },
     BlueDarkButton: {
       borderColor: 'border-transparent',
-      backgroundColor: 'bg-blue-600',
+      backgroundColor: 'bg-blue-400',
       dimensions: `${selectedDimension.height} ${selectedDimension.width}`,
       textUtils: 'text-white font-poppins rounded',
       hoverState:
