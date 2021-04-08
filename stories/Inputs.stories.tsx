@@ -89,6 +89,9 @@ export const Text_Area = () =>
 export const CheckBox = () =>
   <ul>
     <li>
+      <li>
+        <b>Unchecked</b>
+      </li>
       <Checkbox
         variant="checkbox"
         onChange={handleChange}
@@ -97,6 +100,9 @@ export const CheckBox = () =>
     </Checkbox>
     </li><br />
     <li>
+      <li>
+        <b><u>Checked</u></b>
+      </li>
       <Checkbox
         variant="checkbox"
         onChange={handleChange}
@@ -105,6 +111,9 @@ export const CheckBox = () =>
     </Checkbox>
     </li><br />
     <li>
+      <li>
+        <b>Disabled</b>
+      </li>
       <Checkbox
         variant="checkbox"
         onChange={handleChange}
