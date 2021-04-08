@@ -3,7 +3,7 @@ import '../../index.css'
 
 export interface Props extends InputHTMLAttributes<HTMLInputElement> {
     className?: string
-    onChange: any,
+    onChange?: any,
     children?: any
     variant: string
     disabled?: boolean,
