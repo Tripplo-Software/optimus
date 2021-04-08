@@ -3,6 +3,7 @@ export { default as Dropdown } from './inputs/dropdown/Dropdown'
 export { default as Option } from './inputs/dropdown/Dropdown'
 export { default as DatePickerAPI } from './inputs/datePicker/DatePickerAPI'
 export { default as TextArea } from './inputs/textArea/TextArea'
+export { default as Checkbox } from './inputs/checkbox/Checkbox'
 
 export { default as Typography } from './typography/Typography'
 export { default as HeadingOne } from './typography/HeadingOne'
