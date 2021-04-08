@@ -179,8 +179,7 @@ describe('Input Components', () => {
     const testCheckboxClass = "form-checkbox h-4 w-4"
     const { container, getByTestId, rerender } = render(
       <Checkbox
-        onChange={onChange}
-        variant="checkbox">
+        onChange={onChange}>
       </Checkbox>
     )
     fireEvent.click(getByTestId("checkbox"));
@@ -192,7 +191,6 @@ describe('Input Components', () => {
     rerender(
       <Checkbox
         onChange={onChange}
-        variant="checkbox"
         isChecked={toggleState}>
       </Checkbox>
     )

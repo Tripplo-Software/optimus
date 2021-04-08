@@ -106,7 +106,6 @@ export const CheckBox = () =>
         <b>Unchecked</b>
       </p>
       <Checkbox
-        variant="checkbox"
         onChange={handleChange}
       >
         Placeholder
@@ -117,7 +116,6 @@ export const CheckBox = () =>
         <b>Checked</b>
       </p>
       <Checkbox
-        variant="checkbox"
         onChange={handleChange}
         isChecked={true}>
         Placeholder
@@ -128,7 +126,6 @@ export const CheckBox = () =>
         <b>Disabled</b>
       </p>
       <Checkbox
-        variant="checkbox"
         disabled={true}>
         Placeholder
     </Checkbox>
