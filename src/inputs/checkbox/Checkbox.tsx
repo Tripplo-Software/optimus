@@ -26,6 +26,7 @@ const Checkbox: FC<Props> = ({
                 type={variant}
                 disabled={disabled}
                 checked={isChecked}
+                id="checkbox"
             />
             <span className="ml-2">{children}</span>
         </label>
