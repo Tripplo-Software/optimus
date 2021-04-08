@@ -16,7 +16,7 @@ export interface Props {
 }
 const Typography: FC<Props> = ({
   variant,
-  className,
+  className='',
   children,
   href,
 }: Props) => {

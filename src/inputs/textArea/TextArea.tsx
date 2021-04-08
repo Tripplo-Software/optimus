@@ -8,7 +8,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const TextArea: FC<Props> = ({
-    className,
+    className='',
     onChange,
     value,
     placeholder

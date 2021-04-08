@@ -11,7 +11,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Checkbox: FC<Props> = ({
-    className,
+    className='',
     onChange,
     variant,
     children,

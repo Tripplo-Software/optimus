@@ -14,7 +14,7 @@ export interface Props {
     placeholder?: string
 }
 
-const Dropdown: FC<Props> = ({ className, children, onBlur, onChange, onFocus, onSearch }: Props) => (
+const Dropdown: FC<Props> = ({ className='', children, onBlur, onChange, onFocus, onSearch }: Props) => (
     <Select
         virtual={false}
         defaultValue="Select an Item"
