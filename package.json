@@ -23,8 +23,9 @@
     "lint": "tsdx lint",
     "watch:css": "postcss src/tailwind.css -o src/index.css -w",
     "prepare": "tsdx build",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 ",
     "build-storybook": "build-storybook -o ./storybook-static",
+    "storybook-run": "npm-run-all --parallel watch:css storybook",
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {

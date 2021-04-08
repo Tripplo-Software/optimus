@@ -31,7 +31,7 @@ const Input: FC<Props> = ({
 }: Props) => {
   return (
     <input
-      className={` ${className} bg-white border border-gray-400 hover:border-blue-400 focus:outline-none rounded py-2 w-24 stepper:style-none`}
+      className={` ${className} bg-white border border-gray-400 hover:border-blue-400 focus:outline-none rounded py-2 w-64 stepper:style-none`}
       onChange={onChange}
       type={variant}
       data-testid="input"

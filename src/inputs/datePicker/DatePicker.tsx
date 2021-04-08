@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import '../../index.css'
 import 'antd/dist/antd.css'
-import { DatePicker, Space } from 'antd'
-const { RangePicker } = DatePicker
+import { DatePicker as Dpicker, Space } from 'antd'
+const { RangePicker } = Dpicker
 
 export interface Props {
     className?: string
@@ -14,7 +14,7 @@ export interface Props {
 }
 
 
-const DatePickerAPI: FC<Props> = ({ className, onChange, variant = "datePicker", format = "DD/MM/YYYY", value }: Props) => (
+const DatePicker: FC<Props> = ({ className, onChange, variant = "datePicker", format = "DD/MM/YYYY", value }: Props) => (
     <Space
         className={`${className}`}
         direction="vertical"
@@ -22,7 +22,7 @@ const DatePickerAPI: FC<Props> = ({ className, onChange, variant = "datePicker",
         {variant === "rangePicker" ? (
             <RangePicker onChange={onChange} />
         ) : (
-            <DatePicker onChange={onChange}
+            <Dpicker onChange={onChange}
                 format={format}
                 value={value}
                 data-testid="ant-picker"
@@ -31,4 +31,4 @@ const DatePickerAPI: FC<Props> = ({ className, onChange, variant = "datePicker",
     </Space>
 )
 
-export default DatePickerAPI;
+export default DatePicker;

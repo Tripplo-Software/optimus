@@ -60,45 +60,45 @@ const Button: FC<Props> = ({
       dimensions: `${selectedDimension.height} ${selectedDimension.width}`,
       textUtils: 'text-white font-poppins border-white rounded-lg',
       hoverState:
-        'hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-300 hover:text-blue-400',
+        'hover:bg-blue-100 focus:outline-none border hover:border-blue-300 hover:text-blue-300',
     },
     BlueDarkButton: {
       borderColor: 'border-transparent',
-      backgroundColor: 'bg-blue-600',
+      backgroundColor: 'bg-blue-400',
       dimensions: `${selectedDimension.height} ${selectedDimension.width}`,
       textUtils: 'text-white font-poppins rounded',
       hoverState:
-        'hover:bg-blue-100 focus:outline-none border-2 hover:border-blue-500 hover:text-blue-400',
+        'hover:bg-blue-100 focus:outline-none border hover:border-blue-400 hover:text-blue-400',
     },
     BlueDarkTransparentOutlinedButton: {
-      borderColor: 'border-2 border-solid border-blue-500',
+      borderColor: 'border border-solid border-blue-400',
       backgroundColor: 'bg-transparent',
       dimensions: `${selectedDimension.height} ${selectedDimension.width}`,
       textUtils: 'text-blue-400 font-poppins rounded',
-      hoverState: 'hover:bg-blue-500 focus:outline-none hover:text-white',
+      hoverState: 'hover:bg-blue-400 focus:outline-none hover:text-white',
     },
     GreenButton: {
       borderColor: 'border-transparent',
-      backgroundColor: 'bg-green-600',
+      backgroundColor: 'bg-green-300',
       dimensions: `${selectedDimension.height} ${selectedDimension.width}`,
       textUtils: 'text-white font-poppins rounded',
       hoverState:
-        'hover:bg-green-100 focus:outline-none border-2 hover:border-green-500 hover:text-green-500',
+        'hover:bg-transparent focus:outline-none border hover:border-green-300 hover:text-green-300',
     },
     BlueLightestOutlinedButton: {
-      borderColor: 'border-2 border-solid border-blue-500',
+      borderColor: 'border border-solid border-blue-300',
       backgroundColor: 'bg-blue-100',
       dimensions: `${selectedDimension.height} ${selectedDimension.width}`,
-      textUtils: 'text-blue-500 font-poppins rounded',
-      hoverState: 'hover:bg-blue-500 focus:outline-none hover:text-white',
+      textUtils: 'text-blue-300 font-poppins rounded',
+      hoverState: 'hover:bg-blue-300 focus:outline-none hover:text-white',
     },
     RedButton: {
       borderColor: 'border-transparent',
-      backgroundColor: 'bg-red-600',
+      backgroundColor: 'bg-red-300',
       dimensions: `${selectedDimension.height} ${selectedDimension.width}`,
       textUtils: 'text-white font-poppins rounded',
       hoverState:
-        'hover:bg-red-100 focus:outline-none  border-2 hover:border-red-500 hover:text-red-500',
+        'hover:bg-transparent focus:outline-none  border hover:border-red-300 hover:text-red-300',
     },
   }
 

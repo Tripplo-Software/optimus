@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import { Input, Dropdown, DatePickerAPI } from '../src/index';
+import { Input, Dropdown, DatePicker, TextArea } from '../src/index';
 import { Option } from '../src/inputs/dropdown'
 
 function onChange(value: any) {
@@ -56,10 +56,10 @@ describe('Input Components', () => {
   it('[DatePicker] - Selects the correct Date variant for DP and RP && Tests the Date value for correctness.', () => {
     const testDP = "ant-picker-date-panel"
     const { container, rerender, getByPlaceholderText, getByTestId } = render(
-      <DatePickerAPI
+      <DatePicker
         onChange={onChange}
         variant="DP">
-      </DatePickerAPI>
+      </DatePicker>
     )
     //opens the Date Picker panel
     fireEvent.click(getByPlaceholderText("Select date"));
@@ -68,10 +68,10 @@ describe('Input Components', () => {
     //Checks if it returns the correct variant=RangePicker
     const testRP = "ant-picker-date-panels"
     rerender(
-      <DatePickerAPI
+      <DatePicker
         onChange={onChange}
         variant="RP">
-      </DatePickerAPI>
+      </DatePicker>
     )
     fireEvent.click(getByPlaceholderText("Select date"));
     expect(container.getElementsByClassName(testRP))
@@ -79,10 +79,10 @@ describe('Input Components', () => {
     // Checks for date correctness
     const testValue = "06-04-2021"
     rerender(
-      <DatePickerAPI
+      <DatePicker
         onChange={onChange}
         variant="DP">
-      </DatePickerAPI>
+      </DatePicker>
     )
     //opens the Date Picker panel
     const dateinput = getByTestId("ant-picker") as HTMLInputElement;
@@ -152,5 +152,26 @@ describe('Input Components', () => {
     )
     fireEvent.change(numberInput, { target: { value: testMax } });
     expect(numberInput).toBeValid();
+  })
+
+  // Test the TextArea Component
+  test('[TextArea]-It accepts text/value and a placeholder as a prop', () => {
+    const testValue = 'Type this.'
+    const { queryByText, queryByPlaceholderText, rerender } = render(
+      <TextArea
+        onChange={onChange}
+        value={testValue}
+      />
+    )
+    expect(queryByText(testValue))
+    //Test for the Placeholder text
+    const testPH = 'This is a placeholder text'
+    rerender(
+      <TextArea
+        onChange={onChange}
+        placeholder={testPH}
+      />
+    )
+    expect(queryByPlaceholderText(testPH))
   })
 })

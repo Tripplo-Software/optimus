@@ -1,8 +1,9 @@
 import React from 'react'
-import { Input, Dropdown, DatePickerAPI } from '../src/inputs'
+import { Input, Dropdown, DatePicker, TextArea } from '../src/inputs'
 import { Option } from '../src/inputs/dropdown'
 export default {
   title: 'Input/Inputs',
+  component: Input, Dropdown, DatePicker
 }
 
 
@@ -24,13 +25,17 @@ function onSearch(val: any) {
 export const Default = () =>
   <ul>
     <li>
-      <b>Text Input</b>{'\u00A0'}
+      <li>
+        <b>Text Input</b>
+      </li>
       <Input
         placeholder="Type here"
         onChange={onChange} />
     </li><br />
     <li>
-      <b>Number Input</b>{'\u00A0'}
+      <li>
+        <b>Number Input</b>
+      </li>
       <Input
         onChange={onChange}
         variant="number"
@@ -58,18 +63,29 @@ export const Dropdown_Menu = () => (
 export const Date_Picker = () => (
   <ul>
     <li>
-      <b>Date Picker</b>{'\u00A0'}
-      <DatePickerAPI
+      <li>
+        <b>Date Picker</b>
+      </li>
+      <DatePicker
         onChange={onChange}>
-      </DatePickerAPI>
+      </DatePicker>
     </li><br />
     <li>
-      <b>Range Picker</b>{'\u00A0'}
-      <DatePickerAPI
+      <li>
+        <b>Range Picker</b>
+      </li>
+      <DatePicker
         onChange={onChange}
         variant="rangePicker">
-      </DatePickerAPI>
+      </DatePicker>
     </li>
   </ul>
 )
+
+export const Text_Area = () =>
+  <div className="container">
+    <TextArea
+      onChange={onChange}
+      placeholder="Enter Text here.." />
+  </div>
 
