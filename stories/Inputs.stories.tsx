@@ -75,6 +75,9 @@ export const Date_Picker = () => (
 )
 
 export const Text_Area = () =>
-  <TextArea
-    onChange={onChange}
-    placeholder="Enter Text here.." />
+  <div className="container">
+    <TextArea
+      onChange={onChange}
+      placeholder="Enter Text here.." />
+  </div>
+
