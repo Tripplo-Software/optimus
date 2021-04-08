@@ -11,10 +11,15 @@ function onChange(value: any) {
   console.log(`selected ${value}`)
 }
 
-function handleChange(isChecked: boolean) {
-  console.log(`selected ${isChecked}`)
+function handleChange(isChecked: any) {
+  isChecked = !isChecked;
+  if ((document.getElementById('checkbox') as HTMLInputElement).checked) {
+    isChecked = !isChecked;
+    console.log("uchecked")
+  } else {
+    console.log("checked");
+  }
 }
-
 
 function onBlur() {
   console.log('blur')
