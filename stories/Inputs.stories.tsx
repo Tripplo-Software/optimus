@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input, Dropdown, DatePickerAPI, TextArea } from '../src/inputs'
+import { Input, Dropdown, DatePickerAPI, TextArea, Checkbox } from '../src/inputs'
 import { Option } from '../src/inputs/dropdown'
 export default {
   title: 'Input/Inputs',
@@ -80,4 +80,10 @@ export const Text_Area = () =>
       onChange={onChange}
       placeholder="Enter Text here.." />
   </div>
+
+export const CheckBox = () =>
+  <Checkbox
+    variant="checkbox"
+  />
+
 
