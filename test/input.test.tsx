@@ -175,9 +175,9 @@ describe('Input Components', () => {
     expect(queryByPlaceholderText(testPH))
   })
 
-  it('[Checkbox] - Checks if it Returns the correct classname', () => {
+  it('[Checkbox] - Checks if it Returns the correct classname && tests for correct state', () => {
     const testCheckboxClass = "form-checkbox h-4 w-4"
-    const { container, getByTestId } = render(
+    const { container, getByTestId, rerender } = render(
       <Checkbox
         onChange={onChange}
         variant="checkbox">
@@ -185,5 +185,18 @@ describe('Input Components', () => {
     )
     fireEvent.click(getByTestId("checkbox"));
     expect(container.getElementsByClassName(testCheckboxClass))
+
+    //Test for the correct toggle state
+    const toggleState: boolean = true
+    const checkboxState = getByTestId("checkbox") as HTMLInputElement;
+    rerender(
+      <Checkbox
+        onChange={onChange}
+        variant="checkbox"
+        isChecked={toggleState}>
+      </Checkbox>
+    )
+    fireEvent.change(checkboxState, { target: { value: toggleState } });
+    expect(checkboxState).toBe(true);
   })
 })
