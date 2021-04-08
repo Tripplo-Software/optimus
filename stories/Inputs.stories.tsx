@@ -11,6 +11,11 @@ function onChange(value: any) {
   console.log(`selected ${value}`)
 }
 
+function handleChange(isChecked: boolean) {
+  console.log(`selected ${isChecked}`)
+}
+
+
 function onBlur() {
   console.log('blur')
 }
@@ -82,8 +87,32 @@ export const Text_Area = () =>
   </div>
 
 export const CheckBox = () =>
-  <Checkbox
-    variant="checkbox"
-  />
+  <ul>
+    <li>
+      <Checkbox
+        variant="checkbox"
+        onChange={handleChange}
+      >
+        Placeholder
+    </Checkbox>
+    </li><br />
+    <li>
+      <Checkbox
+        variant="checkbox"
+        onChange={handleChange}
+        checked={true}>
+        Placeholder
+    </Checkbox>
+    </li><br />
+    <li>
+      <Checkbox
+        variant="checkbox"
+        onChange={handleChange}
+        disabled={true}>
+        Placeholder
+    </Checkbox>
+    </li>
+  </ul>
+
 
 
