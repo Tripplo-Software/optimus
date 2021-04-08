@@ -13,17 +13,18 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement> {
 const Checkbox: FC<Props> = ({
     className,
     variant,
+    children,
+    ...rest
 }: Props) => {
     return (
-        <div className="mt-4">
-            <label className="inline-flex items-center">
-                <input
-                    className={` ${className} form-checkbox`}
-                    type={variant}
-                />
-            </label>
-        </div>
-
+        <label className="inline-flex items-center">
+            <input
+                className={` ${className} form-checkbox`}
+                type={variant}
+                {...rest}
+            />
+            <span className="ml-2">Placeholder</span>
+        </label>
     )
 }
 
