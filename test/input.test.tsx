@@ -197,6 +197,6 @@ describe('Input Components', () => {
       </Checkbox>
     )
     fireEvent.change(checkboxState, { target: { value: toggleState } });
-    expect(checkboxState).toBe(true);
+    expect(checkboxState).toBeValid();
   })
 })
