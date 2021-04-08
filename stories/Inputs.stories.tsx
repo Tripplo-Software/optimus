@@ -30,17 +30,17 @@ function onSearch(val: any) {
 export const Default = () =>
   <ul>
     <li>
-      <li>
+      <p>
         <b>Text Input</b>
-      </li>
+      </p>
       <Input
         placeholder="Type here"
         onChange={onChange} />
     </li><br />
     <li>
-      <li>
+      <p>
         <b>Number Input</b>
-      </li>
+      </p>
       <Input
         onChange={onChange}
         variant="number"
@@ -68,17 +68,17 @@ export const Dropdown_Menu = () => (
 export const Date_Picker = () => (
   <ul>
     <li>
-      <li>
+      <p>
         <b>Date Picker</b>
-      </li>
+      </p>
       <DatePicker
         onChange={onChange}>
       </DatePicker>
     </li><br />
     <li>
-      <li>
+      <p>
         <b>Range Picker</b>
-      </li>
+      </p>
       <DatePicker
         onChange={onChange}
         variant="rangePicker">
@@ -97,9 +97,9 @@ export const Text_Area = () =>
 export const CheckBox = () =>
   <ul>
     <li>
-      <li>
+      <p>
         <b>Unchecked</b>
-      </li>
+      </p>
       <Checkbox
         variant="checkbox"
         onChange={handleChange}
@@ -108,23 +108,22 @@ export const CheckBox = () =>
     </Checkbox>
     </li><br />
     <li>
-      <li>
-        <b><u>Checked</u></b>
-      </li>
+      <p>
+        <b>Checked</b>
+      </p>
       <Checkbox
         variant="checkbox"
         onChange={handleChange}
-        checked={true}>
+        isChecked={true}>
         Placeholder
     </Checkbox>
     </li><br />
     <li>
-      <li>
+      <p>
         <b>Disabled</b>
-      </li>
+      </p>
       <Checkbox
         variant="checkbox"
-        onChange={handleChange}
         disabled={true}>
         Placeholder
     </Checkbox>
