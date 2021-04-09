@@ -6,7 +6,7 @@ interface Props {
   children: any
   url: string
 }
-const Link: FC<Props> = ({ children, className, url }: Props) => (
+const Link: FC<Props> = ({ children, className='', url }: Props) => (
   <a
     href={url}
     className={` ${className} text-black font-poppins no-underline hover:underline hover:text-blue-400`}

@@ -6,7 +6,7 @@ export interface Props {
   children: any
 }
 
-const BodyText: FC<Props> = ({ children, className }: Props) => (
+const BodyText: FC<Props> = ({ children, className='' }: Props) => (
   <p className={` ${className} text-black text-base`}>{children}</p>
 )
 

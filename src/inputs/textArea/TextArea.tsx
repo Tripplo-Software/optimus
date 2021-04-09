@@ -8,14 +8,14 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const TextArea: FC<Props> = ({
-    className,
+    className='',
     onChange,
     value,
     placeholder
 }: Props) => {
     return (
         <textarea
-            className={` ${className} border border-grey font-poppins  py-12 px-16 rounded-sm focus:outline-none `}
+            className={`${className} border border-grey font-poppins  py-12 px-16 rounded-sm focus:outline-none rounded-lg`}
             onChange={onChange}
             value={value}
             placeholder={placeholder}

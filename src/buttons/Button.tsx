@@ -23,7 +23,7 @@ const ImageLoading = styled.div`
 `
 
 const Button: FC<Props> = ({
-  className,
+  className='',
   onClick,
   children,
   disabled,

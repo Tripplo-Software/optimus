@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import { Input, Dropdown, DatePicker, TextArea } from '../src/index';
+import { Input, Dropdown, DatePicker, TextArea, Checkbox } from '../src/index';
 import { Option } from '../src/inputs/dropdown'
 
 function onChange(value: any) {
@@ -173,5 +173,28 @@ describe('Input Components', () => {
       />
     )
     expect(queryByPlaceholderText(testPH))
+  })
+
+  it('[Checkbox] - Checks if it Returns the correct classname && tests for correct state', () => {
+    const testCheckboxClass = "form-checkbox h-4 w-4"
+    const { container, getByTestId, rerender } = render(
+      <Checkbox
+        onChange={onChange}>
+      </Checkbox>
+    )
+    fireEvent.click(getByTestId("checkbox"));
+    expect(container.getElementsByClassName(testCheckboxClass))
+
+    //Test for the correct toggle state
+    const toggleState: boolean = true
+    const checkboxState = getByTestId("checkbox") as HTMLInputElement;
+    rerender(
+      <Checkbox
+        onChange={onChange}
+        isChecked={toggleState}>
+      </Checkbox>
+    )
+    fireEvent.change(checkboxState, { target: { value: toggleState } });
+    expect(checkboxState).toBeValid();
   })
 })

@@ -24,7 +24,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement> {
 // `
 
 const Input: FC<Props> = ({
-  className,
+  className='',
   onChange,
   variant = "text",
   ...rest

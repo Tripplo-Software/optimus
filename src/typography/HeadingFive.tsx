@@ -6,7 +6,7 @@ interface Props {
   children: any
 }
 
-const HeadingFive: FC<Props> = ({ children, className }: Props) => (
+const HeadingFive: FC<Props> = ({ children, className='' }: Props) => (
   <h5 className={` ${className} text-2xl text-black font-poppins`}>
     {children}
   </h5>
