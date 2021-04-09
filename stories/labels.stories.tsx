@@ -32,3 +32,8 @@ export const SuccessTag = () => (
     variant="InactiveTag"
     >Inactive</Tag>
   )
+  export const UnknownTag = () => (
+    <Tag
+    variant="UnknownTag"
+    >Unknown</Tag>
+  )
