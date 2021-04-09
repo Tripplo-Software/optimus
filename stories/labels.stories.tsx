@@ -37,3 +37,10 @@ export const SuccessTag = () => (
     variant="UnknownTag"
     >Unknown</Tag>
   )
+  const count: number = 9
+  export const CountTag = () => (
+    <Tag
+    variant="CountTag"
+    count={count}
+    >{count}</Tag>
+  )

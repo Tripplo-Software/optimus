@@ -5,12 +5,16 @@ export interface Props {
     className?: string
     children?: any
     variant: string,
+    count?: number
+    isCount?: boolean
 }
 
 const Tag: FC<Props> = ({
     className = '',
     children,
     variant,
+    isCount = false,
+    count = 0
 }: Props) => {
 
     const types: any = {
@@ -38,6 +42,10 @@ const Tag: FC<Props> = ({
         UnknownTag: {
             backgroundColor: 'bg-orange-400',
             textUtils: 'text-gray-300 font-poppins rounded-full',
+        },
+        CountTag: {
+            backgroundColor: 'bg-red-200',
+            textUtils: 'text-white font-poppins rounded-lg',
         }
     }
 
@@ -45,7 +53,11 @@ const Tag: FC<Props> = ({
 
     return (
         <div className={`${className} ${classNames} text-sm inline-flex items-center leading-sm px-3 py-1`}>
-            {children}
+            {isCount ? (
+                count
+            ) : (
+                children
+            )}
         </div>
     )
 }
