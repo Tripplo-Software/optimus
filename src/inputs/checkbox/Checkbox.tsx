@@ -1,9 +1,9 @@
-import React, { FC, InputHTMLAttributes } from 'react'
+import React, { ChangeEventHandler, FC, InputHTMLAttributes } from 'react'
 import '../../index.css'
 
 export interface Props extends InputHTMLAttributes<HTMLInputElement> {
     className?: string
-    onChange?: any,
+    onChange?: ChangeEventHandler,
     children?: any
     disabled?: boolean,
     isChecked?: boolean
