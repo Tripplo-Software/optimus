@@ -19,7 +19,7 @@ const Tag: FC<Props> = ({
             textUtils: 'text-white font-poppins rounded-lg',
         },
         WarningTag: {
-            backgroundColor: 'bg-yellow-600',
+            backgroundColor: 'bg-yellow-500',
             textUtils: 'text-white font-poppins rounded-lg',
         },
         DangerTag: {
@@ -40,7 +40,7 @@ const Tag: FC<Props> = ({
     const classNames: string = Object.values(types[variant]).join(' ')
 
     return (
-        <div className={`${className} ${classNames} text-md inline-flex items-space-between leading-sm px-3 py-1 text-white`}>
+        <div className={`${className} ${classNames} text-sm inline-flex items-center leading-sm px-3 py-1`}>
             {children}
         </div>
     )
