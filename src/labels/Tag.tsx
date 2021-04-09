@@ -26,11 +26,11 @@ const Tag: FC<Props> = ({
             backgroundColor: 'bg-red-300',
             textUtils: 'text-white font-poppins rounded-lg',
         },
-        ActiveTag:{
+        ActiveTag: {
             backgroundColor: 'bg-green-300',
             textUtils: 'text-white font-poppins rounded-lg',
         },
-        InactiveTag:{
+        InactiveTag: {
             borderColor: 'border border-solid border-red-200',
             backgroundColor: 'bg-transparent',
             textUtils: 'text-gray-300 font-poppins rounded-lg',
@@ -41,7 +41,7 @@ const Tag: FC<Props> = ({
 
     return (
         <div className={`${className} ${classNames} text-sm inline-flex items-center leading-sm px-3 py-1`}>
-            {children}
+                    {children}
         </div>
     )
 }
