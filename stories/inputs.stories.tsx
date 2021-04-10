@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input, Dropdown, DatePicker, TextArea } from '../src/inputs'
+import { Input, Dropdown, DatePicker, TextArea, Checkbox } from '../src/inputs'
 import { Option } from '../src/inputs/dropdown'
 export default {
   title: 'Input/Inputs',
@@ -9,6 +9,16 @@ export default {
 
 function onChange(value: any) {
   console.log(`selected ${value}`)
+}
+
+function handleChange(isChecked: any) {
+  isChecked = !isChecked;
+  if ((document.getElementById('checkbox') as HTMLInputElement).checked) {
+    isChecked = !isChecked;
+    console.log("uchecked")
+  } else {
+    console.log("checked");
+  }
 }
 
 function onBlur() {
@@ -25,17 +35,17 @@ function onSearch(val: any) {
 export const Default = () =>
   <ul>
     <li>
-      <li>
+      <p>
         <b>Text Input</b>
-      </li>
+      </p>
       <Input
         placeholder="Type here"
         onChange={onChange} />
     </li><br />
     <li>
-      <li>
+      <p>
         <b>Number Input</b>
-      </li>
+      </p>
       <Input
         onChange={onChange}
         variant="number"
@@ -63,17 +73,17 @@ export const Dropdown_Menu = () => (
 export const Date_Picker = () => (
   <ul>
     <li>
-      <li>
+      <p>
         <b>Date Picker</b>
-      </li>
+      </p>
       <DatePicker
         onChange={onChange}>
       </DatePicker>
     </li><br />
     <li>
-      <li>
+      <p>
         <b>Range Picker</b>
-      </li>
+      </p>
       <DatePicker
         onChange={onChange}
         variant="rangePicker">
@@ -88,4 +98,39 @@ export const Text_Area = () =>
       onChange={onChange}
       placeholder="Enter Text here.." />
   </div>
+
+export const CheckBox = () =>
+  <ul>
+    <li>
+      <p>
+        <b>Unchecked</b>
+      </p>
+      <Checkbox
+        onChange={handleChange}
+      >
+        Placeholder
+    </Checkbox>
+    </li><br />
+    <li>
+      <p>
+        <b>Checked</b>
+      </p>
+      <Checkbox
+        onChange={handleChange}
+        isChecked={true}>
+        Placeholder
+    </Checkbox>
+    </li><br />
+    <li>
+      <p>
+        <b>Disabled</b>
+      </p>
+      <Checkbox
+        disabled={true}>
+        Placeholder
+    </Checkbox>
+    </li>
+  </ul>
+
+
 
